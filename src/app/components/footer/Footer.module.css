@@ -1,0 +1,167 @@
+.footer{
+  background:#F5F5F7;
+  color:#111;
+  padding:70px 20px 30px;
+}
+
+/* ---------- CONTAINERS ---------- */
+
+.top,
+.content,
+.bottom,
+.divider{
+  max-width:1200px;
+  margin:auto;
+  width:100%;
+}
+
+/* ---------- TOP ---------- */
+
+.top{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:25px;
+}
+
+.brand img{
+  max-width:120px;
+  height:auto;
+}
+
+.tagline{
+  font-size:15px;
+  color:#444;
+}
+
+/* SOCIALS */
+
+.socials{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.socials a{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+  font-size:16px;
+  transition:.3s;
+}
+
+
+.socials a:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px rgba(255,87,34,.35);
+}
+
+/* ---------- DIVIDER ---------- */
+
+.divider{
+  height:1px;
+  background:#ddd;
+  margin:40px auto;
+}
+
+/* ---------- GRID ---------- */
+
+.content{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:35px;
+  text-align:center;
+}
+
+.content h4{
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+.content p{
+  color:#444;
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* LINKS */
+
+.content ul{
+  list-style:none;
+  padding:0;
+}
+
+.content li{
+  margin-bottom:6px;
+}
+
+.content a{
+  text-decoration:none;
+  color:#444;
+  transition:.25s;
+}
+
+.content a:hover{
+  color:#ff5722;
+}
+
+/* BUTTON */
+
+.joinBtn{
+  margin-top:14px;
+  padding:12px 22px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.joinBtn:hover{
+  transform:translateY(-3px);
+}
+
+/* ---------- TABLET ---------- */
+
+@media(min-width:768px){
+
+  .top{
+    flex-direction:row;
+    justify-content:space-between;
+    text-align:left;
+  }
+
+  .content{
+    grid-template-columns:repeat(2,1fr);
+    text-align:left;
+  }
+
+}
+
+/* ---------- DESKTOP ---------- */
+
+@media(min-width:1024px){
+
+  .content{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+}
+
+/* ---------- BOTTOM ---------- */
+
+.bottom{
+  text-align:center;
+  margin-top:50px;
+  font-size:14px;
+  color:#666;
+}

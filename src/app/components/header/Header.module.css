@@ -1,0 +1,207 @@
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+  height: 90px;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  z-index: 999;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+
+/* ================= LEFT ================= */
+.left {
+  justify-self: start;
+}
+
+
+.logo {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= CENTER ================= */
+.center {
+  justify-self: center;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 0;
+  transition: color 0.2s linear;
+}
+
+.menu li a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* GRADIENT UNDERLINE */
+.menu li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff9800, #ff5722, #ff9800);
+  transition: width 0.3s ease;
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+/* ================= RIGHT ================= */
+.right {
+  justify-self: end;
+}
+
+.joinBtn {
+  padding: 12px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff9800, #ff5722, #ff9800);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.joinBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 87, 34, 0.4);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s ease;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+  .header {
+    padding: 0 20px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  /* Hide center menu */
+  .menu {
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 260px;
+    height: calc(100vh - 90px);
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    gap: 25px;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.08);
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  /* Keep button center */
+ 
+
+    /* Center Book Trial Button */
+  .right {
+  justify-self: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+.header {
+    padding: 0 20px;
+    height: 70px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+ 
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;   /* push hamburger fully right */
+    margin-left: 50px;
+    min-width: 240px;
+  }
+
+  .joinBtn {
+    padding: 8px 14px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .hamburger {
+    width: 26px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-left: 60px;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background: #000;
+    border-radius: 2px;
+  }
+}
+
+

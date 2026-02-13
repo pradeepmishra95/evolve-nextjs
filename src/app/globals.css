@@ -1,26 +1,64 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* padding-top: 45px;    hero ke niche content aaye */
+
+}
+
+/* Floating WhatsApp icon */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* WhatsApp icon */
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Tooltip removed */
+.tooltip {
+  display: none;
+}
+
+/* Hover = button */
+.whatsapp-float:hover {
+  width: 140px;
+  /* reduced width */
+  padding: 0px 2px;
+  /* less padding */
+ background: linear-gradient(90deg, #ff9800, #ff5722, #ff9800);
+  border-radius: 24px;
+}
+
+
+/* Text inside button */
+.whatsapp-float::after {
+  content: "Contact Us";
+  color: #fff;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+/* Show text only on hover */
+.whatsapp-float:hover::after {
+  opacity: 1;
 }

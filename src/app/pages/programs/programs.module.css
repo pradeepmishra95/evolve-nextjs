@@ -1,0 +1,150 @@
+.programs{
+  padding:110px 8%;
+  background:#F5F5F7;   /* MATCHES ABOUT + FOOTER */
+  color:#111;
+}
+
+/* prevents stretching */
+.container{
+  max-width:1300px;
+  margin:auto;
+}
+
+/* HEADING */
+
+.heading{
+  text-align:center;
+  font-size:2.7rem;
+  margin-bottom:90px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+/* ---------- ROW ---------- */
+
+.programRow{
+  display:flex;
+  align-items:center;
+  gap:70px;
+  margin-bottom:110px;
+  width:100%;
+}
+
+.reverse{
+  flex-direction:row-reverse;
+}
+
+/* ---------- IMAGE ---------- */
+
+.imageWrapper{
+  flex:1;
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+
+  border-radius:20px;
+  overflow:hidden;
+
+  border:1px solid rgba(0,0,0,.06);
+}
+
+/* next/image */
+.image{
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.programRow:hover .image{
+  transform:scale(1.05);
+}
+
+/* ---------- TEXT ---------- */
+
+.text{
+  flex:1;
+}
+
+.text h3{
+  font-size:2rem;
+  margin-bottom:18px;
+
+  /* gold accent stays */
+  color:#ff7a00;
+}
+
+.text p{
+  font-size:1.08rem;
+  line-height:1.8;
+  color:#444;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+  margin-top:22px;
+  padding:12px 26px;
+
+  background:linear-gradient(135deg,#ff9800,#ff5722);
+  color:#fff;
+
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(255,87,34,.35);
+}
+
+/* ---------- TABLET ---------- */
+
+@media(max-width:1024px){
+
+  .programRow{
+    gap:40px;
+    margin-bottom:80px;
+  }
+
+  .heading{
+    font-size:2.4rem;
+  }
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+  .programs{
+    padding:80px 6%;
+  }
+
+  .programRow,
+  .reverse{
+    flex-direction:column;
+    gap:26px;
+    margin-bottom:70px;
+  }
+
+  .heading{
+    font-size:2.1rem;
+    margin-bottom:60px;
+  }
+
+  .text h3{
+    font-size:1.6rem;
+  }
+
+  .text p{
+    font-size:1rem;
+  }
+
+  .imageWrapper{
+    aspect-ratio:16/10;
+  }
+
+}

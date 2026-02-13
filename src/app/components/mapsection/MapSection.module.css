@@ -1,0 +1,13 @@
+.mapSection {
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.map {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+}
+

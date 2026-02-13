@@ -1,0 +1,162 @@
+.reelsSection{
+  padding:40px 16px;
+  background:#F5F5F7;
+}
+
+/* TITLE */
+
+.title{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+/* WRAPPER */
+
+.wrapper{
+  position:relative;
+}
+
+/* SCROLL CONTAINER */
+
+.reelsContainer{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+
+  scroll-behavior:smooth;
+  scroll-snap-type:x proximity;
+
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+
+  /* prevents reels from sticking to edge */
+  padding-inline:16px;
+}
+
+.reelsContainer::-webkit-scrollbar{
+  display:none;
+}
+
+/* CARD */
+
+.reelCard{
+  flex-shrink:0;
+  min-width:85%;
+  height:480px;
+
+  border-radius:18px;
+  overflow:hidden;
+
+  background:#fff;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+  scroll-snap-align:center;
+  scroll-snap-stop:always;
+
+  transition:.35s;
+}
+
+/* subtle desktop hover feel */
+.reelCard:hover{
+  transform:scale(0.98);
+}
+
+/* VIDEO */
+
+.video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:relative;
+  z-index:1;
+}
+
+/* ================= DESKTOP ARROWS ================= */
+
+.arrowLeft,
+.arrowRight{
+
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  width:44px;
+  height:44px;
+
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+
+  font-size:24px;
+  color:#fff;
+
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:30;
+
+  transition:.25s;
+}
+
+.arrowLeft{ left:6px; }
+.arrowRight{ right:6px; }
+
+.arrowLeft:hover,
+.arrowRight:hover{
+  background:rgba(0,0,0,.75);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .reelCard{
+    min-width:88%;
+    height:440px;
+  }
+
+  /* Hide arrows on mobile */
+  .arrowLeft,
+  .arrowRight{
+    display:none;
+  }
+
+}
+
+/* ================= TABLET ================= */
+
+@media(min-width:768px){
+
+  .title{
+    font-size:24px;
+  }
+
+  .reelCard{
+    min-width:320px;
+    height:520px;
+
+    /* desktop feels better starting from left */
+    scroll-snap-align:start;
+  }
+
+}
+
+/* ================= DESKTOP ================= */
+
+@media(min-width:1024px){
+
+  .title{
+    font-size:26px;
+  }
+
+  .reelCard{
+    height:560px;
+  }
+
+}
+
