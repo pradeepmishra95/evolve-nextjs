@@ -3,9 +3,9 @@ import { useRef, useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 
 const videos = [
-  '/videos/Video1.mp4',
-  '/videos/Video2.mp4',
-  '/videos/Video3.mp4',
+  'https://res.cloudinary.com/dd9yqqsa4/video/upload/v1770987568/Video1_iin2wf.mp4',
+  'https://res.cloudinary.com/dd9yqqsa4/video/upload/v1770987766/Video2_bwcrtf.mp4',
+  'https://res.cloudinary.com/dd9yqqsa4/video/upload/v1770987785/Video3_fnobe4.mp4',
 ];
 
 export default function Hero() {
