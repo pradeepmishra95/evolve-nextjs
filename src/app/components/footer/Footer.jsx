@@ -90,8 +90,8 @@ export default function Footer() {
             <li><Link href="/pages/timings">Timings</Link></li>
             <li><Link href="/pages/coaches">Coaches</Link></li>
             <li><Link href="/pages/blog">Blog</Link></li>
-            <li><Link href="/pages/about">About</Link></li>
-            <li><Link href="/pages/contact">Contact</Link></li>
+            <li><Link href="/pages/aboutus">About</Link></li>
+            <li><Link href="/pages/contactus">Contact</Link></li>
           </ul>
         </div>
 

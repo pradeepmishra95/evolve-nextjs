@@ -148,6 +148,15 @@
   transform: translateX(-50%);
 }
 
+/* ACTIVE MENU */
+.activeLink::after {
+  width: 100%;
+}
+
+.activeLink a {
+  color: #ff5722;
+  font-weight: 600;
+}
 
 
   .hamburger {

@@ -124,7 +124,7 @@ export default function Timings() {
         {/* Saturday */}
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>
-            Saturday – Fun & Conditioning
+            Saturday – Recovery & Fun Activities
           </h3>
 
           <ul className={styles.list}>

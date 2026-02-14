@@ -2,13 +2,24 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+
+  const menus = [
+    { name: "HOME", path: "/" },
+    { name: "PROGRAMS", path: "/pages/programs" },
+    { name: "TIMINGS", path: "/pages/timings" },
+    { name: "COACHES", path: "/pages/coaches" },
+    { name: "BLOG", path: "/pages/blog" },
+    { name: "ABOUT US", path: "/pages/aboutus" },
+    { name: "CONTACT US", path: "/pages/contactus" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +49,11 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  const isActive = (path) => {
+    if (path === "/") return pathname === "/";
+    return pathname.startsWith(path);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.left}>
@@ -49,27 +65,25 @@ export default function Header() {
         />
       </div>
 
-     <div className={styles.center}>
-  <ul
-    className={`${styles.menu} ${menuOpen ? styles.active : ''}`}
-  >
-    <li onClick={closeMenu}><Link href="/">HOME</Link></li>
-    <li onClick={closeMenu}><Link href="/pages/programs">PROGRAMS</Link></li>
-    <li onClick={closeMenu}><Link href="/pages/timings">TIMINGS</Link></li>
-    <li onClick={closeMenu}><Link href="/pages/coaches">COACHES</Link></li>
-    <li onClick={closeMenu}><Link href="/pages/blog">BLOG</Link></li>
-    <li onClick={closeMenu}><Link href="/pages/aboutus">ABOUT US</Link></li>
-    <li onClick={closeMenu}><Link href="/pages/contactus">CONTACT US</Link></li>
-  </ul>
-</div>
-
+      <div className={styles.center}>
+        <ul className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
+          {menus.map((item) => (
+            <li
+              key={item.path}
+              className={isActive(item.path) ? styles.activeLink : ""}
+              onClick={closeMenu}
+            >
+              <Link href={item.path}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className={styles.right}>
         <button className={styles.joinBtn} onClick={handleWhatsAppClick}>
           Book A Free Trial
         </button>
 
-        {/* Hamburger */}
         <div className={styles.hamburger} onClick={toggleMenu}>
           <span></span>
           <span></span>
