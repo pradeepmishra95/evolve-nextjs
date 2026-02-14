@@ -30,7 +30,7 @@ export default function Footer() {
 
         <div className={styles.brand}>
           <Image
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
             alt="Evolve MMA & Calisthenics"
             width={120}
             height={120}

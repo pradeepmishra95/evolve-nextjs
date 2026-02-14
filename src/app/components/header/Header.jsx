@@ -58,7 +58,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.left}>
         <img
-          src="/images/logo.png"
+          src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
           alt="Logo"
           className={styles.logo}
           onClick={handleLogoClick}

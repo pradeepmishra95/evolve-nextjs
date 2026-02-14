@@ -5,13 +5,13 @@ export default function ContactPage() {
   return (
     <section className={styles.contactSection}>
       
-      {/* Top Image */}
+      {/* Top Image
       <div className={styles.imageWrapper}>
         <img
           src="/images/contactus.jpg"
           alt="Contact Evolve MMA"
         />
-      </div>
+      </div> */}
 
       <h1>Contact Us</h1>
 

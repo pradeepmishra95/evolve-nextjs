@@ -11,7 +11,7 @@ export default function About() {
 
         <div className={styles.logoWrapper}>
           <Image
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
             alt="Evolve MMA & Calisthenics Logo"
             width={140}
             height={140}
