@@ -1,0 +1,140 @@
+.wrapper{
+  padding:110px 8%;
+  background:#F5F5F7;
+  color:#111;
+}
+
+.container{
+  max-width:1300px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  font-size:2.7rem;
+  margin-bottom:70px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.section{
+  margin-bottom:70px;
+}
+
+.sectionTitle{
+  font-size:1.6rem;
+  margin-bottom:20px;
+  color:#ff7a00;
+  font-weight:700;
+}
+
+/* NEW */
+
+.batchTitle{
+  margin-top:18px;
+  font-size:1.1rem;
+  font-weight:600;
+}
+
+/* LIST */
+
+.list{
+  background:#ffffff;
+  padding:24px;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+  border-left:4px solid #ff7a00;
+}
+
+.list li{
+  margin-bottom:12px;
+  font-size:1rem;
+  color:#444;
+}
+
+/* TILES */
+
+.tilesWrapper{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:18px;
+  margin-top:18px;
+}
+
+.tile{
+  background:#fff;
+  border-radius:16px;
+  padding:20px;
+  text-align:center;
+  border:1px solid #eee;
+  transition:0.25s;
+}
+
+.tile:hover{
+  transform:translateY(-5px);
+}
+
+/* ✅ LIGHT PREMIUM TIME TILE (Different from button) */
+
+.timeTile{
+   background:#F5F5F7;         /* soft peach */
+   color:#111;               /* theme orange text */
+  padding:10px 0;
+  border-radius:10px;
+  font-weight:700;
+  margin-bottom:12px;
+  /* border:1px solid #ffe0cc; */
+}
+
+/* Enroll Button */
+
+.enrollBtn{
+  display:block;
+  width:100%;
+  padding:9px 0;
+  border-radius:8px;
+  background: linear-gradient(90deg, #ff9800, #ff5722, #ff9800);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  transition:0.25s;
+}
+
+.enrollBtn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(255,122,0,.35);
+}
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+  .wrapper{
+    padding:90px 6%;
+  }
+
+  .title{
+    font-size:2.4rem;
+  }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .wrapper{
+    padding:80px 6%;
+  }
+
+  .title{
+    font-size:2rem;
+    margin-bottom:50px;
+  }
+
+  .sectionTitle{
+    font-size:1.3rem;
+  }
+
+}

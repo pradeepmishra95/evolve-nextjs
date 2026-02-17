@@ -1,13 +1,18 @@
 import './globals.css';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
+
+import Footer from '@/components/footer/Footer';
+import Header from '@/components/header/Header';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header/>
+
+        <Header />
+
         {children}
+
+        {/* WhatsApp Floating Button */}
         <a
           href="https://wa.me/918850957882"
           target="_blank"
@@ -16,12 +21,12 @@ export default function RootLayout({ children }) {
         >
           <span className="tooltip">Contact Us</span>
           <img src="/icons/whatsapp.png" alt="WhatsApp" />
-          
         </a>
-        <Footer/>
+
+        <Footer />
+
       </body>
     </html>
   );
 }
-
 

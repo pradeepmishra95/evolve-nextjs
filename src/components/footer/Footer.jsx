@@ -38,8 +38,7 @@ export default function Footer() {
           />
 
           <p className={styles.tagline}>
-            Train strong. Move better. Live healthier.
-          </p>
+            Forge Strength. Unlock Movement. Own Your Health.          </p>
         </div>
 
         <div className={styles.socials}>
@@ -47,7 +46,7 @@ export default function Footer() {
           <a href="tel:+918850957882"><FaPhoneAlt /></a>
           <a href="mailto:evolvemmaandcalisthenics@gmail.com"><FaEnvelope /></a>
           <a href="https://www.instagram.com/evolve_mmacalisthenics" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+          <a href="https://www.facebook.com/profile.php?id=61587043175017" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
           <a href="https://youtube.com/@evlovemmacalisthenics" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
         </div>
 
@@ -57,7 +56,7 @@ export default function Footer() {
 
       {/* GRID */}
       <div className={styles.content}>
-{/* 
+        {/* 
         <div>
           <h4>About</h4>
           <p>
@@ -76,8 +75,8 @@ export default function Footer() {
         <div>
           <h4>Address</h4>
           <p>
-            New Link Rd, Near Lower Malad Metro Station,<br/>
-            Sunder Nagar, Malad West,<br/>
+            New Link Rd, Near Lower Malad Metro Station,<br />
+            Sunder Nagar, Malad West,<br />
             Mumbai – 400064
           </p>
         </div>
@@ -86,12 +85,12 @@ export default function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/pages/programs">Programs</Link></li>
-            <li><Link href="/pages/timings">Timings</Link></li>
-            <li><Link href="/pages/coaches">Coaches</Link></li>
-            <li><Link href="/pages/blog">Blog</Link></li>
-            <li><Link href="/pages/aboutus">About</Link></li>
-            <li><Link href="/pages/contactus">Contact</Link></li>
+            <li><Link href="/programs">Programs</Link></li>
+            <li><Link href="/timings">Timings</Link></li>
+            <li><Link href="/coaches">Coaches</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/aboutus">About</Link></li>
+            <li><Link href="/contactus">Contact</Link></li>
           </ul>
         </div>
 

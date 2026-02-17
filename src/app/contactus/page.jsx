@@ -1,17 +1,17 @@
-import MapSection from "@/app/components/mapsection/MapSection";
+import MapSection from "@/components/mapsection/MapSection";
 import styles from "./ContactPage.module.css";
 
 export default function ContactPage() {
   return (
     <section className={styles.contactSection}>
       
-      {/* Top Image
+     {/* Top Image
       <div className={styles.imageWrapper}>
         <img
           src="/images/contactus.jpg"
           alt="Contact Evolve MMA"
         />
-      </div> */}
+      </div>` */}
 
       <h1>Contact Us</h1>
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
 
       <div className={styles.infoBlock}>
         <h3>Working Hours</h3>
-        <p>Monday – Sunday: 6:00 AM – 10:00 PM</p>
+        <p>Monday – Saturday: 6:00 AM – 10:00 PM</p>
       </div>
 
       <MapSection />

@@ -1,10 +1,10 @@
-import Header from "@/app/components/header/Header";
+
 import styles from "./blog.module.css"; // optional if you style it
 
 export default function Blog() {
   return (
     <section className={styles.wrapper}>
-      <Header />
+    
 
       <div className={styles.container}>
         <h1>Fitness Knowledge Hub — Coming Soon</h1>

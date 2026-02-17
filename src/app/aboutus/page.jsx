@@ -1,4 +1,5 @@
-import About from "@/app/components/about/About";
+import About from "@/components/about/About";
+
 
 export default function AboutUs() {
   return (

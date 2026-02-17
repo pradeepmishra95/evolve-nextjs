@@ -9,6 +9,7 @@ export default function InstaReels() {
   const videoRefs = useRef([]);
   const containerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  // const [slowNetwork, setSlowNetwork] = useState(false);
 
 
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function InstaReels() {
     async function fetchReels() {
       const response = await fetch('/api/instagram');
       const data = await response.json();
+      console.log("REELS DATA 👉", data); // 👈 Yaha
 
       if (Array.isArray(data)) {
         setReels(data);
@@ -26,6 +28,21 @@ export default function InstaReels() {
 
     fetchReels();
   }, []);
+
+
+  //   useEffect(() => {
+
+  //  const connection = navigator.connection;
+
+  //  if (connection) {
+  //    setSlowNetwork(
+  //      connection.saveData ||
+  //      connection.effectiveType === "2g" ||
+  //      connection.effectiveType === "3g"
+  //    );
+  //  }
+
+  // }, []);
 
 
 
@@ -39,7 +56,7 @@ export default function InstaReels() {
 
       if (i === index) {
         v.muted = false;
-        v.play().catch(()=>{});
+        v.play().catch(() => { });
       } else {
         v.pause();
         v.currentTime = 0;
@@ -76,7 +93,7 @@ export default function InstaReels() {
           if (entry.isIntersecting) {
 
             video.muted = false; // SOUND ON
-            video.play().catch(()=>{});
+            video.play().catch(() => { });
 
           } else {
 
@@ -89,7 +106,7 @@ export default function InstaReels() {
 
       },
       {
-        threshold:0.75
+        threshold: 0.75
       }
     );
 
@@ -105,15 +122,15 @@ export default function InstaReels() {
 
   const scrollLeft = () => {
     containerRef.current.scrollBy({
-      left:-350,
-      behavior:'smooth'
+      left: -350,
+      behavior: 'smooth'
     });
   };
 
   const scrollRight = () => {
     containerRef.current.scrollBy({
-      left:350,
-      behavior:'smooth'
+      left: 350,
+      behavior: 'smooth'
     });
   };
 
@@ -125,7 +142,7 @@ export default function InstaReels() {
   return (
     <section className={styles.reelsSection}>
 
-      <h2 className={styles.title}>Instagram Reels</h2>
+      <h2 className={styles.title}>Training Highlights</h2>
 
 
       <div className={styles.wrapper}>
@@ -158,18 +175,21 @@ export default function InstaReels() {
             <div key={video.id || index} className={styles.reelCard}>
 
               <video
-                ref={(el)=> videoRefs.current[index] = el}
-                src={video.media_url}
-                poster={video.thumbnail_url}
+                ref={(el) => videoRefs.current[index] = el}
+                poster={video.thumbnail}
                 playsInline
                 loop
-                muted={!isMobile} 
+                muted={!isMobile}
                 controls
+                preload="none"
                 className={styles.video}
-
                 onMouseEnter={() => !isMobile && playVideo(index)}
                 onMouseLeave={() => !isMobile && stopVideo(index)}
-              />
+              >
+                <source src={video.media_url} type="video/mp4" />
+              </video>
+
+
 
             </div>
 
