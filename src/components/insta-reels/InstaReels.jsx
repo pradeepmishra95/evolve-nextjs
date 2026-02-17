@@ -174,14 +174,17 @@ export default function InstaReels() {
 
             <div key={video.id || index} className={styles.reelCard}>
 
-              <video
+             <video
                 ref={(el) => videoRefs.current[index] = el}
                 poster={video.thumbnail}
                 playsInline
                 loop
                 muted={!isMobile}
-                controls
                 preload="none"
+                controls
+                controlsList="nodownload noplaybackrate noremoteplayback "
+                disablePictureInPicture
+                onContextMenu={(e) => e.preventDefault()}
                 className={styles.video}
                 onMouseEnter={() => !isMobile && playVideo(index)}
                 onMouseLeave={() => !isMobile && stopVideo(index)}
