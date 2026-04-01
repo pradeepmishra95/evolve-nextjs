@@ -20,6 +20,25 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Google Reviews Setup
+
+The testimonials section can pull live Google reviews through the Places API.
+
+Add these variables to `.env.local`:
+
+```bash
+GOOGLE_PLACES_API_KEY=your_google_maps_platform_key
+GOOGLE_PLACE_ID=your_google_place_id
+GOOGLE_PLACES_LANGUAGE_CODE=en
+GOOGLE_PLACES_REGION_CODE=IN
+```
+
+Notes:
+
+- If the Google credentials are missing, the site falls back to the local testimonial cards.
+- The current implementation shows up to 4 Google reviews on the page.
+- You still need a valid Google Maps Platform project with billing enabled for Places API requests.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

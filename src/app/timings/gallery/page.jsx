@@ -1,19 +1,50 @@
-// pages/gallery.jsx
-// OR app/gallery/page.jsx
-
 export default function Gallery() {
   return (
-    <section style={{ maxWidth: 900, margin: "40px auto", padding: 16 }}>
-      <h1>Gallery</h1>
-
-      <p>
-        Yahan hamare work, services aur products ka overview diya gaya hai.
-        Gallery ka purpose aapko hamari quality, process aur experience ka idea
-        dena hai.
+    <section
+      style={{
+        maxWidth: 960,
+        margin: '0 auto',
+        padding: '88px 24px 96px',
+        color: '#111418',
+        background: '#f4f1ea',
+        minHeight: 'calc(100svh - 88px)',
+      }}
+    >
+      <p
+        style={{
+          margin: 0,
+          color: '#c65905',
+          fontSize: '0.84rem',
+          fontWeight: 800,
+          letterSpacing: '0.16em',
+          textTransform: 'uppercase',
+        }}
+      >
+        Gallery
       </p>
 
-      <p>
-        Jaldi hi yahan real photos aur updates add kiye jayenge.
+      <h1
+        style={{
+          margin: '12px 0 0',
+          maxWidth: '14ch',
+          fontSize: 'clamp(2.1rem, 4vw, 3.4rem)',
+          lineHeight: 1.02,
+        }}
+      >
+        Visual updates from the gym are coming here next.
+      </h1>
+
+      <p
+        style={{
+          margin: '18px 0 0',
+          maxWidth: '48ch',
+          color: '#596170',
+          lineHeight: 1.8,
+        }}
+      >
+        This page will soon host real photos, training moments, and community
+        updates from the floor. For now, the latest visuals are available on
+        Instagram and through direct trial visits.
       </p>
     </section>
   );

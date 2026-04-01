@@ -1,72 +1,71 @@
-'use client';
-
 import Image from 'next/image';
+import Link from 'next/link';
+
+import Reveal from '@/components/reveal/Reveal';
+import { TRIAL_KIOSK_URL } from '@/lib/links';
+
 import styles from './About.module.css';
+
+const pillars = [
+  'Programs designed for real progression, not random daily workouts.',
+  'Technique, mobility, and body control built alongside strength and conditioning.',
+  'An environment that works for beginners, athletes, and working professionals.',
+];
 
 export default function About() {
   return (
     <section className={styles.about}>
+      <div className={styles.shell}>
+        <Reveal className={styles.copy} distance={26}>
+          <p className={styles.eyebrow}>About Evolve</p>
+          <h2>Built for people who want more than generic fitness.</h2>
 
-      <div className={styles.container}>
+          <p className={styles.lead}>
+            Evolve MMA &amp; Calisthenics is a performance-driven training space
+            where strength, mobility, discipline, and athletic movement are developed
+            together.
+          </p>
 
-        <div className={styles.logoWrapper}>
-          <Image
-            src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-            alt="Evolve MMA & Calisthenics Logo"
-            width={140}
-            height={140}
-            priority
-          />
-        </div>
+          <p>
+            The approach is simple: coach-led sessions, clear progressions, and
+            training that improves how you move, perform, and carry yourself
+            outside the gym too.
+          </p>
 
-        <h2 className={styles.heading}>
-          About Evolve MMA & Calisthenics
-        </h2>
+          <div className={styles.actions}>
+            <Link href="/aboutus" className={styles.secondaryLink}>
+              Learn More About The Gym
+            </Link>
 
-        <p className={styles.lead}>
-          <span className={styles.highlight}>
-            Evolve MMA & Calisthenics
-          </span>{' '}
-          is a performance-driven training facility built for individuals who
-          pursue <span className={styles.strong}>real strength</span>,{' '}
-          <span className={styles.strong}>mobility</span>, and{' '}
-          <span className={styles.strong}>discipline</span>.
-        </p>
+            <a
+              href={TRIAL_KIOSK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.primaryLink}
+            >
+              Book A Trial
+            </a>
+          </div>
+        </Reveal>
 
-        <p>
-          We focus on training the body to{' '}
-          <span className={styles.strong}>move naturally</span>, develop{' '}
-          <span className={styles.strong}>usable strength</span>, and achieve{' '}
-          <span className={styles.strong}>complete physical control</span>
-          through calisthenics, mixed martial arts, and functional conditioning.
-        </p>
+        <Reveal className={styles.panel} delay={120} distance={24}>
+          <div className={styles.logoWrap}>
+            <Image
+              src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
+              alt="Evolve MMA & Calisthenics logo"
+              width={96}
+              height={96}
+            />
+          </div>
 
-        <p>
-          Our structured programs support{' '}
-          <span className={styles.strong}>beginners</span>,{' '}
-          <span className={styles.strong}>serious athletes</span>, and{' '}
-          <span className={styles.strong}>working professionals</span>.
-          Every session follows proven methodologies — never random workouts.
-        </p>
+          <h3>What makes the training experience different</h3>
 
-        <p>
-          Training at Evolve cultivates{' '}
-          <span className={styles.strong}>confidence</span>,{' '}
-          <span className={styles.strong}>mental resilience</span>, and long-term{' '}
-          <span className={styles.strong}>consistency</span>.  
-          Fitness here is not a temporary phase — it becomes a{' '}
-          <span className={styles.highlight}>lifestyle.</span>
-        </p>
-
-        <a
-          href="https://wa.me/918850957882"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.joinBtn}
-        >
-          Book a Trial
-        </a>
-
+          <ul className={styles.pillarList}>
+            {pillars.map((pillar) => (
+              <li key={pillar}>{pillar}</li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

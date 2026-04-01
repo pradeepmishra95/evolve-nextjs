@@ -1,64 +1,152 @@
+:root {
+  --page-bg: #090d14;
+  --surface-dark: #0f1622;
+  --surface-dark-soft: #151f2d;
+  --surface-light: #f4f1ea;
+  --surface-card: #ffffff;
+  --surface-card-soft: rgba(255, 255, 255, 0.7);
+  --text-strong: #f7f4ef;
+  --text-dark: #111418;
+  --text-muted: #69707d;
+  --brand: #ff6a00;
+  --brand-bright: #ff9b27;
+  --brand-soft: rgba(255, 106, 0, 0.12);
+  --line-light: rgba(255, 255, 255, 0.12);
+  --line-dark: rgba(17, 20, 24, 0.08);
+  --shadow-lg: 0 24px 60px rgba(9, 13, 20, 0.18);
+  --shadow-md: 0 16px 35px rgba(9, 13, 20, 0.12);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  /* padding-top: 45px;    hero ke niche content aaye */
-
+  min-height: 100%;
 }
 
-/* Floating WhatsApp icon */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-strong);
+  font-family:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+main {
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(255, 106, 0, 0.28);
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(255, 155, 39, 0.5);
+  outline-offset: 3px;
+}
+
 .whatsapp-float {
   position: fixed;
-  right: 5px;
-  bottom: 24px;
-  z-index: 999;
-  width: 50px;
-  height: 50px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  padding: 0;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  background: transparent;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 35px rgba(9, 13, 20, 0.28);
   text-decoration: none;
-  transition: all 0.3s ease;
+  overflow: visible;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
-/* WhatsApp icon */
-.whatsapp-float img {
-  width: 40px;
-  height: 40px;
-}
-
-/* Tooltip removed */
-.tooltip {
-  display: none;
-}
-
-/* Hover = button */
 .whatsapp-float:hover {
-  width: 140px;
-  /* reduced width */
-  padding: 0px 2px;
-  /* less padding */
- background: linear-gradient(90deg, #ff9800, #ff5722, #ff9800);
-  border-radius: 24px;
+  transform: translateY(-2px);
+  box-shadow: 0 22px 40px rgba(9, 13, 20, 0.34);
 }
 
-
-/* Text inside button */
-.whatsapp-float::after {
-  content: "Contact Us";
+.tooltip {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 12px);
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(15, 22, 34, 0.96);
   color: #fff;
-  font-size: 1.1rem;
-  margin-left: 8px;
-  opacity: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   white-space: nowrap;
-  transition: opacity 0.2s ease;
+  box-shadow: 0 14px 30px rgba(9, 13, 20, 0.22);
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
-/* Show text only on hover */
-.whatsapp-float:hover::after {
+.whatsapp-float:hover .tooltip,
+.whatsapp-float:focus-visible .tooltip {
   opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

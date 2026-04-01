@@ -1,3 +1,5 @@
+import ProofStrip from '@/components/proof-strip/ProofStrip';
+import TrialJourney from '@/components/trial-journey/TrialJourney';
 import InstaReels from '@/components/insta-reels/InstaReels';
 import Testimonials from '@/components/testimonials/Testimonials';
 import Excercises from '@/components/excersises/Excersises';
@@ -9,12 +11,13 @@ export default function Home() {
   return (
     <main className="relative">
       <Hero />
-      <InstaReels />
-      <Excercises />
-      <Testimonials />
+      <ProofStrip />
       <About />
+      <Excercises />
+      <InstaReels />
+      <Testimonials />
+      <TrialJourney />
       <MapSection />
     </main>
   );
 }
-
