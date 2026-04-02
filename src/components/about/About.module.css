@@ -1,6 +1,6 @@
 .about {
   background: #f4f1ea;
-  padding: 92px 24px;
+  padding: var(--section-space) 24px;
   color: #111418;
 }
 
@@ -9,12 +9,12 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 420px);
-  gap: 26px;
+  gap: 32px;
   align-items: start;
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   color: #c65905;
   font-size: 0.84rem;
   font-weight: 800;
@@ -24,27 +24,58 @@
 
 .copy h2 {
   margin: 0;
-  max-width: 16ch;
-  font-size: clamp(2.1rem, 4vw, 3.5rem);
-  line-height: 1.02;
+  max-width: 15ch;
+  font-size: clamp(2.2rem, 4vw, 3.7rem);
+  line-height: 0.99;
 }
 
 .lead {
-  margin: 20px 0 12px;
+  margin: 24px 0 14px;
   max-width: 48ch;
-  font-size: 1.1rem;
-  line-height: 1.75;
+  font-size: 1.12rem;
+  line-height: 1.82;
   color: #272d36;
 }
 
 .copy p {
-  max-width: 54ch;
+  max-width: 56ch;
   color: #596170;
-  line-height: 1.8;
+  line-height: 1.82;
+}
+
+.statGrid {
+  margin-top: 32px;
+  max-width: 46rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.statCard {
+  padding: 22px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(17, 20, 24, 0.08);
+  box-shadow: 0 18px 34px rgba(9, 13, 20, 0.08);
+}
+
+.statCard strong {
+  display: block;
+  color: #111418;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.statCard span {
+  display: block;
+  margin-top: 8px;
+  color: #596170;
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .actions {
-  margin-top: 28px;
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -55,8 +86,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 22px;
+  min-height: 50px;
+  padding: 0 24px;
   border-radius: 999px;
   font-weight: 800;
   text-decoration: none;
@@ -74,23 +105,56 @@
   border: 1px solid rgba(17, 20, 24, 0.08);
 }
 
+.primaryLink,
+.secondaryLink {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.primaryLink:hover,
+.secondaryLink:hover {
+  transform: translateY(-2px);
+}
+
+.primaryLink:hover {
+  box-shadow: 0 22px 38px rgba(255, 106, 0, 0.24);
+}
+
+.secondaryLink:hover {
+  background: rgba(17, 20, 24, 0.07);
+}
+
 .panel {
-  padding: 28px;
-  border-radius: 28px;
+  position: relative;
+  padding: 32px;
+  border-radius: 30px;
   background:
     radial-gradient(circle at top right, rgba(255, 106, 0, 0.14), transparent 26%),
     #111923;
   color: #f7f4ef;
   box-shadow: 0 24px 60px rgba(9, 13, 20, 0.16);
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 176, 96, 0.5), transparent);
 }
 
 .logoWrap {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .panel h3 {
-  margin: 0 0 18px;
-  font-size: 1.45rem;
+  margin: 0 0 20px;
+  font-size: 1.52rem;
+  line-height: 1.08;
 }
 
 .pillarList {
@@ -98,16 +162,30 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 14px;
+  gap: 16px;
+  counter-reset: pillar;
 }
 
 .pillarList li {
-  padding: 16px;
-  border-radius: 20px;
+  position: relative;
+  padding: 18px 20px 18px 60px;
+  border-radius: 22px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  line-height: 1.7;
+  line-height: 1.78;
   color: rgba(247, 244, 239, 0.8);
+  counter-increment: pillar;
+}
+
+.pillarList li::before {
+  content: counter(pillar, decimal-leading-zero);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: #ffb060;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
 @media (max-width: 1024px) {
@@ -118,11 +196,20 @@
 
 @media (max-width: 767px) {
   .about {
-    padding: 76px 16px;
+    padding: var(--section-space-mobile) 16px;
+  }
+
+  .statGrid {
+    grid-template-columns: 1fr;
   }
 
   .actions {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .panel {
+    padding: 26px 24px;
+    border-radius: 24px;
   }
 }

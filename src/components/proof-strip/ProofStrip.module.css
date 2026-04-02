@@ -1,6 +1,6 @@
 .strip {
   padding: 0 24px 28px;
-  margin-top: -52px;
+  margin-top: -58px;
   position: relative;
   z-index: 2;
 }
@@ -10,32 +10,73 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-auto-rows: 1fr;
+  gap: 18px;
 }
 
 .card {
-  padding: 22px 22px 20px;
-  border-radius: 22px;
+  position: relative;
+  height: 100%;
+  padding: 24px 24px 22px;
+  border-radius: 24px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 243, 237, 0.94));
   border: 1px solid rgba(17, 20, 24, 0.08);
   box-shadow: 0 20px 40px rgba(9, 13, 20, 0.12);
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9b27, #ff6a00);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 46px rgba(9, 13, 20, 0.16);
+  border-color: rgba(198, 89, 5, 0.14);
+}
+
+.card:last-child {
+  background: linear-gradient(180deg, #ffe4cd, #fff7ee);
+  border-color: rgba(198, 89, 5, 0.16);
+}
+
+.card:last-child::before {
+  background: linear-gradient(90deg, #c65905, #ff9b27);
 }
 
 .title {
-  margin: 0 0 8px;
-  font-size: 0.92rem;
+  margin: 0 0 10px;
+  max-width: 11ch;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #111418;
 }
 
+.card:last-child .title {
+  color: #7d3700;
+}
+
 .detail {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.96rem;
+  line-height: 1.68;
   color: #5d6572;
+}
+
+.card:last-child .detail {
+  color: #5c3421;
 }
 
 @media (max-width: 1024px) {
@@ -47,11 +88,16 @@
 @media (max-width: 767px) {
   .strip {
     padding: 0 16px 18px;
-    margin-top: -24px;
+    margin-top: -28px;
   }
 
   .inner {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .card {
+    padding: 20px 18px 18px;
+    border-radius: 18px;
   }
 }

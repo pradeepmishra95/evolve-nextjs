@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import styles from './Header.module.css';
-import { TRIAL_KIOSK_URL } from '@/lib/links';
+import { GOOGLE_MAPS_URL, TRIAL_KIOSK_URL } from '@/lib/links';
 
 const menus = [
   { name: 'Home', path: '/' },
@@ -36,6 +36,14 @@ export default function Header() {
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
   const closeMenu = () => setMenuOpen(false);
+  const handleLogoClick = (event) => {
+    closeMenu();
+
+    if (pathname === '/') {
+      event.preventDefault();
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  };
 
   const isActive = (path) => {
     if (path === '/') {
@@ -52,26 +60,36 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link href="/" onClick={closeMenu} className={styles.brand}>
-          <Image
-            src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-            alt="Evolve MMA & Calisthenics"
-            width={64}
-            height={64}
-            className={styles.logo}
-            priority
-          />
+        <div className={styles.brand}>
+          <Link href="/" onClick={handleLogoClick} className={styles.logoLink}>
+            <Image
+              src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
+              alt="Evolve MMA & Calisthenics"
+              width={64}
+              height={64}
+              className={styles.logo}
+              priority
+            />
+          </Link>
 
           <div className={styles.brandCopy}>
-            <span className={styles.brandName}>Evolve MMA & Calisthenics</span>
+            <Link href="/" onClick={closeMenu} className={styles.brandNameLink}>
+              <span className={styles.brandName}>Evolve MMA & Calisthenics</span>
+            </Link>
 
-            {/* ✅ Only this line updated */}
-            <span className={styles.brandSub}>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.brandSub}
+              aria-label="Open Evolve MMA & Calisthenics in Google Maps"
+              title="Open in Google Maps"
+            >
               <LocationIcon />
               Malad West, Mumbai
-            </span>
+            </a>
           </div>
-        </Link>
+        </div>
 
         <nav
           id="primary-navigation"
@@ -101,7 +119,7 @@ export default function Header() {
             className={styles.cta}
             onClick={closeMenu}
           >
-            Book A Free Trial
+            Book A Trial
           </a>
         </nav>
 

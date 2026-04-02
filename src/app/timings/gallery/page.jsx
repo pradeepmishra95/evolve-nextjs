@@ -1,3 +1,13 @@
+export const metadata = {
+  title: 'Gallery Updates Coming Soon',
+  description:
+    'Gallery updates for Evolve MMA & Calisthenics are coming soon. Visit Instagram for the latest training visuals.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 export default function Gallery() {
   return (
     <section
@@ -31,7 +41,7 @@ export default function Gallery() {
           lineHeight: 1.02,
         }}
       >
-        Visual updates from the gym are coming here next.
+        Visual updates from the training center are coming here next.
       </h1>
 
       <p

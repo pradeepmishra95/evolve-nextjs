@@ -3,24 +3,29 @@ import Link from 'next/link';
 
 import MapSection from '@/components/mapsection/MapSection';
 import Reveal from '@/components/reveal/Reveal';
+import { WHATSAPP_PROGRAM_FIT_URL } from '@/lib/links';
 
 import styles from './aboutus.module.css';
 
 export const metadata = {
   title: 'About Evolve MMA & Calisthenics in Malad West',
   description:
-    'Learn about Evolve MMA & Calisthenics in Malad West, Mumbai, including the gym philosophy, coaching approach, featured coaches, and trial experience.',
+    'Learn about Evolve MMA & Calisthenics in Malad West, Mumbai, including the training philosophy, coaching approach, featured coaches, and trial experience.',
+  alternates: {
+    canonical: '/aboutus',
+  },
   keywords: [
     'about Evolve MMA',
-    'Malad West gym',
-    'MMA and calisthenics gym Mumbai',
-    'coach-led gym Malad West',
-    'fitness gym near Lower Malad Metro',
+    'Malad West training center',
+    'MMA and calisthenics training center Mumbai',
+    'coach-led training center Malad West',
+    'fitness training center near Lower Malad Metro',
   ],
   openGraph: {
     title: 'About Us | Evolve MMA & Calisthenics',
     description:
       'See how Evolve approaches coaching, progression, beginner guidance, and performance-focused training in Malad West.',
+    url: '/aboutus',
   },
 };
 
@@ -38,27 +43,27 @@ const facts = [
   {
     label: 'Format',
     title: 'Coach-led batches with clear progressions',
-    detail: 'The goal is not random exhaustion. It is better movement, strength, and skill.',
+    detail: 'Defined sessions, active corrections, and less guesswork than a generic open floor.',
   },
   {
     label: 'Programs',
     title: 'MMA, calisthenics, and parkour',
-    detail: 'Three focused flagship programs built around skill, control, and athletic movement.',
+    detail: 'Combat training, bodyweight strength, and movement practice each have their own lane.',
   },
 ];
 
 const trainingPillars = [
-  'Technique and movement quality are treated like real parts of progress, not optional extras.',
-  'Beginners, working professionals, and more experienced trainees all need structure that meets them at the right level.',
-  'Strength, conditioning, mobility, and body control are developed together so training feels more athletic and useful outside the gym too.',
-  'A free trial lowers the pressure and lets people understand the environment before they commit.',
+  'Technique, timing, and control matter just as much as effort and sweat.',
+  'Programs are taught as disciplines with their own logic, not blended into vague circuit training.',
+  'The aim is athletic carryover you can feel outside class too: posture, stamina, coordination, and composure.',
+  'A first visit should help you understand how the place runs before you decide whether to join.',
 ];
 
 const whoItFits = [
-  'People who are new to MMA, calisthenics, or structured training and want guidance from the start.',
-  'Working professionals who need real coaching and realistic batch timings, not guesswork.',
-  'Parents looking for a disciplined, movement-focused environment for their child.',
-  'Trainees who want performance-driven sessions instead of a generic gym-floor routine.',
+  'Beginners who want a clear starting point instead of being left to figure everything out alone.',
+  'People drawn to combat sports, bodyweight strength, or movement practice for the long term.',
+  'Students and working professionals who need usable timings, not ideal-world schedules.',
+  'Parents who want a disciplined environment with real instruction for their child.',
 ];
 
 const coaches = [
@@ -93,19 +98,19 @@ const coaches = [
 
 const visitSteps = [
   {
-    title: 'Tell us your goal and current level',
+    title: 'Tell us what interests you',
     detail:
-      'A quick trial form submission helps the team guide you toward the right batch from the beginning.',
+      'Share whether you are interested in MMA, calisthenics, parkour, kids batches, or simply starting structured training.',
   },
   {
-    title: 'Visit for a trial class',
+    title: 'Come in and feel the training rhythm',
     detail:
-      'See the space, meet the coaches, and understand how the sessions are structured before deciding.',
+      'A first session helps you see the floor, the teaching style, and the pace of the batch in real life.',
   },
   {
-    title: 'Choose the next step with context',
+    title: 'Decide based on fit, not guesswork',
     detail:
-      'After the trial, it is easier to pick a program and timing that actually fits your routine.',
+      'After that visit, it is easier to choose a program, timing, and routine you can actually maintain.',
   },
 ];
 
@@ -114,17 +119,16 @@ export default function AboutUs() {
     <section className={styles.page}>
       <div className={styles.shell}>
         <Reveal className={styles.hero} distance={24}>
-          <p className={styles.eyebrow}>About The Gym</p>
-          <h1>Performance-driven training with enough clarity for beginners to start well.</h1>
+          <p className={styles.eyebrow}>About Evolve</p>
+          <h1>A training center built around disciplines, not random workouts.</h1>
           <p className={styles.lead}>
-            Evolve MMA &amp; Calisthenics is built around coach-led progressions,
-            consistent batches, and an environment that helps people train for
-            strength, movement, confidence, and long-term improvement.
+            Evolve brings together MMA, calisthenics, parkour, and structured
+            coaching in one space for people who want to learn, not just sweat.
           </p>
 
           <div className={styles.actions}>
             <a
-              href="https://wa.me/918850957882?text=Hi!%20I%20want%20to%20understand%20which%20program%20fits%20me%20best."
+              href={WHATSAPP_PROGRAM_FIT_URL}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.primaryLink}
@@ -138,9 +142,9 @@ export default function AboutUs() {
           </div>
 
           <p className={styles.helper}>
-            If you are unsure where to start, you do not need to figure it out
-            alone first. Share your goal, schedule, and comfort level with
-            training, and the team can point you toward the most suitable batch.
+            If you are still figuring out where you fit, that is normal. Share
+            your goal and schedule, and the team can tell you which batch is
+            worth trying first.
           </p>
         </Reveal>
 
@@ -163,9 +167,9 @@ export default function AboutUs() {
           <Reveal className={styles.contentCard} distance={22}>
             <h2>What the training is built around</h2>
             <p>
-              The gym is designed for people who want more than a membership and
-              a random workout of the day. The aim is to make progress visible in
-              how you move, how strong you feel, and how confidently you train.
+              This is not meant to feel like a generic room full of machines and
+              disconnected exercises. The space is organised around coached
+              classes, repeatable drills, and skill-based improvement.
             </p>
             <ul className={styles.contentList}>
               {trainingPillars.map((item) => (
@@ -177,9 +181,8 @@ export default function AboutUs() {
           <Reveal className={styles.contentCard} delay={90} distance={22}>
             <h2>Who tends to do well here</h2>
             <p>
-              Evolve works best for people who want coaching, structure, and a
-              clearer sense of progression than a standard gym-floor experience
-              usually gives them.
+              The best fit is someone who wants a discipline to practice, not
+              just a place to burn calories for a day.
             </p>
             <ul className={styles.contentList}>
               {whoItFits.map((item) => (
@@ -193,11 +196,11 @@ export default function AboutUs() {
           <div className={styles.coachHeader}>
             <div>
               <p className={styles.eyebrow}>Featured Coaches</p>
-              <h2>Coaching quality shapes the whole training experience.</h2>
+              <h2>The people teaching here shape how fast you settle in.</h2>
               <p>
-                The gym experience improves quickly when the people teaching know
-                how to correct, progress, and adapt the session to the person in
-                front of them.
+                For most new members, the difference is felt in the first few
+                classes: how drills are explained, how corrections are given,
+                and whether the room feels attentive.
               </p>
             </div>
 
@@ -233,11 +236,10 @@ export default function AboutUs() {
         </Reveal>
 
         <Reveal className={styles.visitPanel} distance={22}>
-          <h2>What a first visit should feel like</h2>
+          <h2>Your first visit should make the place easier to understand.</h2>
           <p>
-            A first session works best when it removes pressure instead of adding
-            it. The goal is to help you understand the environment, meet the
-            coaches, and leave knowing what the next step should be.
+            A good first session shows you the pace of class, the coaching
+            style, and the kind of people already training there.
           </p>
 
           <div className={styles.visitGrid}>
@@ -258,8 +260,8 @@ export default function AboutUs() {
       </div>
 
       <MapSection
-        title="Visit the gym once and the decision gets clearer."
-        copy="See the space, ask questions, and understand which program and batch fit your goal before committing."
+        title="Visit once and the center becomes easier to read."
+        copy="One walk-through usually answers the practical questions about the setup, vibe, and class format much faster than text can."
       />
     </section>
   );

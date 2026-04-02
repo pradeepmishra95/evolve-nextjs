@@ -4,20 +4,20 @@ import styles from './ProofStrip.module.css';
 
 const proofPoints = [
   {
-    title: 'Coach-led batches',
-    detail: 'Technique feedback and structured progressions in every session.',
+    title: 'Skill-first sessions',
+    detail: 'Pads, grappling, holds, vaults, and drills are taught with clear class structure.',
   },
   {
-    title: 'Beginner-friendly entry',
-    detail: 'Clear onboarding for first-timers, professionals, and young athletes.',
+    title: '6 AM - 10 PM',
+    detail: 'Train before work, after work, or around school and college routines.',
   },
   {
-    title: 'All-round training',
-    detail: 'MMA, calisthenics, and parkour training under one roof.',
+    title: 'Near Lower Malad Metro',
+    detail: 'Easy to reach before work, after work, or as a planned weekend visit.',
   },
   {
-    title: 'Convenient location',
-    detail: 'Near Lower Malad Metro Station in Malad West, Mumbai.',
+    title: 'Trial before joining',
+    detail: 'Use one visit to feel the floor, pace, and environment for yourself.',
   },
 ];
 

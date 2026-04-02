@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import Reveal from '@/components/reveal/Reveal';
+import { WHATSAPP_PROGRAM_HELP_URL } from '@/lib/links';
 
 import styles from './blog.module.css';
 
@@ -8,17 +9,21 @@ export const metadata = {
   title: 'Training Tips & Beginner Guidance Blog',
   description:
     'Read practical training guidance from Evolve MMA & Calisthenics on starting well, staying consistent, choosing the right batch, and improving safely.',
+  alternates: {
+    canonical: '/blog',
+  },
   keywords: [
     'MMA training tips Mumbai',
     'calisthenics beginner tips',
     'fat loss training advice',
     'fitness blog Malad West',
-    'gym beginner guidance Mumbai',
+    'beginner training guidance Mumbai',
   ],
   openGraph: {
     title: 'Blog | Evolve MMA & Calisthenics',
     description:
       'Practical guidance on MMA, calisthenics, consistency, recovery, and starting your training journey well.',
+    url: '/blog',
   },
 };
 
@@ -91,7 +96,7 @@ export default function Blog() {
 
           <div className={styles.actions}>
             <a
-              href="https://wa.me/918850957882?text=Hi!%20I%20want%20help%20choosing%20the%20right%20program%20and%20batch."
+              href={WHATSAPP_PROGRAM_HELP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.primaryLink}

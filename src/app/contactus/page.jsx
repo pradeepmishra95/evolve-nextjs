@@ -1,24 +1,32 @@
 import MapSection from '@/components/mapsection/MapSection';
 import Reveal from '@/components/reveal/Reveal';
-import { TRIAL_KIOSK_URL } from '@/lib/links';
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_LINK,
+  TRIAL_KIOSK_URL,
+} from '@/lib/links';
 
 import styles from './ContactPage.module.css';
 
 export const metadata = {
   title: 'Contact Evolve MMA & Calisthenics in Malad West',
   description:
-    'Contact Evolve MMA & Calisthenics in Malad West, Mumbai for trial bookings, program guidance, timings, directions, and gym visit information.',
+    'Contact Evolve MMA & Calisthenics in Malad West, Mumbai for trial bookings, program guidance, timings, directions, and training center visit information.',
+  alternates: {
+    canonical: '/contactus',
+  },
   keywords: [
-    'contact MMA gym Malad West',
-    'gym near Lower Malad Metro',
-    'book free trial Malad West gym',
+    'contact MMA training center Malad West',
+    'training center near Lower Malad Metro',
+    'book trial Malad West training center',
     'Evolve MMA contact number',
-    'fitness gym contact Mumbai',
+    'fitness training center contact Mumbai',
   ],
   openGraph: {
     title: 'Contact Us | Evolve MMA & Calisthenics',
     description:
-      'Reach Evolve for free trial bookings, schedule questions, and directions to the Malad West gym.',
+      'Reach Evolve for trial bookings, schedule questions, and directions to the Malad West training center.',
+    url: '/contactus',
   },
 };
 
@@ -28,11 +36,11 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How can I book a free trial at Evolve MMA & Calisthenics?',
+      name: 'How can I book a trial at Evolve MMA & Calisthenics?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'You can book a free trial through the online booking form or by calling the gym directly. The team also helps you choose the right batch based on your goal and schedule.',
+          'You can book a trial through the online booking form or by calling the team directly. The team also helps you choose the right batch based on your goal and schedule.',
       },
     },
     {
@@ -41,16 +49,16 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'The gym is located in Malad West, Mumbai, near Lower Malad Metro Station on New Link Road.',
+          'The training center is located in Malad West, Mumbai, near Lower Malad Metro Station on New Link Road.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What are the gym contact details?',
+      name: 'What are the contact details for Evolve MMA & Calisthenics?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'You can contact the gym by phone at +91 8850957882 or by email at evolvemmaandcalisthenics@gmail.com.',
+          `You can contact the team by phone at ${CONTACT_PHONE_DISPLAY} or by email at evolvemmaandcalisthenics@gmail.com.`,
       },
     },
     {
@@ -67,24 +75,24 @@ const faqSchema = {
 
 const contactCards = [
   {
-    title: 'Call the gym',
-    value: '+91 8850957882',
-    helper: 'Quickest route for trial slots and immediate questions.',
+    title: 'Call the team',
+    value: CONTACT_PHONE_DISPLAY,
+    helper: 'Best for trial availability, program fit, and same-day questions.',
   },
   {
     title: 'Email',
     value: 'evolvemmaandcalisthenics@gmail.com',
-    helper: 'Best for business inquiries or detailed questions.',
+    helper: 'Useful for partnerships, media, or anything that needs detail.',
   },
   {
     title: 'Working hours',
     value: 'Monday - Saturday | 6:00 AM - 10:00 PM',
-    helper: 'Morning and evening batches run through the week.',
+    helper: 'Use this as the operating window for batches and visits.',
   },
   {
     title: 'Location',
     value: 'Near Lower Malad Metro, Malad West, Mumbai',
-    helper: 'Easy to reach before work, after work, or on weekends.',
+    helper: 'A convenient landmark if you are coming by metro or New Link Road.',
   },
 ];
 
@@ -100,11 +108,10 @@ export default function ContactPage() {
         <div className={styles.shell}>
           <Reveal className={styles.hero} distance={24}>
             <p className={styles.eyebrow}>Contact & Visit</p>
-            <h1>Talk to the team, plan a trial, and walk in with clarity.</h1>
+            <h1>Reach the team for timings, trial slots, or a quick program check.</h1>
             <p className={styles.lead}>
-              If you are deciding between programs, unsure about your level, or just
-              want to visit the gym first, reach out and we will help you choose the
-              right starting point.
+              This page is for practical questions: which batch fits your
+              schedule, where the center is, and how to plan your first visit.
             </p>
 
             <div className={styles.actions}>
@@ -117,15 +124,14 @@ export default function ContactPage() {
                 Book A Trial
               </a>
 
-              <a href="tel:+918850957882" className={styles.secondaryLink}>
-                Call The Gym
+              <a href={CONTACT_PHONE_LINK} className={styles.secondaryLink}>
+                Call The Team
               </a>
             </div>
 
             <p className={styles.helper}>
-              If you are unsure about your level, schedule, or which program to
-              begin with, just ask. The team can help you narrow down the right
-              first class before you visit.
+              If you already know what you want, book directly. If not, call
+              and get clarity in a few minutes.
             </p>
           </Reveal>
 
@@ -146,8 +152,8 @@ export default function ContactPage() {
         </div>
 
         <MapSection
-          title="Visit once before you decide."
-          copy="See the space, understand the batch structure, and get help choosing the right training path based on your goal."
+          title="See the space before you choose a batch."
+          copy="One visit usually answers the location, setup, and class-format questions much faster than messages do."
         />
       </section>
     </>

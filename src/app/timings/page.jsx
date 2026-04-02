@@ -4,20 +4,24 @@ import { TRIAL_KIOSK_URL } from '@/lib/links';
 import styles from './timings.module.css';
 
 export const metadata = {
-  title: 'Gym Timings & Batch Schedule in Malad West',
+  title: 'Training Center Timings & Batch Schedule in Malad West',
   description:
     'Check morning and evening batch timings for MMA, calisthenics, advanced calisthenics, and kids classes at Evolve MMA & Calisthenics in Malad West, Mumbai.',
+  alternates: {
+    canonical: '/timings',
+  },
   keywords: [
     'MMA timings Malad West',
     'calisthenics batch timings Mumbai',
-    'gym schedule Malad West',
+    'training schedule Malad West',
     'kids fitness timings Mumbai',
-    'free trial gym timings Malad West',
+    'trial training center timings Malad West',
   ],
   openGraph: {
     title: 'Timings | Evolve MMA & Calisthenics',
     description:
       'See morning and evening batch timings and schedule details for MMA, calisthenics, and kids training at Evolve.',
+    url: '/timings',
   },
 };
 
@@ -93,11 +97,11 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What are the gym timings at Evolve MMA & Calisthenics?',
+      name: 'What are the training center timings at Evolve MMA & Calisthenics?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'The gym operates Monday to Saturday from 6:00 AM to 10:00 PM, with morning and evening training batches.',
+          'The training center operates Monday to Saturday from 6:00 AM to 10:00 PM, with morning and evening training batches.',
       },
     },
     {
@@ -155,32 +159,31 @@ export default function Timings() {
         <div className={styles.container}>
           <Reveal className={styles.hero} distance={24}>
             <p className={styles.eyebrow}>Schedule & Availability</p>
-            <h1>Choose a batch that fits real life, not the other way around.</h1>
+            <h1>A weekly schedule built for consistency, not guesswork.</h1>
             <p className={styles.lead}>
-              Morning and evening options make it easier to train consistently. If
-              you are unsure where to start, book a trial and we will guide you to
-              the right batch.
+              Use the timetable to decide what actually fits your life. MMA and
+              calisthenics run across morning and evening windows, with
+              dedicated slots for advanced practice and kids batches.
             </p>
 
             <div className={styles.quickGrid}>
               <div className={styles.quickCard}>
-                <span>Free trial</span>
-                <strong>Find the right batch before committing</strong>
+                <span>Trial class</span>
+                <strong>See the batch before you commit</strong>
               </div>
               <div className={styles.quickCard}>
                 <span>Flexible slots</span>
-                <strong>Morning and evening options through the week</strong>
+                <strong>Choose a realistic morning or evening routine</strong>
               </div>
               <div className={styles.quickCard}>
-                <span>Coach-guided</span>
-                <strong>Choose your batch with real program context</strong>
+                <span>Different formats</span>
+                <strong>MMA, calisthenics, advanced practice, and kids timings</strong>
               </div>
             </div>
 
             <p className={styles.helper}>
-              Beginners are welcome here too. If you are unsure which slot fits
-              your level, book a trial and the team will guide you toward the
-              most suitable first session.
+              This page tells you when classes happen. If you want help picking
+              between programs, the trial visit is the easiest next step.
             </p>
           </Reveal>
 

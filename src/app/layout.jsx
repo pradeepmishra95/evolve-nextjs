@@ -4,23 +4,41 @@ import './globals.css';
 
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import { WHATSAPP_TRIAL_URL } from '@/lib/links';
+import PwaRegistrar from '@/components/pwa/PwaRegistrar';
+import { CONTACT_PHONE_DISPLAY, WHATSAPP_TRIAL_URL } from '@/lib/links';
+import { SITE_URL, SITE_URL_OBJECT } from '@/lib/site';
 
 export const metadata = {
+  applicationName: 'Evolve MMA & Calisthenics',
+  metadataBase: SITE_URL_OBJECT,
   title: {
     default: 'Evolve MMA & Calisthenics | MMA and Functional Training in Mumbai',
     template: '%s | Evolve MMA & Calisthenics',
   },
+  manifest: '/manifest.webmanifest',
   description:
     'Train MMA, calisthenics, and parkour with coach-led batches in Malad West, Mumbai.',
   keywords: [
-    'MMA gym Mumbai',
+    'MMA training center Mumbai',
     'calisthenics Mumbai',
     'parkour Mumbai',
-    'fitness gym Malad West',
-    'free trial gym Mumbai',
+    'fitness training center Malad West',
+    'trial training center Mumbai',
   ],
   openGraph: {
+    title: 'Evolve MMA & Calisthenics',
+    description:
+      'Coach-led MMA, calisthenics, and parkour training in Malad West, Mumbai.',
+    url: SITE_URL,
+    siteName: 'Evolve MMA & Calisthenics',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png',
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: 'Evolve MMA & Calisthenics',
     description:
       'Coach-led MMA, calisthenics, and parkour training in Malad West, Mumbai.',
@@ -28,6 +46,51 @@ export const metadata = {
       'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png',
     ],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      maxImagePreview: 'large',
+      maxSnippet: -1,
+      maxVideoPreview: -1,
+    },
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Evolve MMA',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: {
+    apple: [
+      {
+        url: '/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+    icon: [
+      {
+        url: '/icon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: '/icon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+  },
+};
+
+export const viewport = {
+  themeColor: '#090d14',
+  colorScheme: 'dark',
 };
 
 const organizationSchema = {
@@ -36,7 +99,7 @@ const organizationSchema = {
   name: 'Evolve MMA & Calisthenics',
   description:
     'Performance-driven training space offering coach-led MMA, calisthenics, and parkour programs in Malad West, Mumbai.',
-  telephone: '+91 88509 57882',
+  telephone: CONTACT_PHONE_DISPLAY,
   email: 'evolvemmaandcalisthenics@gmail.com',
   address: {
     '@type': 'PostalAddress',
@@ -57,6 +120,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <PwaRegistrar />
+
         <script
           type="application/ld+json"
           suppressHydrationWarning

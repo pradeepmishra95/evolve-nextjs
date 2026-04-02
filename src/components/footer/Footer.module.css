@@ -3,7 +3,7 @@
     radial-gradient(circle at top left, rgba(255, 106, 0, 0.15), transparent 22%),
     linear-gradient(180deg, #0d131d, #080d14);
   color: #f7f4ef;
-  padding: 0 24px 28px;
+  padding: 0 24px 32px;
 }
 
 .shell {
@@ -12,16 +12,16 @@
 }
 
 .ctaPanel {
-  padding: 30px;
-  border-radius: 32px;
-  transform: translateY(-38px);
+  padding: 34px;
+  border-radius: 34px;
+  transform: translateY(-42px);
   background: linear-gradient(135deg, rgba(255, 155, 39, 0.2), rgba(255, 106, 0, 0.14));
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 22px 50px rgba(9, 13, 20, 0.28);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 28px;
 }
 
 .eyebrow {
@@ -36,29 +36,37 @@
 .ctaPanel h2 {
   margin: 0;
   max-width: 20ch;
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  line-height: 1.05;
+  font-size: clamp(1.72rem, 3vw, 2.7rem);
+  line-height: 1.02;
 }
 
 .trialLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 24px;
+  min-height: 50px;
+  padding: 0 26px;
   border-radius: 999px;
   background: linear-gradient(135deg, #ff9b27, #ff6a00);
   color: #fff;
   font-weight: 800;
   text-decoration: none;
   white-space: nowrap;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.trialLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(255, 106, 0, 0.24);
 }
 
 .grid {
-  margin-top: -6px;
+  margin-top: 2px;
   display: grid;
   grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
-  gap: 26px;
+  gap: 30px;
 }
 
 .brandBlock {
@@ -74,13 +82,14 @@
 
 .brand h3 {
   margin: 0 0 6px;
-  font-size: 1.25rem;
+  font-size: 1.34rem;
 }
 
 .tagline {
   margin: 0;
   color: rgba(247, 244, 239, 0.72);
-  line-height: 1.6;
+  font-size: 0.98rem;
+  line-height: 1.62;
 }
 
 .description,
@@ -91,12 +100,13 @@
 }
 
 .description {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .grid h4 {
-  margin: 0 0 12px;
-  font-size: 1rem;
+  margin: 0 0 14px;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
   color: #fff;
 }
 
@@ -146,8 +156,8 @@
 }
 
 .bottom {
-  margin-top: 34px;
-  padding-top: 20px;
+  margin-top: 40px;
+  padding-top: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
@@ -173,11 +183,11 @@
 
 @media (max-width: 767px) {
   .footer {
-    padding: 0 16px 24px;
+    padding: 0 16px 26px;
   }
 
   .ctaPanel {
-    padding: 24px;
+    padding: 26px 24px;
     border-radius: 24px;
     transform: translateY(-24px);
   }

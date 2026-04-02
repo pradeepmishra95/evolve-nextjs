@@ -6,14 +6,14 @@ import styles from './Hero.module.css';
 
 const fallbackProofs = [
   {
-    label: 'Free trial',
-    value: 'Visit before you commit',
-    detail: 'Start with a guided first session.',
+    label: 'Trial class',
+    value: 'Visit before joining',
+    detail: 'See the pace before deciding.',
   },
   {
     label: 'Coach-led',
-    value: 'Feedback in every batch',
-    detail: 'Technique cues and structured progressions.',
+    value: 'Attention in every batch',
+    detail: 'Corrections, demos, and clear class flow.',
   },
   {
     label: 'Timings',

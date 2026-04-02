@@ -4,14 +4,14 @@ import { TRIAL_KIOSK_URL } from '@/lib/links';
 import styles from './MapSection.module.css';
 
 export default function MapSection({
-  title = 'Train near Lower Malad Metro without adding friction to your day.',
-  copy = 'Visit Evolve MMA & Calisthenics in Malad West for coach-led sessions, trial bookings, and program guidance.',
+  title = 'The space makes more sense once you see it in person.',
+  copy = 'Walk in, look at the floor, and get a better feel for the setup, class rhythm, and location than any page can give you.',
 }) {
   return (
     <section className={styles.mapSection}>
       <div className={styles.shell}>
         <Reveal className={styles.copy} distance={22}>
-          <p className={styles.eyebrow}>Visit The Gym</p>
+          <p className={styles.eyebrow}>Visit The Center</p>
           <h2>{title}</h2>
           <p>{copy}</p>
 
@@ -31,7 +31,7 @@ export default function MapSection({
               rel="noopener noreferrer"
               className={styles.primaryLink}
             >
-              Plan Your Visit
+              Book A Trial
             </a>
           </div>
         </Reveal>

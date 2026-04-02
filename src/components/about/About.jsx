@@ -7,9 +7,15 @@ import { TRIAL_KIOSK_URL } from '@/lib/links';
 import styles from './About.module.css';
 
 const pillars = [
-  'Programs designed for real progression, not random daily workouts.',
-  'Technique, mobility, and body control built alongside strength and conditioning.',
-  'An environment that works for beginners, athletes, and working professionals.',
+  'Sessions are built around technique, timing, coordination, and control.',
+  'Combat training, bodyweight strength, and movement practice live under one roof.',
+  'The weekly schedule works for students, professionals, and parents trying to stay regular.',
+];
+
+const aboutStats = [
+  { value: '3', label: 'focused training paths' },
+  { value: '6 AM - 10 PM', label: 'weekday-friendly training window' },
+  { value: '1 trial visit', label: 'before choosing your next step' },
 ];
 
 export default function About() {
@@ -17,24 +23,33 @@ export default function About() {
     <section className={styles.about}>
       <div className={styles.shell}>
         <Reveal className={styles.copy} distance={26}>
-          <p className={styles.eyebrow}>About Evolve</p>
-          <h2>Built for people who want more than generic fitness.</h2>
+          <p className={styles.eyebrow}>Why Evolve</p>
+          <h2>For people who want purposeful training, not random workouts.</h2>
 
           <p className={styles.lead}>
-            Evolve MMA &amp; Calisthenics is a performance-driven training space
-            where strength, mobility, discipline, and athletic movement are developed
-            together.
+            Evolve is for people who want to learn something while they train:
+            how to strike, move, climb, land, and build strength with better
+            body control over time.
           </p>
 
           <p>
-            The approach is simple: coach-led sessions, clear progressions, and
-            training that improves how you move, perform, and carry yourself
-            outside the gym too.
+            Instead of selling intensity alone, the space brings together MMA,
+            calisthenics, and parkour in a more disciplined format than a
+            generic open-floor setup usually offers.
           </p>
+
+          <div className={styles.statGrid}>
+            {aboutStats.map((item) => (
+              <div key={item.label} className={styles.statCard}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
 
           <div className={styles.actions}>
             <Link href="/aboutus" className={styles.secondaryLink}>
-              Learn More About The Gym
+              Learn More About The Center
             </Link>
 
             <a
@@ -58,7 +73,7 @@ export default function About() {
             />
           </div>
 
-          <h3>What makes the training experience different</h3>
+          <h3>What people tend to notice early</h3>
 
           <ul className={styles.pillarList}>
             {pillars.map((pillar) => (

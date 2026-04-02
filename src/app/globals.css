@@ -15,9 +15,22 @@
   --line-dark: rgba(17, 20, 24, 0.08);
   --shadow-lg: 0 24px 60px rgba(9, 13, 20, 0.18);
   --shadow-md: 0 16px 35px rgba(9, 13, 20, 0.12);
+  --shadow-xl: 0 30px 72px rgba(9, 13, 20, 0.22);
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
+  --section-space: 104px;
+  --section-space-mobile: 80px;
+  --font-body:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  --font-display:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 * {
@@ -38,24 +51,50 @@ html {
 body {
   background: var(--page-bg);
   color: var(--text-strong);
-  font-family:
-    'Segoe UI',
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   display: block;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0;
+  font-family: var(--font-display);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
 a {
   color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 img,
 video {
   max-width: 100%;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 ::selection {

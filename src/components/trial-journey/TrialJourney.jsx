@@ -5,26 +5,26 @@ import styles from './TrialJourney.module.css';
 
 const steps = [
   {
-    title: 'Tell us your goal',
+    title: 'Share what you want from training',
     detail:
-      'Share whether you want MMA skills, calisthenics strength, or movement-based parkour training.',
+      'Tell us whether you want fight skills, bodyweight strength, parkour movement, or a suitable kids batch.',
   },
   {
-    title: 'Join the right batch',
+    title: 'Get placed into a suitable session',
     detail:
-      'We guide you to a suitable session based on your level, schedule, and comfort with training.',
+      'We look at age, experience, schedule, and comfort level before suggesting the best batch to try.',
   },
   {
-    title: 'Train your first class',
+    title: 'Use the class as your reference point',
     detail:
-      'Meet the coaches, experience the environment, and leave with a clear path for your next step.',
+      'By the end of the visit, you should know how the class feels and whether the format suits you.',
   },
 ];
 
 const reassurancePoints = [
-  'No experience needed to book a first class.',
-  'We help you choose the right batch before you arrive.',
-  'You can visit once and decide after you have context.',
+  'You do not need prior training knowledge before booking.',
+  'You can ask about age groups, intensity, timings, and program fit.',
+  'The first visit is meant to clarify the experience, not rush a decision.',
 ];
 
 export default function TrialJourney() {
@@ -32,11 +32,11 @@ export default function TrialJourney() {
     <section className={styles.section}>
       <div className={styles.panel}>
         <Reveal className={styles.copy} distance={24}>
-          <p className={styles.eyebrow}>Free Trial Flow</p>
-          <h2>Make the first session feel easy, not intimidating.</h2>
+          <p className={styles.eyebrow}>First Visit Flow</p>
+          <h2>A first visit should remove doubt, not create pressure.</h2>
           <p className={styles.lead}>
-            The goal is simple: remove friction, match you to the right session,
-            and help you feel the coaching quality before you commit.
+            This step is about seeing the floor, feeling the class pace, and
+            understanding whether the format suits your goal before you commit.
           </p>
 
           <a
@@ -45,7 +45,7 @@ export default function TrialJourney() {
             rel="noopener noreferrer"
             className={styles.cta}
           >
-            Book Your Trial
+            Book A Trial
           </a>
 
           <ul className={styles.reassuranceList}>

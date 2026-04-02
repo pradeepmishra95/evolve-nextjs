@@ -8,17 +8,21 @@ export const metadata = {
   title: 'Meet the Coaches at Evolve MMA & Calisthenics',
   description:
     'See the coaches behind Evolve MMA & Calisthenics in Malad West, Mumbai, including expertise across MMA, calisthenics, strength, and mobility.',
+  alternates: {
+    canonical: '/coaches',
+  },
   keywords: [
     'MMA coach Malad West',
     'calisthenics coach Mumbai',
     'strength coach Malad West',
     'fitness coaches Evolve MMA',
-    'gym coaches near Lower Malad Metro',
+    'training center coaches near Lower Malad Metro',
   ],
   openGraph: {
     title: 'Coaches | Evolve MMA & Calisthenics',
     description:
       'Meet the coaching team guiding MMA, calisthenics, strength, and movement training at Evolve.',
+    url: '/coaches',
   },
 };
 
@@ -60,9 +64,9 @@ export default function Coaches() {
           <p className={styles.eyebrow}>Coaching Team</p>
           <h1>People stay consistent when the coaching quality is obvious.</h1>
           <p className={styles.lead}>
-            The gym experience is shaped by who is teaching, how they correct,
-            and whether they understand progression. That is where these coaches
-            make the difference.
+            The training experience is shaped by who is teaching, how they
+            correct, and whether they understand progression. That is where
+            these coaches make the difference.
           </p>
         </Reveal>
 

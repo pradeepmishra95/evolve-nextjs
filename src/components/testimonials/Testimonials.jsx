@@ -19,29 +19,29 @@ const fallbackTestimonials = [
   {
     signal: 'Needed a beginner-safe start',
     quote:
-      'I joined as a complete beginner and never felt out of place. The environment pushes you, but it does not intimidate you.',
+      'I started with zero combat background. The coaches explained the structure, corrected the basics, and made the first few classes feel manageable.',
     name: 'Anita',
     role: 'First-time trainee',
-    program: 'Fat Loss Training',
-    takeaway: 'Felt guided early instead of feeling lost in the room.',
+    program: 'MMA',
+    takeaway: 'Felt coached from the start instead of feeling lost in the room.',
   },
   {
-    signal: 'Wanted athletic structure',
+    signal: 'Wanted movement coaching',
     quote:
-      'The sessions feel athletic and purposeful. You leave feeling like you trained for performance, not just sweat.',
+      'The parkour sessions are not random tricks. There is real coaching on landings, control, and confidence, which makes the training feel much safer and more purposeful.',
     name: 'Amit',
     role: 'Weekend athlete',
-    program: 'Strength & Conditioning',
-    takeaway: 'Noticed that the sessions had more purpose than random intensity.',
+    program: 'Parkour',
+    takeaway: 'Noticed that the sessions were coached in detail, not just high-energy.',
   },
   {
     signal: 'Needed something positive for a child',
     quote:
-      'My child enjoys the discipline and movement drills, and I can see more confidence and focus outside the gym too.',
+      'My child enjoys the discipline and movement drills, and I can see more confidence and focus outside training too.',
     name: 'Pooja',
     role: 'Parent',
     program: 'Kids Batch',
-    takeaway: 'Saw the value outside the gym as well, not just during class.',
+    takeaway: 'Saw the value beyond the sessions as well, not just during class.',
   },
 ];
 
@@ -103,13 +103,13 @@ export default function Testimonials() {
           </p>
           <h2>
             {isGoogleSource
-              ? 'See what people mention publicly before they visit.'
-              : 'People stay when the coaching feels real in the details.'}
+              ? 'Public reviews give a first impression before the first visit.'
+              : 'The strongest signal is what people notice after a few classes.'}
           </h2>
           <p className={styles.lead}>
             {isGoogleSource
-              ? 'These reviews come from Google and help first-time visitors understand the coaching experience before they walk in.'
-              : 'The useful signal is not hype. It is whether people feel guided, get corrections, and understand how to keep progressing after the first few sessions.'}
+              ? 'These Google reviews help new visitors understand the place, people, and training atmosphere in public words, not brand copy.'
+              : 'The useful part of feedback is whether people mention clarity, attention, safety, and a reason to keep returning.'}
           </p>
         </Reveal>
 
@@ -237,7 +237,7 @@ export default function Testimonials() {
                 </div>
               ) : (
                 <>
-                  <p className={styles.takeawayLabel}>What stood out</p>
+                  <p className={styles.takeawayLabel}>Why it mattered</p>
                   <p className={styles.takeaway}>{item.takeaway}</p>
                 </>
               )}

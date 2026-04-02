@@ -7,14 +7,20 @@ import About from '@/components/about/About';
 import MapSection from '@/components/mapsection/MapSection';
 import Hero from '@/components/hero/Hero';
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
+
 export default function Home() {
   return (
     <main className="relative">
       <Hero />
+      <InstaReels />
       <ProofStrip />
       <About />
       <Excercises />
-      <InstaReels />
       <Testimonials />
       <TrialJourney />
       <MapSection />

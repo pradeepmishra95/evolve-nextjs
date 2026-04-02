@@ -10,7 +10,12 @@ import {
 } from 'react-icons/fa';
 
 import styles from './Footer.module.css';
-import { TRIAL_KIOSK_URL } from '@/lib/links';
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_PHONE_LINK,
+  TRIAL_KIOSK_URL,
+  WHATSAPP_TRIAL_URL,
+} from '@/lib/links';
 
 const links = [
   { label: 'Home', href: '/' },
@@ -28,7 +33,7 @@ export default function Footer() {
         <div className={styles.ctaPanel}>
           <div>
             <p className={styles.eyebrow}>Ready To Start?</p>
-            <h2>Come in for a trial and feel the training environment yourself.</h2>
+            <h2>Want to see whether the space feels right in person?</h2>
           </div>
 
           <a
@@ -37,7 +42,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className={styles.trialLink}
           >
-            Book A Free Trial
+            Book A Trial
           </a>
         </div>
 
@@ -55,21 +60,21 @@ export default function Footer() {
               <div>
                 <h3>Evolve MMA & Calisthenics</h3>
                 <p className={styles.tagline}>
-                  Forge strength. Unlock movement. Own your health.
+                  Skill. Strength. Movement.
                 </p>
               </div>
             </div>
 
             <p className={styles.description}>
-              A performance-focused training space for MMA, calisthenics,
-              mobility, conditioning, and sustainable physical progress.
+              A Malad West training center for MMA, calisthenics, parkour,
+              conditioning, and disciplined athletic development.
             </p>
 
             <div className={styles.socials}>
-              <a href="https://wa.me/918850957882" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <a href={WHATSAPP_TRIAL_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
-              <a href="tel:+918850957882" aria-label="Call Evolve MMA & Calisthenics">
+              <a href={CONTACT_PHONE_LINK} aria-label="Call Evolve MMA & Calisthenics">
                 <FaPhoneAlt />
               </a>
               <a href="mailto:evolvemmaandcalisthenics@gmail.com" aria-label="Email Evolve MMA & Calisthenics">
@@ -126,8 +131,7 @@ export default function Footer() {
 
           <div>
             <h4>Contact</h4>
-            <p>+91 8850957882</p>
-            <p>+91 9552596315</p>
+            <p>{CONTACT_PHONE_DISPLAY}</p>
             <p>evolvemmaandcalisthenics@gmail.com</p>
             <p>Monday - Saturday, 6:00 AM - 10:00 PM</p>
           </div>
@@ -135,7 +139,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} Evolve MMA & Calisthenics.</span>
-          <span>Coach-led training for real strength, skill, and movement.</span>
+          <span>MMA, calisthenics, and parkour training in Malad West.</span>
         </div>
       </div>
     </footer>

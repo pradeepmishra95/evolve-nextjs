@@ -9,25 +9,25 @@ const programs = [
   {
     id: 'mma',
     title: 'Mixed Martial Arts',
-    shortDesc: 'Master striking, grappling, and complete combat skills.',
+    shortDesc: 'Learn striking, grappling, cage awareness, and conditioning in one track.',
     fullDesc:
-      'Our MMA program builds skill, confidence, and conditioning through structured striking, grappling, pad work, movement drills, and coached progressions.',
+      'The MMA track is built for people who want combat skill, sharper reactions, and better conditioning through pad work, drills, grappling, and structured sparring foundations.',
     image: 'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771035263/mma_gprnre.png',
   },
   {
     id: 'calisthenics',
     title: 'Calisthenics',
-    shortDesc: 'Develop elite strength using only your bodyweight.',
+    shortDesc: 'Build strength, control, and mobility through bodyweight training.',
     fullDesc:
-      'Calisthenics focuses on body control, mobility, pulling strength, pushing strength, and progressive skill work through structured bodyweight training.',
+      'Calisthenics focuses on clean pulling and pushing strength, static control, mobility, and body awareness for people who want visible progress without depending on machines.',
     image: 'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771037485/calisthenics_vhwsuz.jpg',
   },
   {
     id: 'parkour',
     title: 'Parkour',
-    shortDesc: 'Train movement confidence, explosive power, and aerial body control.',
+    shortDesc: 'Train jumps, vaults, landings, and freer athletic movement.',
     fullDesc:
-      'Parkour is designed for people who want to move with confidence, precision, and athletic freedom through jumps, landings, vaults, flips, and advanced movement mechanics.',
+      'Parkour is for people who want better coordination, agility, and movement freedom through jumps, vaults, landings, flips, and progressive skill mechanics.',
     image: 'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771035261/flipss_g53q5v.png',
   },
 ];

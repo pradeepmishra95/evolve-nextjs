@@ -4,17 +4,21 @@ export const metadata = {
   title: 'MMA, Calisthenics & Parkour Programs in Malad West',
   description:
     'Explore the three flagship programs at Evolve MMA & Calisthenics in Malad West, Mumbai: MMA, calisthenics, and parkour.',
+  alternates: {
+    canonical: '/programs',
+  },
   keywords: [
     'MMA classes Malad West',
     'calisthenics classes Mumbai',
     'parkour classes Mumbai',
     'parkour training Malad West',
-    'MMA and calisthenics gym Mumbai',
+    'MMA and calisthenics training center Mumbai',
   ],
   openGraph: {
     title: 'Programs | Evolve MMA & Calisthenics',
     description:
       'See the three current programs at Evolve in Malad West: MMA, calisthenics, and parkour.',
+    url: '/programs',
   },
 };
 
@@ -28,16 +32,16 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'Beginners can start with a free trial and the coaches help match them to the most suitable batch based on their goal, comfort level, and schedule.',
+          'The best starting point depends on whether you are drawn to combat training, bodyweight strength, or movement practice. A trial makes that choice easier.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you offer a free trial before joining?',
+      name: 'Do you offer a trial before joining?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'Yes. Evolve offers a free trial so new visitors can understand the environment, coaching style, and batch structure before committing.',
+          'Yes. Evolve offers a trial so new visitors can experience the class rhythm and decide with real context before joining.',
       },
     },
     {
