@@ -47,8 +47,8 @@ const facts = [
   },
   {
     label: 'Programs',
-    title: 'MMA, calisthenics, and parkour',
-    detail: 'Combat training, bodyweight strength, and movement practice each have their own lane.',
+    title: 'MMA and Calisthenics',
+    detail: 'Combat training and bodyweight strength are the core lanes; other movement offerings arrive soon.',
   },
 ];
 
@@ -100,7 +100,7 @@ const visitSteps = [
   {
     title: 'Tell us what interests you',
     detail:
-      'Share whether you are interested in MMA, calisthenics, parkour, kids batches, or simply starting structured training.',
+      'Share whether you are interested in MMA, calisthenics, kids batches, or simply starting structured training.',
   },
   {
     title: 'Come in and feel the training rhythm',
@@ -122,8 +122,7 @@ export default function AboutUs() {
           <p className={styles.eyebrow}>About Evolve</p>
           <h1>A training center built around disciplines, not random workouts.</h1>
           <p className={styles.lead}>
-            Evolve brings together MMA, calisthenics, parkour, and structured
-            coaching in one space for people who want to learn, not just sweat.
+            Evolve brings together MMA and calisthenics with structured coaching in one space for people who want to learn, not just sweat. Jumba and Yoga are upcoming.
           </p>
 
           <div className={styles.actions}>

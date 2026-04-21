@@ -1,0 +1,135 @@
+.section {
+  padding: var(--section-space) 24px;
+  background:
+    linear-gradient(180deg, rgba(11, 15, 22, 0.98), rgba(8, 12, 18, 1)),
+    #090d14;
+}
+
+.shell {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 380px);
+  gap: 24px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  position: relative;
+  min-height: 250px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.18);
+}
+
+.large {
+  grid-column: span 2;
+  min-height: 320px;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 260ms ease;
+}
+
+.tile:hover .image {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 13, 20, 0.14), rgba(9, 13, 20, 0.78));
+}
+
+.caption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.caption span {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 106, 0, 0.18);
+  color: #ffb060;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.caption strong {
+  font-size: 1.18rem;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.72);
+}
+
+@media (max-width: 1024px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: var(--section-space-mobile) 16px;
+  }
+
+  .grid,
+  .large {
+    grid-template-columns: 1fr;
+    grid-column: span 1;
+  }
+
+  .tile,
+  .large {
+    min-height: 240px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

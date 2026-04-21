@@ -28,10 +28,10 @@ const fallbackTestimonials = [
   {
     signal: 'Wanted movement coaching',
     quote:
-      'The parkour sessions are not random tricks. There is real coaching on landings, control, and confidence, which makes the training feel much safer and more purposeful.',
+      'The movement-focused sessions are not random tricks. There is real coaching on landings, control, and confidence, which makes the training feel much safer and more purposeful.',
     name: 'Amit',
     role: 'Weekend athlete',
-    program: 'Parkour',
+    program: 'Movement',
     takeaway: 'Noticed that the sessions were coached in detail, not just high-energy.',
   },
   {

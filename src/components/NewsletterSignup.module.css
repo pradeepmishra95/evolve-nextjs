@@ -1,0 +1,48 @@
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.label {
+  display: grid;
+  gap: 8px;
+}
+
+.label span {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: rgba(247, 244, 239, 0.72);
+}
+
+.label input {
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff9b27, #ff6a00);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.success,
+.error {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: #22c55e;
+}
+
+.error {
+  color: #ff9b9b;
+}

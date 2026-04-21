@@ -128,6 +128,7 @@
   width: 100%;
   aspect-ratio: 4 / 4.7;
   overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
 }
 
 .mediaOverlay {
@@ -153,6 +154,21 @@
   font-weight: 800;
   letter-spacing: 0.08em;
   z-index: 1;
+}
+
+.previewButton {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(9, 13, 20, 0.72);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
 }
 
 .image {
@@ -218,6 +234,47 @@
   margin-top: auto;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cardActions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.primaryAction {
+  color: #fff;
+  background: linear-gradient(135deg, #ff9b27, #ff6a00);
+}
+
+.secondaryAction {
+  color: rgba(247, 244, 239, 0.88);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.primaryAction:hover,
+.secondaryAction:hover,
+.previewButton:hover {
+  transform: translateY(-2px);
 }
 
 .footerLabel {

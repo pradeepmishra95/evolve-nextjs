@@ -1,0 +1,98 @@
+.card {
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 1 / 1.08;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.body {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+}
+
+.specialization {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 106, 0, 0.16);
+  color: #ffb060;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.42rem;
+  color: #fff;
+}
+
+.bio {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.74);
+  line-height: 1.72;
+}
+
+.certifications {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.certifications li {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(247, 244, 239, 0.84);
+  font-size: 0.86rem;
+}
+
+.experience {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.68);
+}
+
+.experience strong {
+  color: #fff;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff9b27, #ff6a00);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.compact .certifications {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .body {
+    padding: 20px;
+  }
+}

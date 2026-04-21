@@ -1,0 +1,56 @@
+:root {
+  --color-primary: #1a1a1a;
+  --color-accent: #ff6a00;
+  --color-accent-strong: #ff9b27;
+  --color-secondary: #f5f5f0;
+  --color-surface: #101419;
+  --color-surface-soft: #171c23;
+  --color-surface-elevated: rgba(255, 255, 255, 0.06);
+  --color-text: #f5f5f0;
+  --color-text-strong: #ffffff;
+  --color-text-muted: rgba(245, 245, 240, 0.72);
+  --color-text-dark: #111418;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-line-dark: rgba(17, 20, 24, 0.08);
+  --gradient-accent: linear-gradient(135deg, #ff9b27, #ff6a00);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.18);
+  --shadow-large: 0 30px 72px rgba(0, 0, 0, 0.28);
+  --radius-xs: 12px;
+  --radius-sm: 18px;
+  --radius-md: 24px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+  --content-width: 1240px;
+  --section-space: 104px;
+  --section-space-mobile: 80px;
+  --font-display:
+    'Segoe UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  --font-body:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  --page-bg: #090d14;
+  --surface-dark: #0f1622;
+  --surface-dark-soft: #151f2d;
+  --surface-light: #f5f5f0;
+  --surface-card: #ffffff;
+  --surface-card-soft: rgba(255, 255, 255, 0.7);
+  --text-strong: #f5f5f0;
+  --text-dark: #111418;
+  --text-muted: #69707d;
+  --brand: #ff6a00;
+  --brand-bright: #ff9b27;
+  --brand-soft: rgba(255, 106, 0, 0.12);
+  --line-light: rgba(255, 255, 255, 0.12);
+  --line-dark: rgba(17, 20, 24, 0.08);
+  --shadow-lg: 0 24px 60px rgba(9, 13, 20, 0.18);
+  --shadow-md: 0 16px 35px rgba(9, 13, 20, 0.12);
+  --shadow-xl: 0 30px 72px rgba(9, 13, 20, 0.22);
+  --radius-xl: 28px;
+  --radius-md-old: 14px;
+}

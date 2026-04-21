@@ -1,0 +1,33 @@
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.item {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.trigger {
+  width: 100%;
+  padding: 18px 20px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.answer {
+  margin: 0;
+  padding: 0 20px 18px;
+  color: rgba(247, 244, 239, 0.72);
+  line-height: 1.74;
+}

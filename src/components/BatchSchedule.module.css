@@ -1,0 +1,129 @@
+.wrapper {
+  display: grid;
+  gap: 16px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.legend span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.open {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.limited {
+  background: rgba(255, 176, 96, 0.14);
+  color: #ffb060;
+}
+
+.fullBadge {
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+}
+
+.scrollArea {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 960px;
+  display: grid;
+  grid-template-columns: 120px repeat(7, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.cornerCell,
+.dayHeader,
+.slotLabel,
+.cell {
+  border-radius: 18px;
+}
+
+.cornerCell,
+.dayHeader {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 800;
+  text-align: center;
+}
+
+.slotLabel {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(247, 244, 239, 0.84);
+  font-weight: 700;
+}
+
+.cell {
+  min-height: 154px;
+}
+
+.emptyCell,
+.batchCard {
+  height: 100%;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.emptyCell {
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(247, 244, 239, 0.4);
+  font-size: 0.92rem;
+}
+
+.batchCard {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.batchCard strong {
+  color: #fff;
+}
+
+.batchCard span,
+.batchCard p {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.72);
+}
+
+.bookButton,
+.fullLabel {
+  margin-top: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.bookButton {
+  background: linear-gradient(135deg, #ff9b27, #ff6a00);
+  color: #fff;
+}
+
+.fullLabel {
+  background: rgba(148, 163, 184, 0.14);
+  color: #cbd5e1;
+}
+
+.full {
+  background: rgba(148, 163, 184, 0.07);
+}

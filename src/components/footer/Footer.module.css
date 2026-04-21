@@ -65,7 +65,7 @@
 .grid {
   margin-top: 2px;
   display: grid;
-  grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1.2fr repeat(4, minmax(0, 1fr));
   gap: 30px;
 }
 
@@ -114,10 +114,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.linkList li + li {
-  margin-top: 8px;
+  display: grid;
+  gap: 8px;
 }
 
 .linkList a {
