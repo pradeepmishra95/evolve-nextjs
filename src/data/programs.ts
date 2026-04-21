@@ -25,8 +25,9 @@ export const PROGRAMS: Program[] = [
     name: 'Mixed Martial Arts',
     shortName: 'MMA',
     label: 'Combat Skill',
-    image: '/images/gallery/IMG_1375.PNG',
-    imagePosition: 'center 78%',
+    image: '/images/gallery/mma-new.jpeg',
+    imagePosition: 'center',
+    imageFit: 'contain',
     previewVideo: '/videos/mma-preview.mp4', // Replace with real training footage.
     teaser:
       'Build striking, grappling, conditioning, and confidence in structured coach-led batches.',
@@ -48,8 +49,9 @@ export const PROGRAMS: Program[] = [
     name: 'Calisthenics',
     shortName: 'Calisthenics',
     label: 'Bodyweight Strength',
-    image: '/images/gallery/IMG_1378.PNG',
-    imagePosition: 'center 96%',
+    image: '/images/gallery/calisthenics-new.PNG',
+    imagePosition: '72% 16%',
+    imageFit: 'cover',
     teaser:
       'Develop pull strength, pushing power, mobility, and visible control through bodyweight progressions.',
     description:
