@@ -27,6 +27,7 @@ The testimonials section can pull live Google reviews through the Places API.
 Add these variables to `.env.local`:
 
 ```bash
+NEXT_PUBLIC_GOOGLE_REVIEWS_ENABLED=false
 GOOGLE_PLACES_API_KEY=your_google_maps_platform_key
 GOOGLE_PLACE_ID=your_google_place_id
 GOOGLE_PLACES_LANGUAGE_CODE=en
@@ -36,6 +37,7 @@ GOOGLE_PLACES_REGION_CODE=IN
 Notes:
 
 - If the Google credentials are missing, the site falls back to the local testimonial cards.
+- Google reviews stay paused unless `NEXT_PUBLIC_GOOGLE_REVIEWS_ENABLED=true`.
 - The current implementation shows up to 4 Google reviews on the page.
 - You still need a valid Google Maps Platform project with billing enabled for Places API requests.
 

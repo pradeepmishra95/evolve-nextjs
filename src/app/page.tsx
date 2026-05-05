@@ -6,6 +6,7 @@ import Excercises from '@/components/excersises/Excersises';
 import ProgressShowcase from '@/components/ProgressShowcase';
 import CommunitySection from '@/components/CommunitySection';
 import About from '@/components/about/About';
+import GoogleReviewsProvider from '@/components/google-reviews/GoogleReviewsProvider';
 import MapSection from '@/components/mapsection/MapSection';
 import Hero from '@/components/hero/Hero';
 import { PROGRESS_ENTRIES } from '@/data/progress';
@@ -29,18 +30,20 @@ export const metadata = buildMetadata({
 
 export default function Home() {
   return (
-    <main className="relative">
-      <Hero />
-      <InstaReels />
-      <ProofStrip />
-      <About />
-      <Excercises />
-      {/* TrainingGallery hidden for now; bring it back here when ready to reveal. */}
-      <Testimonials />
-      <ProgressShowcase entries={PROGRESS_ENTRIES} />
-      <TrialJourney />
-      <MapSection />
-      <CommunitySection />
-    </main>
+    <GoogleReviewsProvider>
+      <main className="relative">
+        <Hero />
+        <InstaReels />
+        <ProofStrip />
+        <About />
+        <Excercises />
+        {/* TrainingGallery hidden for now; bring it back here when ready to reveal. */}
+        <Testimonials />
+        <ProgressShowcase entries={PROGRESS_ENTRIES} />
+        <TrialJourney />
+        <MapSection />
+        <CommunitySection />
+      </main>
+    </GoogleReviewsProvider>
   );
 }

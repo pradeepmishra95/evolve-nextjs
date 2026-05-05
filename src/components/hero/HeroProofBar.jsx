@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useGoogleReviews } from '@/components/google-reviews/GoogleReviewsProvider';
 
 import styles from './Hero.module.css';
 
@@ -40,46 +40,15 @@ function formatReviewCount(value) {
 }
 
 export default function HeroProofBar() {
-  const [googleSummary, setGoogleSummary] = useState(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadGoogleSummary() {
-      try {
-        const response = await fetch('/api/google-reviews', { cache: 'no-store' });
-
-        if (!response.ok) {
-          return;
-        }
-
-        const data = await response.json();
-
-        if (
-          cancelled ||
-          typeof data?.rating !== 'number' ||
-          typeof data?.userRatingCount !== 'number'
-        ) {
-          return;
-        }
-
-        setGoogleSummary({
-          label: 'Google reviews',
-          value: `${formatRating(data.rating)}/5 rating`,
-          detail: `${formatReviewCount(data.userRatingCount)} on Google Maps`,
-          href: data.googleMapsUri || null,
-        });
-      } catch {
-        // Quiet fallback keeps the hero stable even if reviews are unavailable.
+  const { googleReviews, hasSummary } = useGoogleReviews();
+  const googleSummary = hasSummary
+    ? {
+        label: 'Google reviews',
+        value: `${formatRating(googleReviews.rating)}/5 rating`,
+        detail: `${formatReviewCount(googleReviews.userRatingCount)} on Google Maps`,
+        href: googleReviews.googleMapsUri || null,
       }
-    }
-
-    loadGoogleSummary();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+    : null;
 
   const proofItems = googleSummary
     ? [googleSummary, ...fallbackProofs.slice(1)]

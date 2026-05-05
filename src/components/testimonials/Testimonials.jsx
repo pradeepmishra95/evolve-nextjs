@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
+import { useGoogleReviews } from '@/components/google-reviews/GoogleReviewsProvider';
 import Reveal from '@/components/reveal/Reveal';
 
 import styles from './Testimonials.module.css';
@@ -50,48 +49,8 @@ function formatRating(value) {
 }
 
 export default function Testimonials() {
-  const [googleReviews, setGoogleReviews] = useState(null);
-  const [status, setStatus] = useState('loading');
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadGoogleReviews() {
-      try {
-        const response = await fetch('/api/google-reviews', { cache: 'no-store' });
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch Google reviews');
-        }
-
-        const data = await response.json();
-
-        if (cancelled) {
-          return;
-        }
-
-        if (Array.isArray(data?.reviews) && data.reviews.length > 0) {
-          setGoogleReviews(data);
-          setStatus('ready');
-          return;
-        }
-
-        setStatus('fallback');
-      } catch {
-        if (!cancelled) {
-          setStatus('fallback');
-        }
-      }
-    }
-
-    loadGoogleReviews();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const isGoogleSource = status === 'ready' && googleReviews;
+  const { googleReviews, hasReviews } = useGoogleReviews();
+  const isGoogleSource = hasReviews && googleReviews;
   const visibleReviews = isGoogleSource ? googleReviews.reviews : fallbackTestimonials;
 
   return (
