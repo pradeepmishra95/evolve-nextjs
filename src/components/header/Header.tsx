@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import styles from './Header.module.css';
+import { LOGO_IMAGE_ALT, LOGO_IMAGE_PATH } from '@/lib/brand';
 import { BOOK_TRIAL_PATH, GOOGLE_MAPS_URL } from '@/lib/links';
 
 const menus = [
@@ -64,8 +65,8 @@ export default function Header() {
         <div className={styles.brand}>
           <Link href="/" onClick={handleLogoClick} className={styles.logoLink}>
             <Image
-              src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-              alt="Evolve Sports And Fitness Club"
+              src={LOGO_IMAGE_PATH}
+              alt={LOGO_IMAGE_ALT}
               width={64}
               height={64}
               className={styles.logo}

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
+import { LOGO_IMAGE_PATH } from '@/lib/brand';
 import { buildAbsoluteUrl, SITE_URL } from '@/lib/site';
 
-const OG_IMAGE =
-  'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png';
+const OG_IMAGE = buildAbsoluteUrl(LOGO_IMAGE_PATH);
 
 type MetadataConfig = {
   title: string;

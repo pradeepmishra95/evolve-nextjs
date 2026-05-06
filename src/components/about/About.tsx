@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import Reveal from '@/components/reveal/Reveal';
+import { LOGO_IMAGE_ALT, LOGO_IMAGE_PATH } from '@/lib/brand';
 import { BOOK_TRIAL_PATH } from '@/lib/links';
 
 import styles from './About.module.css';
@@ -61,8 +62,8 @@ export default function About() {
         <Reveal className={styles.panel} delay={120} distance={24}>
           <div className={styles.logoWrap}>
             <Image
-              src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-              alt="Evolve Sports And Fitness Club logo"
+              src={LOGO_IMAGE_PATH}
+              alt={LOGO_IMAGE_ALT}
               width={96}
               height={96}
             />

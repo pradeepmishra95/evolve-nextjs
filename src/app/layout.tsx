@@ -5,6 +5,7 @@ import './globals.css';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import PwaRegistrar from '@/components/pwa/PwaRegistrar';
+import { LOGO_IMAGE_PATH } from '@/lib/brand';
 import {
   CONTACT_EMAIL,
   CONTACT_PHONE_DISPLAY,
@@ -12,7 +13,7 @@ import {
   GOOGLE_MAPS_URL,
   WHATSAPP_TRIAL_URL,
 } from '@/lib/links';
-import { SITE_URL, SITE_URL_OBJECT } from '@/lib/site';
+import { buildAbsoluteUrl, SITE_URL, SITE_URL_OBJECT } from '@/lib/site';
 
 export const metadata = {
   applicationName: 'Evolve Sports And Fitness Club',
@@ -39,17 +40,13 @@ export const metadata = {
     siteName: 'Evolve Sports And Fitness Club',
     locale: 'en_IN',
     type: 'website',
-    images: [
-      'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png',
-    ],
+    images: [buildAbsoluteUrl(LOGO_IMAGE_PATH)],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Evolve Sports And Fitness Club',
     description: 'Coach-led MMA and calisthenics training in Malad West, Mumbai. Jumba & Yoga coming soon.',
-    images: [
-      'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png',
-    ],
+    images: [buildAbsoluteUrl(LOGO_IMAGE_PATH)],
   },
   robots: {
     index: true,
@@ -123,8 +120,7 @@ const organizationSchema = {
   openingHours: 'Mo-Sa 06:00-22:00',
   hasMap: GOOGLE_MAPS_URL,
   areaServed: FULL_ADDRESS,
-  image:
-    'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png',
+  image: buildAbsoluteUrl(LOGO_IMAGE_PATH),
   sameAs: [
     'https://www.instagram.com/evolve_mmacalisthenics',
     'https://www.facebook.com/profile.php?id=61587043175017',

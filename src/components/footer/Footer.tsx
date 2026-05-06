@@ -11,6 +11,7 @@ import {
 
 import styles from './Footer.module.css';
 import NewsletterSignup from '@/components/NewsletterSignup';
+import { LOGO_IMAGE_ALT, LOGO_IMAGE_PATH } from '@/lib/brand';
 import {
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
@@ -58,8 +59,8 @@ export default function Footer() {
           <div className={styles.brandBlock}>
             <div className={styles.brand}>
               <Image
-                src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-                alt="Evolve Sports And Fitness Club"
+                src={LOGO_IMAGE_PATH}
+                alt={LOGO_IMAGE_ALT}
                 width={96}
                 height={96}
                 priority
