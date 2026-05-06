@@ -12,7 +12,7 @@ export const metadata = buildMetadata({
     'MMA classes in Malad West Mumbai',
     'beginner MMA Malad West',
     'MMA training Mumbai',
-    'Evolve MMA classes',
+    'Evolve Sports And Fitness Club classes',
   ],
 });
 

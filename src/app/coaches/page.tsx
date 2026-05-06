@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/metadata';
 import styles from './coaches.module.css';
 
 export const metadata = buildMetadata({
-  title: 'Coaches | Evolve MMA & Calisthenics',
+  title: 'Coaches | Evolve Sports And Fitness Club',
   description:
     'Meet the MMA and calisthenics coaches at Evolve in Malad West, Mumbai. Parkour has been retired on the site.',
   path: '/coaches',

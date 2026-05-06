@@ -9,9 +9,9 @@ import {
 import styles from './ContactPage.module.css';
 
 export const metadata = {
-  title: 'Contact Evolve MMA & Calisthenics in Malad West',
+  title: 'Contact Evolve Sports And Fitness Club in Malad West',
   description:
-    'Contact Evolve MMA & Calisthenics in Malad West, Mumbai for trial bookings, program guidance, timings, directions, and training center visit information.',
+    'Contact Evolve Sports And Fitness Club in Malad West, Mumbai for trial bookings, program guidance, timings, directions, and training center visit information.',
   alternates: {
     canonical: '/contactus',
   },
@@ -19,11 +19,11 @@ export const metadata = {
     'contact MMA training center Malad West',
     'training center near Lower Malad Metro',
     'book trial Malad West training center',
-    'Evolve MMA contact number',
+    'Evolve Sports And Fitness Club contact number',
     'fitness training center contact Mumbai',
   ],
   openGraph: {
-    title: 'Contact Us | Evolve MMA & Calisthenics',
+    title: 'Contact Us | Evolve Sports And Fitness Club',
     description:
       'Reach Evolve for trial bookings, schedule questions, and directions to the Malad West training center.',
     url: '/contactus',
@@ -36,7 +36,7 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How can I book a trial at Evolve MMA & Calisthenics?',
+      name: 'How can I book a trial at Evolve Sports And Fitness Club?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
@@ -45,7 +45,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Where is Evolve MMA & Calisthenics located?',
+      name: 'Where is Evolve Sports And Fitness Club located?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
@@ -54,7 +54,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What are the contact details for Evolve MMA & Calisthenics?',
+      name: 'What are the contact details for Evolve Sports And Fitness Club?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:

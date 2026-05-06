@@ -8,7 +8,7 @@ import styles from './blog.module.css';
 export const metadata = {
   title: 'Training Tips & Beginner Guidance Blog',
   description:
-    'Read practical training guidance from Evolve MMA & Calisthenics on starting well, staying consistent, choosing the right batch, and improving safely.',
+    'Read practical training guidance from Evolve Sports And Fitness Club on starting well, staying consistent, choosing the right batch, and improving safely.',
   alternates: {
     canonical: '/blog',
   },
@@ -20,7 +20,7 @@ export const metadata = {
     'beginner training guidance Mumbai',
   ],
   openGraph: {
-    title: 'Blog | Evolve MMA & Calisthenics',
+    title: 'Blog | Evolve Sports And Fitness Club',
     description:
       'Practical guidance on MMA, calisthenics, consistency, recovery, and starting your training journey well.',
     url: '/blog',

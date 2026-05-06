@@ -65,7 +65,7 @@ export default function Header() {
           <Link href="/" onClick={handleLogoClick} className={styles.logoLink}>
             <Image
               src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-              alt="Evolve MMA & Calisthenics"
+              alt="Evolve Sports And Fitness Club"
               width={64}
               height={64}
               className={styles.logo}
@@ -75,7 +75,7 @@ export default function Header() {
 
           <div className={styles.brandCopy}>
             <Link href="/" onClick={closeMenu} className={styles.brandNameLink}>
-              <span className={styles.brandName}>Evolve MMA & Calisthenics</span>
+              <span className={styles.brandName}>Evolve Sports And Fitness Club</span>
             </Link>
 
             <a
@@ -83,7 +83,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.brandSub}
-              aria-label="Open Evolve MMA & Calisthenics in Google Maps"
+              aria-label="Open Evolve Sports And Fitness Club in Google Maps"
               title="Open in Google Maps"
             >
               <LocationIcon />

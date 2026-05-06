@@ -7,9 +7,9 @@ import { buildMetadata } from '@/lib/metadata';
 import styles from './book-trial.module.css';
 
 export const metadata = buildMetadata({
-  title: 'Book A Trial | Evolve MMA & Calisthenics',
+  title: 'Book A Trial | Evolve Sports And Fitness Club',
   description:
-    'Book a trial at Evolve MMA & Calisthenics in Malad West, Mumbai. Share your preferred program, timing, and details in one quick form.',
+    'Book a trial at Evolve Sports And Fitness Club in Malad West, Mumbai. Share your preferred program, timing, and details in one quick form.',
   path: '/book-trial',
   keywords: [
     'book MMA trial Malad West',

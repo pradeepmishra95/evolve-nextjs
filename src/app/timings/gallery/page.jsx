@@ -1,7 +1,7 @@
 export const metadata = {
   title: 'Gallery Updates Coming Soon',
   description:
-    'Gallery updates for Evolve MMA & Calisthenics are coming soon. Visit Instagram for the latest training visuals.',
+    'Gallery updates for Evolve Sports And Fitness Club are coming soon. Visit Instagram for the latest training visuals.',
   robots: {
     index: false,
     follow: false,

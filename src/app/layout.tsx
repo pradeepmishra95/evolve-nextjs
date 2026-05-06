@@ -15,12 +15,12 @@ import {
 import { SITE_URL, SITE_URL_OBJECT } from '@/lib/site';
 
 export const metadata = {
-  applicationName: 'Evolve MMA & Calisthenics',
+  applicationName: 'Evolve Sports And Fitness Club',
   metadataBase: SITE_URL_OBJECT,
   title: {
     default:
-      'Evolve MMA & Calisthenics | MMA & Calisthenics Training in Malad West, Mumbai',
-    template: '%s | Evolve MMA & Calisthenics',
+      'Evolve Sports And Fitness Club | MMA & Calisthenics Training in Malad West, Mumbai',
+    template: '%s | Evolve Sports And Fitness Club',
   },
   manifest: '/manifest.webmanifest',
   description: 'Train MMA and calisthenics with coach-led batches in Malad West, Mumbai. Jumba & Yoga coming soon.',
@@ -33,10 +33,10 @@ export const metadata = {
     'trial training center Mumbai',
   ],
   openGraph: {
-    title: 'Evolve MMA & Calisthenics',
+    title: 'Evolve Sports And Fitness Club',
     description: 'Coach-led MMA and calisthenics training in Malad West, Mumbai. Jumba & Yoga coming soon.',
     url: SITE_URL,
-    siteName: 'Evolve MMA & Calisthenics',
+    siteName: 'Evolve Sports And Fitness Club',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -45,7 +45,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Evolve MMA & Calisthenics',
+    title: 'Evolve Sports And Fitness Club',
     description: 'Coach-led MMA and calisthenics training in Malad West, Mumbai. Jumba & Yoga coming soon.',
     images: [
       'https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png',
@@ -65,7 +65,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Evolve MMA',
+    title: 'Evolve Sports And Fitness Club',
   },
   formatDetection: {
     telephone: false,
@@ -101,7 +101,7 @@ export const viewport = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'SportsActivityLocation',
-  name: 'Evolve MMA & Calisthenics',
+  name: 'Evolve Sports And Fitness Club',
   description:
     'Performance-driven training space offering coach-led MMA and calisthenics programs in Malad West, Mumbai. Jumba & Yoga coming soon.',
   url: SITE_URL,

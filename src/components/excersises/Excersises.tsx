@@ -52,7 +52,7 @@ export default function Excercises() {
               <div className={styles.mediaWrap}>
                 <Image
                   src={item.image}
-                  alt={`${item.name} training at Evolve MMA & Calisthenics`}
+                  alt={`${item.name} training at Evolve Sports And Fitness Club`}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className={styles.image}

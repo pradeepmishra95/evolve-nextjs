@@ -59,14 +59,14 @@ export default function Footer() {
             <div className={styles.brand}>
               <Image
                 src="https://res.cloudinary.com/dd9yqqsa4/image/upload/v1771045740/logo_p9ooao.png"
-                alt="Evolve MMA & Calisthenics"
+                alt="Evolve Sports And Fitness Club"
                 width={96}
                 height={96}
                 priority
               />
 
               <div>
-                <h3>Evolve MMA & Calisthenics</h3>
+                <h3>Evolve Sports And Fitness Club</h3>
                 <p className={styles.tagline}>
                   Skill. Strength. Movement.
                 </p>
@@ -81,10 +81,10 @@ export default function Footer() {
               <a href={WHATSAPP_TRIAL_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
-              <a href={CONTACT_PHONE_LINK} aria-label="Call Evolve MMA & Calisthenics">
+              <a href={CONTACT_PHONE_LINK} aria-label="Call Evolve Sports And Fitness Club">
                 <FaPhoneAlt />
               </a>
-              <a href="mailto:evolvemmaandcalisthenics@gmail.com" aria-label="Email Evolve MMA & Calisthenics">
+              <a href="mailto:evolvemmaandcalisthenics@gmail.com" aria-label="Email Evolve Sports And Fitness Club">
                 <FaEnvelope />
               </a>
               <a
@@ -155,7 +155,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <span>© {new Date().getFullYear()} Evolve MMA & Calisthenics.</span>
+          <span>© {new Date().getFullYear()} Evolve Sports And Fitness Club.</span>
           <span>MMA and calisthenics training in Malad West. Jumba & Yoga coming soon.</span>
         </div>
       </div>

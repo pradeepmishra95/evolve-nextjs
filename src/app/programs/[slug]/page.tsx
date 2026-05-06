@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: ProgramPageProps) {
       `${program.shortName} Malad West`,
       `${program.shortName} Mumbai`,
       `${program.shortName} training center`,
-      'Evolve MMA & Calisthenics',
+      'Evolve Sports And Fitness Club',
     ],
   });
 }

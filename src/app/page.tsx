@@ -14,7 +14,7 @@ import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
   title:
-    'Evolve MMA & Calisthenics | MMA & Calisthenics Training in Malad West, Mumbai',
+    'Evolve Sports And Fitness Club | MMA & Calisthenics Training in Malad West, Mumbai',
   description:
     'Coach-led MMA and calisthenics training in Malad West, Mumbai with trial booking, schedules, coaches, and program details. Jumba and Yoga are upcoming programs.',
   path: '/',

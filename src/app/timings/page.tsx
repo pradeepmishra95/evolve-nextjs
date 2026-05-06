@@ -9,7 +9,7 @@ import { buildMetadata } from '@/lib/metadata';
 import styles from './timings.module.css';
 
 export const metadata = buildMetadata({
-  title: 'Live Batch Schedule | Evolve MMA & Calisthenics',
+  title: 'Live Batch Schedule | Evolve Sports And Fitness Club',
   description:
     'View the weekly MMA and calisthenics batch schedule at Evolve in Malad West, Mumbai, with trainer names, spots, and booking links.',
   path: '/timings',

@@ -1,6 +1,6 @@
 export const BOOK_TRIAL_WHATSAPP_NUMBER = '8850957882';
 export const BOOK_TRIAL_PATH = `https://wa.me/91${BOOK_TRIAL_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Hi! I want to book a trial at Evolve MMA & Calisthenics.'
+  'Hi! I want to book a trial at Evolve Sports And Fitness Club.'
 )}`;
 
 export const CONTACT_PHONE_NUMBER = '9552596315';
@@ -16,7 +16,7 @@ export const INSTAGRAM_PROFILE_URL =
   'https://www.instagram.com/evolve_mmacalisthenics';
 
 export const WHATSAPP_TRIAL_URL = `https://wa.me/91${CONTACT_PHONE_NUMBER}?text=${encodeURIComponent(
-  'Hi! I want to book a trial at Evolve MMA & Calisthenics.'
+  'Hi! I want to book a trial at Evolve Sports And Fitness Club.'
 )}`;
 export const WHATSAPP_PROGRAM_HELP_URL = `https://wa.me/91${CONTACT_PHONE_NUMBER}?text=${encodeURIComponent(
   'Hi! I want help choosing the right program and batch.'

@@ -36,7 +36,7 @@ export default function MapSection({
         <Reveal className={styles.frame} delay={120} distance={24}>
           <iframe
             className={styles.map}
-            title="Map showing Evolve MMA & Calisthenics in Malad West, Mumbai"
+            title="Map showing Evolve Sports And Fitness Club in Malad West, Mumbai"
             src={GOOGLE_MAPS_EMBED_URL}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

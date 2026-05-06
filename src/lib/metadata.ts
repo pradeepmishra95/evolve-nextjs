@@ -31,7 +31,7 @@ export function buildMetadata({
       title,
       description,
       url,
-      siteName: 'Evolve MMA & Calisthenics',
+      siteName: 'Evolve Sports And Fitness Club',
       locale: 'en_IN',
       type: 'website',
       images: [OG_IMAGE],

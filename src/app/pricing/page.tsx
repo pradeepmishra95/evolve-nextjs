@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
-  title: 'Pricing | Evolve MMA & Calisthenics',
+  title: 'Pricing | Evolve Sports And Fitness Club',
   description:
-    'See placeholder membership pricing for MMA and calisthenics at Evolve MMA & Calisthenics in Malad West, Mumbai. Jumba & Yoga are upcoming.',
+    'See placeholder membership pricing for MMA and calisthenics at Evolve Sports And Fitness Club in Malad West, Mumbai. Jumba & Yoga are upcoming.',
   path: '/pricing',
   keywords: [
     'MMA pricing Malad West',

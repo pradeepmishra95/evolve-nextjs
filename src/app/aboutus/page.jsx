@@ -1,6 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
 import MapSection from '@/components/mapsection/MapSection';
 import Reveal from '@/components/reveal/Reveal';
 import { WHATSAPP_PROGRAM_FIT_URL } from '@/lib/links';
@@ -8,21 +5,21 @@ import { WHATSAPP_PROGRAM_FIT_URL } from '@/lib/links';
 import styles from './aboutus.module.css';
 
 export const metadata = {
-  title: 'About Evolve MMA & Calisthenics in Malad West',
+  title: 'About Evolve Sports And Fitness Club in Malad West',
   description:
-    'Learn about Evolve MMA & Calisthenics in Malad West, Mumbai, including the training philosophy, coaching approach, featured coaches, and trial experience.',
+    'Learn about Evolve Sports And Fitness Club in Malad West, Mumbai, including the training philosophy, coaching approach, and trial experience.',
   alternates: {
     canonical: '/aboutus',
   },
   keywords: [
-    'about Evolve MMA',
+    'about Evolve Sports And Fitness Club',
     'Malad West training center',
     'MMA and calisthenics training center Mumbai',
     'coach-led training center Malad West',
     'fitness training center near Lower Malad Metro',
   ],
   openGraph: {
-    title: 'About Us | Evolve MMA & Calisthenics',
+    title: 'About Us | Evolve Sports And Fitness Club',
     description:
       'See how Evolve approaches coaching, progression, beginner guidance, and performance-focused training in Malad West.',
     url: '/aboutus',
@@ -66,36 +63,6 @@ const whoItFits = [
   'Parents who want a disciplined environment with real instruction for their child.',
 ];
 
-const coaches = [
-  {
-    name: 'Rahul Gupta',
-    role: 'Head Calisthenics Coach',
-    summary:
-      'Guides members through bodyweight strength, mobility, and progressive movement skill development.',
-    focus: 'Calisthenics • Strength • Mobility',
-    image:
-      'https://res.cloudinary.com/dd9yqqsa4/image/upload/w_800,c_fill,g_auto,dpr_auto,q_auto:best,f_auto/RahulGupta_mnreqs.jpg',
-  },
-  {
-    name: 'Zaid',
-    role: 'MMA Coach',
-    summary:
-      'Builds striking, grappling confidence, and disciplined training habits with safety-first coaching.',
-    focus: 'MMA • Striking • Grappling',
-    image:
-      'https://res.cloudinary.com/dd9yqqsa4/image/upload/w_800,c_fill,g_auto,dpr_auto,q_auto:best,f_auto/Zaid_dertug.jpg',
-  },
-  {
-    name: 'Vishal Yadav',
-    role: 'Calisthenics Coach',
-    summary:
-      'Works on strength progressions, movement quality, and long-term bodyweight control for all levels.',
-    focus: 'Calisthenics • Strength • Movement',
-    image:
-      'https://res.cloudinary.com/dd9yqqsa4/image/upload/w_800,c_fill,g_auto,dpr_auto,q_auto:best,f_auto/VishalYadav_wvfgos.jpg',
-  },
-];
-
 const visitSteps = [
   {
     title: 'Tell us what interests you',
@@ -134,10 +101,6 @@ export default function AboutUs() {
             >
               Talk To The Team
             </a>
-
-            <Link href="/coaches" className={styles.secondaryLink}>
-              Meet The Coaches
-            </Link>
           </div>
 
           <p className={styles.helper}>
@@ -190,49 +153,6 @@ export default function AboutUs() {
             </ul>
           </Reveal>
         </div>
-
-        <Reveal className={styles.coachSection} distance={22}>
-          <div className={styles.coachHeader}>
-            <div>
-              <p className={styles.eyebrow}>Featured Coaches</p>
-              <h2>The people teaching here shape how fast you settle in.</h2>
-              <p>
-                For most new members, the difference is felt in the first few
-                classes: how drills are explained, how corrections are given,
-                and whether the room feels attentive.
-              </p>
-            </div>
-
-            <Link href="/coaches" className={styles.coachLink}>
-              View All Coaches
-            </Link>
-          </div>
-
-          <div className={styles.coachGrid}>
-            {coaches.map((coach, index) => (
-              <Reveal
-                key={coach.name}
-                className={styles.coachCard}
-                delay={index * 80}
-                distance={20}
-              >
-                <div className={styles.coachImageWrap}>
-                  <Image
-                    src={coach.image}
-                    alt={`${coach.name} - ${coach.role}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-                    className={styles.coachImage}
-                  />
-                </div>
-                <p className={styles.coachRole}>{coach.role}</p>
-                <h3>{coach.name}</h3>
-                <p className={styles.coachSummary}>{coach.summary}</p>
-                <span className={styles.coachFocus}>{coach.focus}</span>
-              </Reveal>
-            ))}
-          </div>
-        </Reveal>
 
         <Reveal className={styles.visitPanel} distance={22}>
           <h2>Your first visit should make the place easier to understand.</h2>
