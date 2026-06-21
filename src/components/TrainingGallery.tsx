@@ -25,8 +25,8 @@ const galleryItems: GalleryItem[] = [
     image: '/images/gallery/IMG_1378.PNG', // Replace with real photography.
   },
   {
-    title: 'Jumba Session',
-    label: 'Jumba',
+    title: 'Zumba & Dance Session',
+    label: 'Zumba & Dance',
     image: '/images/gallery/zumba-urban.jpg',
   },
   {

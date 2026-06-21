@@ -6,7 +6,11 @@ export const BOOK_TRIAL_PATH = `https://wa.me/91${BOOK_TRIAL_WHATSAPP_NUMBER}?te
 export const CONTACT_PHONE_NUMBER = '9552596315';
 export const CONTACT_PHONE_DISPLAY = '+91 9552596315';
 export const CONTACT_PHONE_LINK = `tel:+91${CONTACT_PHONE_NUMBER}`;
-export const CONTACT_EMAIL = 'evolvemmaandcalisthenics@gmail.com';
+export const CONTACT_EMAIL = 'esfclub.in';
+export const CONTACT_EMAIL_IS_ADDRESS = CONTACT_EMAIL.includes('@');
+export const CONTACT_EMAIL_LINK = CONTACT_EMAIL_IS_ADDRESS
+  ? `mailto:${CONTACT_EMAIL}`
+  : `https://${CONTACT_EMAIL}`;
 
 export const GOOGLE_MAPS_URL =
   'https://maps.google.com/?q=EVOLVE%20MMA%20%26%20CALISTHENICS%20Malad%20West';

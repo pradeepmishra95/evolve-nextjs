@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
   keywords: [
     'MMA coach Malad West',
     'calisthenics coach Mumbai',
-    'jumba coach Mumbai',
+    'zumba dance coach Mumbai',
     'yoga coach Mumbai',
     'Evolve coaches',
   ],

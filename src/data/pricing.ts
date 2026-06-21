@@ -53,7 +53,7 @@ export const PRICING_PROGRAMS: PricingProgram[] = [
     ],
   },
   {
-    program: 'Jumba (upcoming)',
+    program: 'Zumba & Dance',
     tiers: [],
   },
   {

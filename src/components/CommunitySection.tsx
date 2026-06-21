@@ -16,8 +16,7 @@ export default function CommunitySection() {
             <h2 className="section-heading">Training gets stickier when you feel part of something.</h2>
           </div>
           <p className="section-lead">
-            Workshops, open days, sparring meets, and regular updates help the space
-            feel active even when you are still deciding where to start.
+            Workshops, sparring meets, and updates keep the space active between visits.
           </p>
         </Reveal>
 
@@ -37,7 +36,7 @@ export default function CommunitySection() {
 
           <Reveal className={styles.ctaCard} delay={70} distance={18}>
             <p className={styles.cardEyebrow}>Stay Close To The Community</p>
-            <h3>Get announcements, session highlights, and new event updates in one place.</h3>
+            <h3>Get updates in one place.</h3>
             <div className={styles.actions}>
               <a
                 href={WHATSAPP_COMMUNITY_URL}

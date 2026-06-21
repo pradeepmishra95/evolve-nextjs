@@ -18,7 +18,8 @@ export default function ProgramsOverview() {
           </div>
           <p className="section-lead">
             MMA and calisthenics are coached differently for a reason. Each path has its own
-            technical goals, pace, and kind of progress. Jumba and Yoga are upcoming programs.
+            technical goals, pace, and kind of progress. Zumba & Dance is now running, and Yoga
+            is upcoming.
           </p>
         </Reveal>
 

@@ -41,14 +41,12 @@
 .container {
   position: relative;
   z-index: 2;
-  max-width: 1280px;
+  max-width: 1120px;
   min-height: calc(100svh - 88px);
   margin: 0 auto;
   padding: 64px 24px 74px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 410px);
+  display: block;
   align-items: end;
-  gap: 52px;
 }
 
 .copy {
@@ -71,11 +69,10 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-bottom: 22px;
+  margin-bottom: 0;
 }
 
-.eyebrowPill,
-.eyebrowMeta {
+.eyebrowPill {
   margin: 0;
   min-height: 36px;
   display: inline-flex;
@@ -94,22 +91,6 @@
   box-shadow: 0 16px 28px rgba(255, 106, 0, 0.18);
 }
 
-.eyebrowMeta {
-  padding: 0 14px;
-  color: rgba(247, 244, 239, 0.82);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-}
-
-.copy h1 {
-  margin: 0;
-  max-width: 11ch;
-  color: #f7f4ef;
-  font-size: clamp(3.2rem, 7vw, 6.5rem);
-  line-height: 0.92;
-  text-shadow: 0 18px 46px rgba(0, 0, 0, 0.26);
-}
-
 .lead {
   margin: 24px 0 0;
   max-width: 38ch;
@@ -119,7 +100,7 @@
 }
 
 .actions {
-  margin-top: 34px;
+  margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -167,8 +148,7 @@
 }
 
 .primaryCta:hover,
-.secondaryCta:hover,
-.panelLink:hover {
+.secondaryCta:hover {
   transform: translateY(-2px);
 }
 
@@ -229,139 +209,6 @@
   line-height: 1.5;
 }
 
-.panel {
-  position: relative;
-  padding: 32px 30px;
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at top right, rgba(255, 176, 96, 0.18), transparent 34%),
-    linear-gradient(180deg, rgba(19, 28, 41, 0.88), rgba(8, 13, 19, 0.8));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 28px 56px rgba(9, 13, 20, 0.26);
-  overflow: hidden;
-}
-
-.panel::before {
-  content: '';
-  position: absolute;
-  inset: 0 0 auto;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 176, 96, 0.6), transparent);
-}
-
-.panelEyebrow {
-  margin: 0 0 20px;
-  color: rgba(247, 244, 239, 0.76);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.panelTitle {
-  margin: 0;
-  color: #fff;
-  max-width: 12ch;
-  font-size: 1.95rem;
-  line-height: 1;
-}
-
-.trackList {
-  margin-top: 24px;
-  display: grid;
-  gap: 14px;
-}
-
-.track {
-  padding: 18px 20px;
-  border-radius: 22px;
-  background: rgba(8, 14, 22, 0.46);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease;
-}
-
-.track:hover {
-  transform: translateX(4px);
-  border-color: rgba(255, 176, 96, 0.3);
-  background: rgba(12, 20, 29, 0.72);
-}
-
-.trackHead {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.trackHead span:last-child {
-  color: #ffb060;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.trackIndex {
-  display: inline-flex;
-  align-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.track p {
-  margin: 0;
-  color: rgba(247, 244, 239, 0.84);
-  line-height: 1.62;
-}
-
-.panelFooter {
-  margin-top: 24px;
-  display: grid;
-  gap: 16px;
-}
-
-.metaList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.metaList span {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05);
-  color: rgba(247, 244, 239, 0.86);
-  font-size: 0.84rem;
-  font-weight: 700;
-}
-
-.panelLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  padding: 0 22px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 800;
-  color: #0b1118;
-  background: #f7f4ef;
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease;
-}
-
 .scrollCue {
   position: absolute;
   left: 50%;
@@ -411,21 +258,8 @@
 }
 
 @media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
-
   .scrollCue {
     display: none;
-  }
-
-  .copy h1 {
-    max-width: 11ch;
-  }
-
-  .panelTitle {
-    max-width: 14ch;
   }
 }
 
@@ -448,18 +282,12 @@
 
   .eyebrowRow {
     gap: 10px;
-    margin-bottom: 16px;
   }
 
-  .eyebrowPill,
-  .eyebrowMeta {
+  .eyebrowPill {
     min-height: 32px;
     font-size: 0.74rem;
     letter-spacing: 0.12em;
-  }
-
-  .copy h1 {
-    max-width: 10ch;
   }
 
   .lead {
@@ -484,16 +312,4 @@
     width: 100%;
   }
 
-  .panel {
-    padding: 26px 24px;
-    border-radius: 24px;
-  }
-
-  .track {
-    padding: 15px 16px;
-  }
-
-  .panelLink {
-    width: 100%;
-  }
 }

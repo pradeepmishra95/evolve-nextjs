@@ -157,6 +157,13 @@
   line-height: 1.08;
 }
 
+.panelNote {
+  margin: 0;
+  max-width: 28ch;
+  color: rgba(247, 244, 239, 0.8);
+  line-height: 1.8;
+}
+
 .pillarList {
   margin: 0;
   padding: 0;

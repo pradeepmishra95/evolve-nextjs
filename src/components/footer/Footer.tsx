@@ -10,13 +10,13 @@ import {
 } from 'react-icons/fa';
 
 import styles from './Footer.module.css';
-import NewsletterSignup from '@/components/NewsletterSignup';
 import { LOGO_IMAGE_ALT, LOGO_IMAGE_PATH } from '@/lib/brand';
 import {
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
   BOOK_TRIAL_PATH,
   CONTACT_EMAIL,
+  CONTACT_EMAIL_LINK,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_LINK,
   INSTAGRAM_PROFILE_URL,
@@ -75,7 +75,7 @@ export default function Footer() {
             </div>
 
             <p className={styles.description}>
-              A Malad West training center for MMA and calisthenics with coach-led progress, disciplined structure, and a strong movement culture. Jumba & Yoga coming soon.
+              A Malad West training center for MMA, calisthenics, and Zumba & Dance with coach-led progress, disciplined structure, and a strong movement culture. Yoga coming soon.
             </p>
 
             <div className={styles.socials}>
@@ -85,7 +85,12 @@ export default function Footer() {
               <a href={CONTACT_PHONE_LINK} aria-label="Call Evolve Sports And Fitness Club">
                 <FaPhoneAlt />
               </a>
-              <a href="mailto:evolvemmaandcalisthenics@gmail.com" aria-label="Email Evolve Sports And Fitness Club">
+              <a
+                href={CONTACT_EMAIL_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Email Evolve Sports And Fitness Club"
+              >
                 <FaEnvelope />
               </a>
               <a
@@ -147,17 +152,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>Contact & Updates</h4>
+            <h4>Contact</h4>
             <p>{CONTACT_PHONE_DISPLAY}</p>
             <p>{CONTACT_EMAIL}</p>
             <p>{OPENING_HOURS_LABEL}</p>
-            <NewsletterSignup />
           </div>
         </div>
 
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} Evolve Sports And Fitness Club.</span>
-          <span>MMA and calisthenics training in Malad West. Jumba & Yoga coming soon.</span>
+          <span>MMA, calisthenics, and Zumba & Dance training in Malad West. Yoga coming soon.</span>
         </div>
       </div>
     </footer>

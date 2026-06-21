@@ -7,12 +7,6 @@ import { BOOK_TRIAL_PATH } from '@/lib/links';
 
 import styles from './About.module.css';
 
-const pillars = [
-  'Sessions are built around technique, timing, coordination, and control.',
-  'Combat training and bodyweight strength are core programs; other movement offerings arrive soon.',
-  'The weekly schedule works for students, professionals, and parents trying to stay regular.',
-];
-
 const aboutStats = [
   { value: '2', label: 'core training paths' },
   { value: '6 AM - 10 PM', label: 'weekday-friendly training window' },
@@ -28,15 +22,8 @@ export default function About() {
           <h2>For people who want purposeful training, not random workouts.</h2>
 
           <p className={styles.lead}>
-            Evolve is for people who want to learn something while they train:
-            how to strike, move, climb, land, and build strength with better
-            body control over time.
-          </p>
-
-          <p>
-            Instead of selling intensity alone, the space brings together MMA
-            and calisthenics in a more disciplined format than a generic
-            open-floor setup usually offers. Jumba and Yoga are coming soon.
+            Evolve brings MMA and calisthenics into a more guided format for
+            people who want real skill, strength, and body control.
           </p>
 
           <div className={styles.statGrid}>
@@ -69,13 +56,11 @@ export default function About() {
             />
           </div>
 
-          <h3>What people tend to notice early</h3>
-
-          <ul className={styles.pillarList}>
-            {pillars.map((pillar) => (
-              <li key={pillar}>{pillar}</li>
-            ))}
-          </ul>
+          <h3>What stands out early</h3>
+          <p className={styles.panelNote}>
+            Technique comes first, the schedule is workable, and the classes
+            feel more guided than generic.
+          </p>
         </Reveal>
       </div>
     </section>

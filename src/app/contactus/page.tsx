@@ -2,6 +2,8 @@ import MapSection from '@/components/mapsection/MapSection';
 import Reveal from '@/components/reveal/Reveal';
 import {
   BOOK_TRIAL_PATH,
+  CONTACT_EMAIL,
+  CONTACT_EMAIL_LINK,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_LINK,
 } from '@/lib/links';
@@ -58,7 +60,7 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          `You can contact the team by phone at ${CONTACT_PHONE_DISPLAY} or by email at evolvemmaandcalisthenics@gmail.com.`,
+          `You can contact the team by phone at ${CONTACT_PHONE_DISPLAY} or through ${CONTACT_EMAIL}.`,
       },
     },
     {
@@ -81,8 +83,9 @@ const contactCards = [
   },
   {
     title: 'Email',
-    value: 'evolvemmaandcalisthenics@gmail.com',
+    value: CONTACT_EMAIL,
     helper: 'Useful for partnerships, media, or anything that needs detail.',
+    href: CONTACT_EMAIL_LINK,
   },
   {
     title: 'Working hours',
@@ -139,7 +142,13 @@ export default function ContactPage() {
                 distance={20}
               >
                 <h2>{card.title}</h2>
-                <p className={styles.value}>{card.value}</p>
+                {card.href ? (
+                  <a href={card.href} className={styles.value} target="_blank" rel="noopener noreferrer">
+                    {card.value}
+                  </a>
+                ) : (
+                  <p className={styles.value}>{card.value}</p>
+                )}
                 <p>{card.helper}</p>
               </Reveal>
             ))}

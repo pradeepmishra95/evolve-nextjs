@@ -16,7 +16,7 @@ export const metadata = buildMetadata({
   keywords: [
     'MMA timings Malad West',
     'calisthenics batch timings Mumbai',
-    'jumba schedule Mumbai',
+    'zumba dance schedule Mumbai',
     'yoga schedule Mumbai',
     'Evolve batch schedule',
   ],

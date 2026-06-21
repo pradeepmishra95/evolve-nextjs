@@ -7,7 +7,7 @@ import styles from './MapSection.module.css';
 
 export default function MapSection({
   title = 'The space makes more sense once you see it in person.',
-  copy = 'Walk in, look at the floor, and get a better feel for the setup, class rhythm, and location than any page can give you.',
+  copy = 'One visit tells you more about the floor, class pace, and location than a long page can.',
 }) {
   return (
     <section className={styles.mapSection}>

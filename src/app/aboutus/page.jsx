@@ -89,7 +89,7 @@ export default function AboutUs() {
           <p className={styles.eyebrow}>About Evolve</p>
           <h1>A training center built around disciplines, not random workouts.</h1>
           <p className={styles.lead}>
-            Evolve brings together MMA and calisthenics with structured coaching in one space for people who want to learn, not just sweat. Jumba and Yoga are upcoming.
+            Evolve brings together MMA, calisthenics, and Zumba & Dance with structured coaching in one space for people who want to learn, not just sweat. Yoga is upcoming.
           </p>
 
           <div className={styles.actions}>

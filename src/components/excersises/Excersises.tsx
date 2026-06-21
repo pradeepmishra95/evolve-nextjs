@@ -21,19 +21,10 @@ export default function Excercises() {
           <div className={styles.headerTop}>
             <div className={styles.headerCopy}>
               <p className={styles.eyebrow}>Programs</p>
-              <h2>Three paths, three very different training experiences.</h2>
-              <p className={styles.lead}>
-                Each program has its own technical focus, class rhythm, and kind of progress.
-                Watch a quick preview, then explore the path that matches what you want to learn.
-              </p>
+              <h2>Choose the training style that fits your goal.</h2>
             </div>
 
             <div className={styles.headerSide}>
-              <p className={styles.headerNote}>
-                Start with the discipline that pulls you in most strongly. You can always
-                grow into more once the habit is built.
-              </p>
-
               <Link href="/programs" className={styles.viewAll}>
                 Explore Programs
               </Link>
@@ -54,7 +45,7 @@ export default function Excercises() {
                   src={item.image}
                   alt={`${item.name} training at Evolve Sports And Fitness Club`}
                   fill
-                  sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 767px) 100vw, (max-width: 1180px) 50vw, 25vw"
                   className={styles.image}
                   style={{
                     objectFit: item.imageFit ?? 'cover',
@@ -80,15 +71,10 @@ export default function Excercises() {
                 <p className={styles.description}>{item.teaser}</p>
 
                 <ul className={styles.pointList}>
-                  {item.highlights.map((point) => (
+                  {item.highlights.slice(0, 3).map((point) => (
                     <li key={point}>{point}</li>
                   ))}
                 </ul>
-
-                <div className={styles.cardFooter}>
-                  <span className={styles.footerLabel}>Best for</span>
-                  <p className={styles.footerText}>{item.bestFor}</p>
-                </div>
 
                 <div className={styles.cardActions}>
                   <Link href={`/programs/${item.slug}`} className={styles.secondaryAction}>

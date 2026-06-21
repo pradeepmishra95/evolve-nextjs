@@ -9,38 +9,34 @@ const fallbackTestimonials = [
   {
     signal: 'Wanted technique correction',
     quote:
-      'The coaches actually correct technique instead of just making the class exhausting. That is what made me stay.',
+      'The coaches actually correct technique instead of just making the class exhausting.',
     name: 'Rahul',
     role: 'Working professional',
     program: 'Calisthenics',
-    takeaway: 'Stayed because the coaching felt attentive instead of generic.',
   },
   {
     signal: 'Needed a beginner-safe start',
     quote:
-      'I started with zero combat background. The coaches explained the structure, corrected the basics, and made the first few classes feel manageable.',
+      'I started with zero combat background, and the coaches made the first few classes feel manageable.',
     name: 'Anita',
     role: 'First-time trainee',
     program: 'MMA',
-    takeaway: 'Felt coached from the start instead of feeling lost in the room.',
   },
   {
     signal: 'Wanted movement coaching',
     quote:
-      'The movement-focused sessions are not random tricks. There is real coaching on landings, control, and confidence, which makes the training feel much safer and more purposeful.',
+      'There is real coaching on landings, control, and confidence, so the movement work feels purposeful.',
     name: 'Amit',
     role: 'Weekend athlete',
     program: 'Movement',
-    takeaway: 'Noticed that the sessions were coached in detail, not just high-energy.',
   },
   {
     signal: 'Needed something positive for a child',
     quote:
-      'My child enjoys the discipline and movement drills, and I can see more confidence and focus outside training too.',
+      'My child enjoys the drills, and I can already see more confidence and focus outside training too.',
     name: 'Pooja',
     role: 'Parent',
     program: 'Kids Batch',
-    takeaway: 'Saw the value beyond the sessions as well, not just during class.',
   },
 ];
 
@@ -48,10 +44,18 @@ function formatRating(value) {
   return typeof value === 'number' ? value.toFixed(1) : null;
 }
 
+function shortenQuote(text, maxLength = 120) {
+  if (typeof text !== 'string') return '';
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength).trimEnd()}...`;
+}
+
 export default function Testimonials() {
   const { googleReviews, hasReviews } = useGoogleReviews();
   const isGoogleSource = hasReviews && googleReviews;
-  const visibleReviews = isGoogleSource ? googleReviews.reviews : fallbackTestimonials;
+  const visibleReviews = (
+    isGoogleSource ? googleReviews.reviews : fallbackTestimonials
+  ).slice(0, 3);
 
   return (
     <section className={styles.section}>
@@ -62,13 +66,13 @@ export default function Testimonials() {
           </p>
           <h2>
             {isGoogleSource
-              ? 'Public reviews give a first impression before the first visit.'
-              : 'The strongest signal is what people notice after a few classes.'}
+              ? 'Reviews give a quick first impression before the first visit.'
+              : 'What people notice in the first few classes matters most.'}
           </h2>
           <p className={styles.lead}>
             {isGoogleSource
-              ? 'These Google reviews help new visitors understand the place, people, and training atmosphere in public words, not brand copy.'
-              : 'The useful part of feedback is whether people mention clarity, attention, safety, and a reason to keep returning.'}
+              ? 'A few public reviews usually tell new visitors enough to decide whether to visit.'
+              : 'The useful signal is whether people mention clarity, coaching, and a reason to return.'}
           </p>
         </Reveal>
 
@@ -96,9 +100,6 @@ export default function Testimonials() {
 
             <div className={styles.summaryFooter}>
               <span className={styles.sourceBadge}>Source: Google Maps</span>
-              <p className={styles.summaryNote}>
-                Google sorts these reviews by relevance.
-              </p>
               {googleReviews.googleMapsUri ? (
                 <a
                   href={googleReviews.googleMapsUri}
@@ -111,18 +112,7 @@ export default function Testimonials() {
               ) : null}
             </div>
           </Reveal>
-        ) : (
-          <Reveal className={styles.contextPanel} delay={70} distance={18}>
-            <p className={styles.contextTitle}>
-              What people usually care about before they join
-            </p>
-            <ul className={styles.contextList}>
-              <li>Will I feel lost if I am a beginner?</li>
-              <li>Will anyone actually correct my technique?</li>
-              <li>Can I fit this around work, school, or family schedules?</li>
-            </ul>
-          </Reveal>
-        )}
+        ) : null}
 
         <div className={styles.grid}>
           {visibleReviews.map((item, index) => (
@@ -152,7 +142,7 @@ export default function Testimonials() {
               </div>
 
               <p className={styles.quote}>
-                &ldquo;{isGoogleSource ? item.text : item.quote}&rdquo;
+                &ldquo;{shortenQuote(isGoogleSource ? item.text : item.quote)}&rdquo;
               </p>
 
               <div className={styles.person}>
@@ -194,12 +184,7 @@ export default function Testimonials() {
                     </a>
                   ) : null}
                 </div>
-              ) : (
-                <>
-                  <p className={styles.takeawayLabel}>Why it mattered</p>
-                  <p className={styles.takeaway}>{item.takeaway}</p>
-                </>
-              )}
+              ) : null}
             </Reveal>
           ))}
         </div>

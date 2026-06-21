@@ -8,6 +8,7 @@ import PwaRegistrar from '@/components/pwa/PwaRegistrar';
 import { LOGO_IMAGE_PATH } from '@/lib/brand';
 import {
   CONTACT_EMAIL,
+  CONTACT_EMAIL_IS_ADDRESS,
   CONTACT_PHONE_DISPLAY,
   FULL_ADDRESS,
   GOOGLE_MAPS_URL,
@@ -24,18 +25,20 @@ export const metadata = {
     template: '%s | Evolve Sports And Fitness Club',
   },
   manifest: '/manifest.webmanifest',
-  description: 'Train MMA and calisthenics with coach-led batches in Malad West, Mumbai. Jumba & Yoga coming soon.',
+  description:
+    'Train MMA, calisthenics, and Zumba & Dance with coach-led batches in Malad West, Mumbai. Yoga is coming soon.',
   keywords: [
     'MMA training center Mumbai',
     'calisthenics Mumbai',
-    'jumba upcoming Mumbai',
+    'zumba dance class Mumbai',
     'yoga upcoming Mumbai',
     'fitness training center Malad West',
     'trial training center Mumbai',
   ],
   openGraph: {
     title: 'Evolve Sports And Fitness Club',
-    description: 'Coach-led MMA and calisthenics training in Malad West, Mumbai. Jumba & Yoga coming soon.',
+    description:
+      'Coach-led MMA, calisthenics, and Zumba & Dance training in Malad West, Mumbai. Yoga is coming soon.',
     url: SITE_URL,
     siteName: 'Evolve Sports And Fitness Club',
     locale: 'en_IN',
@@ -45,7 +48,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Evolve Sports And Fitness Club',
-    description: 'Coach-led MMA and calisthenics training in Malad West, Mumbai. Jumba & Yoga coming soon.',
+    description:
+      'Coach-led MMA, calisthenics, and Zumba & Dance training in Malad West, Mumbai. Yoga is coming soon.',
     images: [buildAbsoluteUrl(LOGO_IMAGE_PATH)],
   },
   robots: {
@@ -100,10 +104,10 @@ const organizationSchema = {
   '@type': 'SportsActivityLocation',
   name: 'Evolve Sports And Fitness Club',
   description:
-    'Performance-driven training space offering coach-led MMA and calisthenics programs in Malad West, Mumbai. Jumba & Yoga coming soon.',
+    'Performance-driven training space offering coach-led MMA, calisthenics, and Zumba & Dance programs in Malad West, Mumbai. Yoga is coming soon.',
   url: SITE_URL,
   telephone: CONTACT_PHONE_DISPLAY,
-  email: CONTACT_EMAIL,
+  ...(CONTACT_EMAIL_IS_ADDRESS ? { email: CONTACT_EMAIL } : {}),
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'New Link Rd, Near Lower Malad Metro Station, Sunder Nagar, Malad West',

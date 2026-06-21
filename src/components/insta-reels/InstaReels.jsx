@@ -188,11 +188,6 @@ export default function InstaReels() {
         <div className={styles.headerCopy}>
           <p className={styles.eyebrow}>Training Highlights</p>
           <h2 className={styles.title}>See the training atmosphere before you visit.</h2>
-          <p className={styles.lead}>
-            Real reels create trust faster than promises do. Browse recent clips,
-            feel the energy of the sessions, and get a clearer sense of how the
-            training center moves.
-          </p>
         </div>
 
         <div className={styles.headerSide}>
@@ -236,8 +231,8 @@ export default function InstaReels() {
             </h3>
             <p>
               {status === 'error'
-                ? 'The Instagram feed did not load this time, but the profile is still active and worth checking directly.'
-                : 'The section is ready for reels, but there is no video feed to display right now.'}
+                ? 'The feed did not load this time, but the profile is still active.'
+                : 'There is no reel feed to show yet.'}
             </p>
           </div>
 
