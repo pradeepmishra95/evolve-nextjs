@@ -68,7 +68,6 @@ export default function Excercises() {
               <div className={styles.cardBody}>
                 <span className={styles.tag}>{item.label}</span>
                 <h3>{item.name}</h3>
-                <p className={styles.description}>{item.teaser}</p>
 
                 <ul className={styles.pointList}>
                   {item.highlights.slice(0, 3).map((point) => (

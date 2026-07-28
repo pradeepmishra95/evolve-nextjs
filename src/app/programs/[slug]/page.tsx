@@ -11,24 +11,24 @@ type ProgramPageProps = {
 
 const audienceCopy: Record<ProgramSlug, string[]> = {
   mma: [
-    'Beginners who want to learn striking and grappling in a structured environment.',
-    'People looking for conditioning that stays mentally engaging because it is skill-based.',
-    'Students and working professionals who want a coached combat discipline, not random circuits.',
+    'First-time and experienced combat trainees',
+    'People who want skill-based conditioning',
+    'Students and working professionals',
   ],
   calisthenics: [
-    'Anyone who wants stronger fundamentals and visible progress through bodyweight training.',
-    'People who enjoy learning movement patterns, holds, and control instead of machine-based routines.',
-    'Students who want better mobility, posture, and strength without depending on complicated equipment.',
+    'Anyone building bodyweight strength',
+    'People who enjoy holds, movement, and control',
+    'Students improving mobility and posture',
   ],
   zumba: [
-    'People who enjoy high-energy group sessions with music, rhythm, and a social class feel.',
-    'Anyone looking for a cardio-focused workout that feels more engaging than repetitive solo routines.',
-    'Beginners who want an upbeat movement class with approachable intensity and fun group energy.',
+    'People who enjoy music and group energy',
+    'Anyone looking for engaging cardio',
+    'Newcomers who want approachable intensity',
   ],
   yoga: [
-    'Anyone looking for better mobility, flexibility, and recovery through guided movement.',
-    'People who want a calmer training format that still improves body control and consistency.',
-    'Students and working professionals who need a restorative class to balance strength or combat training.',
+    'Anyone improving mobility and flexibility',
+    'People who prefer a calmer practice',
+    'Trainees balancing strength or combat work',
   ],
 };
 
@@ -102,30 +102,22 @@ export default async function ProgramDetailPage({ params }: ProgramPageProps) {
           </article>
         </section>
 
-        <section className="two-column">
-          <article className="surface-panel" style={{ padding: '24px' }}>
-            <p className="section-eyebrow">What To Expect</p>
-            <div className="content-prose">
-              <p>
-                Every class is meant to feel coached, progressive, and manageable for the level
-                you are currently at. The aim is not to overwhelm you with intensity for one
-                session, but to make the discipline feel learnable enough to keep showing up.
-              </p>
-              <p>
-                At Evolve, {program.shortName.toLowerCase()} sessions are built so that technique,
-                timing, and repetition create confidence over time. That is what gives the training
-                its long-term value.
-              </p>
-            </div>
-          </article>
-          <article className="surface-panel" style={{ padding: '24px' }}>
-            <p className="section-eyebrow">Who Usually Enjoys It</p>
-            <div className="content-prose">
+        <section className="detail-accordion" aria-label="Program details">
+          <details className="detail-accordion-item">
+            <summary>What to expect</summary>
+            <p>
+              Learn {program.shortName.toLowerCase()} through technique, repetition, and
+              level-appropriate practice.
+            </p>
+          </details>
+          <details className="detail-accordion-item">
+            <summary>Who usually enjoys it</summary>
+            <ul>
               {audience.map((item) => (
-                <p key={item}>{item}</p>
+                <li key={item}>{item}</li>
               ))}
-            </div>
-          </article>
+            </ul>
+          </details>
         </section>
       </div>
     </main>

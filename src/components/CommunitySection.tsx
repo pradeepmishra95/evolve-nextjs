@@ -1,8 +1,11 @@
 import Link from 'next/link';
 
 import Reveal from '@/components/reveal/Reveal';
-import { UPCOMING_EVENTS } from '@/data/events';
-import { BOOK_TRIAL_PATH, INSTAGRAM_PROFILE_URL, WHATSAPP_COMMUNITY_URL } from '@/lib/links';
+import {
+  BOOK_TRIAL_PATH,
+  INSTAGRAM_PROFILE_URL,
+  WHATSAPP_PROGRAM_HELP_URL,
+} from '@/lib/links';
 
 import styles from './CommunitySection.module.css';
 
@@ -16,7 +19,8 @@ export default function CommunitySection() {
             <h2 className="section-heading">Training gets stickier when you feel part of something.</h2>
           </div>
           <p className="section-lead">
-            Workshops, sparring meets, and updates keep the space active between visits.
+            Confirmed workshops, meets, and community updates are shared through the official
+            Instagram account and directly by the team.
           </p>
         </Reveal>
 
@@ -24,13 +28,10 @@ export default function CommunitySection() {
           <Reveal className={styles.eventsCard} distance={18}>
             <p className={styles.cardEyebrow}>Upcoming Events</p>
             <div className={styles.eventsList}>
-              {UPCOMING_EVENTS.map((event) => (
-                <article key={`${event.title}-${event.date}`} className={styles.eventItem}>
-                  <strong>{event.title}</strong>
-                  <span>{event.date}</span>
-                  <p>{event.detail}</p>
-                </article>
-              ))}
+              <article className={styles.eventItem}>
+                <strong>No event dates published right now</strong>
+                <p>Follow the official account or message the team for confirmed announcements.</p>
+              </article>
             </div>
           </Reveal>
 
@@ -39,12 +40,12 @@ export default function CommunitySection() {
             <h3>Get updates in one place.</h3>
             <div className={styles.actions}>
               <a
-                href={WHATSAPP_COMMUNITY_URL}
+                href={WHATSAPP_PROGRAM_HELP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-primary"
               >
-                Join Our WhatsApp Community
+                Ask On WhatsApp
               </a>
               <a
                 href={INSTAGRAM_PROFILE_URL}

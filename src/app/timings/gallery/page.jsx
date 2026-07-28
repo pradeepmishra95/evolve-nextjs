@@ -1,7 +1,9 @@
+import { INSTAGRAM_PROFILE_URL } from '@/lib/links';
+
 export const metadata = {
-  title: 'Gallery Updates Coming Soon',
+  title: 'Training Gallery',
   description:
-    'Gallery updates for Evolve Sports And Fitness Club are coming soon. Visit Instagram for the latest training visuals.',
+    'See current training visuals from Evolve Sports And Fitness Club through the official Instagram profile.',
   robots: {
     index: false,
     follow: false,
@@ -41,7 +43,7 @@ export default function Gallery() {
           lineHeight: 1.02,
         }}
       >
-        Visual updates from the training center are coming here next.
+        See current training moments from the official source.
       </h1>
 
       <p
@@ -52,10 +54,30 @@ export default function Gallery() {
           lineHeight: 1.8,
         }}
       >
-        This page will soon host real photos, training moments, and community
-        updates from the floor. For now, the latest visuals are available on
-        Instagram and through direct trial visits.
+        We only publish training photos after they are ready for public use. For current
+        session visuals and updates from the floor, visit the official Instagram profile
+        or book a trial to see the center in person.
       </p>
+
+      <a
+        href={INSTAGRAM_PROFILE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-flex',
+          marginTop: 24,
+          minHeight: 48,
+          alignItems: 'center',
+          padding: '0 22px',
+          borderRadius: 999,
+          color: '#fff',
+          background: 'linear-gradient(135deg, #ff9b27, #ff6a00)',
+          fontWeight: 800,
+          textDecoration: 'none',
+        }}
+      >
+        View Official Instagram
+      </a>
     </section>
   );
 }

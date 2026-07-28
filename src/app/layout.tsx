@@ -12,6 +12,7 @@ import {
   CONTACT_PHONE_DISPLAY,
   FULL_ADDRESS,
   GOOGLE_MAPS_URL,
+  STREET_ADDRESS,
   WHATSAPP_TRIAL_URL,
 } from '@/lib/links';
 import { buildAbsoluteUrl, SITE_URL, SITE_URL_OBJECT } from '@/lib/site';
@@ -110,7 +111,7 @@ const organizationSchema = {
   ...(CONTACT_EMAIL_IS_ADDRESS ? { email: CONTACT_EMAIL } : {}),
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'New Link Rd, Near Lower Malad Metro Station, Sunder Nagar, Malad West',
+    streetAddress: STREET_ADDRESS,
     addressLocality: 'Mumbai',
     addressRegion: 'Maharashtra',
     postalCode: '400064',

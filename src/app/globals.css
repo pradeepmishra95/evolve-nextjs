@@ -268,6 +268,38 @@ main {
   color: var(--text-muted);
 }
 
+.detail-accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.detail-accordion-item {
+  padding: 0 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.detail-accordion-item summary {
+  padding: 22px 36px 22px 0;
+  color: var(--text-strong);
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.detail-accordion-item p,
+.detail-accordion-item ul {
+  margin: 0;
+  padding-bottom: 22px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.detail-accordion-item ul {
+  padding-left: 20px;
+}
+
 .text-dark .section-eyebrow,
 .site-section-light .section-eyebrow {
   color: var(--brand);

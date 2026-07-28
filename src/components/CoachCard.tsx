@@ -18,21 +18,12 @@ export default function CoachCard({ coach, compact = false }: CoachCardProps) {
         <p className={styles.bio}>{coach.bio}</p>
 
         {!compact ? (
-          <>
-            <ul className={styles.certifications}>
-              {coach.certifications.map((certification) => (
-                <li key={certification}>{certification}</li>
-              ))}
-            </ul>
-            <p className={styles.experience}>
-              <strong>{coach.yearsExperience}+ years</strong> of coaching experience
-            </p>
-          </>
-        ) : (
-          <p className={styles.experience}>
-            <strong>{coach.yearsExperience}+ years</strong> of experience
-          </p>
-        )}
+          <ul className={styles.certifications}>
+            {coach.focusAreas.map((focusArea) => (
+              <li key={focusArea}>{focusArea}</li>
+            ))}
+          </ul>
+        ) : null}
 
         <Link
           href={BOOK_TRIAL_PATH}

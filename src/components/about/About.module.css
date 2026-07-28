@@ -33,7 +33,7 @@
   margin: 24px 0 14px;
   max-width: 48ch;
   font-size: 1.12rem;
-  line-height: 1.82;
+  line-height: 1.65;
   color: #272d36;
 }
 
@@ -41,37 +41,6 @@
   max-width: 56ch;
   color: #596170;
   line-height: 1.82;
-}
-
-.statGrid {
-  margin-top: 32px;
-  max-width: 46rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.statCard {
-  padding: 22px 20px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(17, 20, 24, 0.08);
-  box-shadow: 0 18px 34px rgba(9, 13, 20, 0.08);
-}
-
-.statCard strong {
-  display: block;
-  color: #111418;
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
-
-.statCard span {
-  display: block;
-  margin-top: 8px;
-  color: #596170;
-  font-size: 0.9rem;
-  line-height: 1.55;
 }
 
 .actions {
@@ -147,21 +116,10 @@
   background: linear-gradient(90deg, transparent, rgba(255, 176, 96, 0.5), transparent);
 }
 
-.logoWrap {
-  margin-bottom: 24px;
-}
-
 .panel h3 {
   margin: 0 0 20px;
   font-size: 1.52rem;
   line-height: 1.08;
-}
-
-.panelNote {
-  margin: 0;
-  max-width: 28ch;
-  color: rgba(247, 244, 239, 0.8);
-  line-height: 1.8;
 }
 
 .pillarList {
@@ -179,7 +137,7 @@
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  line-height: 1.78;
+  line-height: 1.5;
   color: rgba(247, 244, 239, 0.8);
   counter-increment: pillar;
 }
@@ -204,10 +162,6 @@
 @media (max-width: 767px) {
   .about {
     padding: var(--section-space-mobile) 16px;
-  }
-
-  .statGrid {
-    grid-template-columns: 1fr;
   }
 
   .actions {

@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/metadata';
 export const metadata = buildMetadata({
   title: 'Pricing | Evolve Sports And Fitness Club',
   description:
-    'See placeholder membership pricing for MMA and calisthenics at Evolve Sports And Fitness Club in Malad West, Mumbai. Zumba & Dance is now running, and Yoga is upcoming.',
+    'Contact Evolve Sports And Fitness Club for current MMA, calisthenics, and Zumba & Dance membership options in Malad West, Mumbai.',
   path: '/pricing',
   keywords: [
     'MMA pricing Malad West',

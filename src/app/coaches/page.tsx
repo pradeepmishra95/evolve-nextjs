@@ -1,6 +1,4 @@
-import CoachCard from '@/components/CoachCard';
 import Reveal from '@/components/reveal/Reveal';
-import { COACHES } from '@/data/coaches';
 import { buildMetadata } from '@/lib/metadata';
 
 import styles from './coaches.module.css';
@@ -8,7 +6,7 @@ import styles from './coaches.module.css';
 export const metadata = buildMetadata({
   title: 'Coaches | Evolve Sports And Fitness Club',
   description:
-    'Meet the MMA and calisthenics coaches at Evolve in Malad West, Mumbai. Parkour has been retired on the site.',
+    'Learn about the MMA and calisthenics coaching focus at Evolve Sports And Fitness Club in Malad West, Mumbai.',
   path: '/coaches',
   keywords: [
     'MMA coach Malad West',
@@ -22,15 +20,15 @@ export const metadata = buildMetadata({
 const values = [
   {
     title: 'Technique-first teaching',
-    detail: 'The aim is to explain, correct, and progress you instead of just running hard sessions.',
+    detail: 'Clear explanation and useful correction.',
   },
   {
-    title: 'Different specialists',
-    detail: 'Each training path has its own coach profile so the learning stays discipline-specific.',
+    title: 'Discipline-specific focus',
+    detail: 'Training built for each discipline.',
   },
   {
     title: 'Trial-friendly',
-    detail: 'You can book directly with a coach preference if you already know who you want to train with.',
+    detail: 'Experience the class before joining.',
   },
 ];
 
@@ -43,8 +41,7 @@ export default function CoachesPage() {
             <p className="section-eyebrow">Coaches</p>
             <h1 className="section-heading">Meet the team behind the training floor.</h1>
             <p className="section-lead">
-              Coaching quality is what turns curiosity into consistency. These placeholder profiles
-              show how each discipline at Evolve can have a visible guide behind it.
+              Meet the people focused on your technique, confidence, and progress.
             </p>
           </div>
         </Reveal>
@@ -55,12 +52,6 @@ export default function CoachesPage() {
               <strong>{value.title}</strong>
               <p>{value.detail}</p>
             </div>
-          ))}
-        </div>
-
-        <div className={styles.grid}>
-          {COACHES.map((coach) => (
-            <CoachCard key={coach.id} coach={coach} />
           ))}
         </div>
       </div>

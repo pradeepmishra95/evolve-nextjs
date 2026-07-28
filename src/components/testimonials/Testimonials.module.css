@@ -26,6 +26,26 @@
   overflow: hidden;
 }
 
+.ratingSummary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
+
+.ratingSummary strong {
+  color: #111418;
+  font-size: 1.3rem;
+}
+
+.ratingSummary > span {
+  color: #596170;
+}
+
+.ratingSummary .providerLink {
+  margin-left: auto;
+}
+
 .summaryPanel::before,
 .contextPanel::before {
   content: '';
@@ -289,18 +309,29 @@
     padding: var(--section-space-mobile) 16px;
   }
 
-  .summaryGrid,
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(82%, 1fr);
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
   }
 
   .card {
     padding: 22px 20px;
     border-radius: 20px;
+    scroll-snap-align: start;
   }
 
   .topRow {
     flex-wrap: wrap;
     align-items: flex-start;
+  }
+
+  .ratingSummary .providerLink {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
   }
 }

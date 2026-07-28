@@ -13,30 +13,28 @@ export default function ProgressShowcase({ entries }: ProgressShowcaseProps) {
       <div className={styles.shell}>
         <Reveal className={styles.header} distance={22}>
           <div>
-            <p className="section-eyebrow">Student Progress</p>
-            <h2 className="section-heading">Small milestones make the training feel real.</h2>
+            <p className="section-eyebrow">Training Goals</p>
+            <h2 className="section-heading">What progress can look like in each program.</h2>
           </div>
           <p className="section-lead">
-            Not every win is dramatic. Sometimes the real proof is the first clean pull-up,
-            the first composed sparring round, or the first vault that felt controlled.
+            Your starting point and pace are personal. These are the skills each program is
+            designed to develop, not promised timelines or fabricated student results.
           </p>
         </Reveal>
 
         <div className={styles.track}>
           {entries.map((entry, index) => (
             <Reveal
-              key={`${entry.studentName}-${entry.milestone}`}
+              key={`${entry.program}-${entry.title}`}
               className={styles.card}
               delay={index * 60}
               distance={18}
             >
               <div className={styles.meta}>
                 <span>{entry.program}</span>
-                <strong>{entry.duration}</strong>
               </div>
-              <h3>{entry.studentName}</h3>
-              <p className={styles.milestone}>{entry.milestone}</p>
-              {entry.quote ? <blockquote>{entry.quote}</blockquote> : null}
+              <h3>{entry.title}</h3>
+              <p className={styles.milestone}>{entry.detail}</p>
             </Reveal>
           ))}
         </div>

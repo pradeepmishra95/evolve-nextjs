@@ -1,103 +1,384 @@
 .page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
   padding: var(--section-space) 24px;
   background:
-    radial-gradient(circle at top right, rgba(255, 106, 0, 0.12), transparent 22%),
-    linear-gradient(180deg, #0f141c, #090d14);
+    radial-gradient(circle at 85% 8%, rgba(255, 106, 0, 0.14), transparent 23rem),
+    radial-gradient(circle at 5% 48%, rgba(255, 106, 0, 0.06), transparent 26rem),
+    linear-gradient(180deg, #0d121a 0%, #080c12 100%);
+}
+
+.glow {
+  position: absolute;
+  top: 150px;
+  right: -160px;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255, 142, 50, 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 70px rgba(255, 142, 50, 0.025),
+    0 0 0 140px rgba(255, 142, 50, 0.018);
+  pointer-events: none;
 }
 
 .shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   max-width: var(--content-width);
   margin: 0 auto;
   display: grid;
-  gap: 30px;
+  gap: 72px;
 }
 
 .hero {
   display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  align-items: end;
+  gap: 64px;
+}
+
+.heroCopy {
+  display: grid;
   gap: 20px;
 }
 
-.copy {
+.heroCopy h1 {
+  max-width: 13ch;
+  font-size: clamp(3rem, 6.3vw, 5.9rem);
+}
+
+.heroCopy h1 br {
+  display: block;
+}
+
+.heroNote {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.heroNote strong {
+  color: #fff;
+  font-size: 0.98rem;
+}
+
+.heroNote p {
+  margin: 5px 0 0;
+  color: rgba(247, 244, 239, 0.62);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.liveDot {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: #ff7a18;
+  box-shadow: 0 0 0 5px rgba(255, 122, 24, 0.12), 0 0 18px rgba(255, 122, 24, 0.55);
+}
+
+.scheduleSection {
   display: grid;
-  gap: 18px;
+  gap: 26px;
+}
+
+.sectionIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+  align-items: end;
+  gap: 24px;
+}
+
+.panelEyebrow {
+  margin: 0 0 8px;
+  color: #ff9b50;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.sectionIntro h2,
+.cta h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.sectionIntro > p {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.6);
+  line-height: 1.7;
+}
+
+.scheduleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.programCard {
+  --program-accent: #ff7a18;
+  --program-accent-rgb: 255, 122, 24;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(var(--program-accent-rgb), 0.09), transparent 38%),
+    rgba(255, 255, 255, 0.045);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.18);
+}
+
+.programCard::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, var(--program-accent) 20%, var(--program-accent) 80%, transparent);
+}
+
+.red {
+  --program-accent: #ff5b54;
+  --program-accent-rgb: 255, 91, 84;
+}
+
+.green {
+  --program-accent: #6ed6a0;
+  --program-accent-rgb: 110, 214, 160;
+}
+
+.purple {
+  --program-accent: #b991ff;
+  --program-accent-rgb: 185, 145, 255;
+}
+
+.programHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.75fr);
+  align-items: start;
+  gap: 22px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.programTitle {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.programNumber {
+  color: var(--program-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 2;
+}
+
+.programTitle h3 {
+  margin: 0 0 9px;
+  color: #fff;
+  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+}
+
+.daysBadge {
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 1px solid rgba(var(--program-accent-rgb), 0.22);
+  border-radius: 999px;
+  color: var(--program-accent);
+  background: rgba(var(--program-accent-rgb), 0.09);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.programHeader > p {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.6);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.sessionList {
+  display: grid;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+.session {
+  display: grid;
+  gap: 13px;
+}
+
+.periodLabel {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.periodIcon {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--program-accent);
+  background: rgba(var(--program-accent-rgb), 0.1);
+}
+
+.periodIcon svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.timeChip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 47px;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(4, 8, 13, 0.28);
+  font-size: clamp(0.76rem, 1vw, 0.86rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.clockDot {
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--program-accent);
+  box-shadow: 0 0 10px rgba(var(--program-accent-rgb), 0.6);
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 40px;
+  padding: 34px;
+  border: 1px solid rgba(255, 142, 50, 0.16);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(255, 106, 0, 0.13), transparent 34%),
+    rgba(255, 255, 255, 0.045);
+}
+
+.cta p:last-child {
+  max-width: 62ch;
+  margin: 10px 0 0;
+  color: rgba(247, 244, 239, 0.65);
+  line-height: 1.7;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-}
-
-.quickGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.quickCard {
-  padding: 20px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.quickCard strong {
-  display: block;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.quickCard p {
-  margin: 0;
-  color: rgba(247, 244, 239, 0.72);
-  line-height: 1.72;
-}
-
-.schedulePanel {
-  padding: 24px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.scheduleHeader {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-  gap: 20px;
-  margin-bottom: 22px;
-}
-
-.panelEyebrow {
-  margin: 0 0 10px;
-  color: #ffb060;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.scheduleHeader h2 {
-  margin: 0;
-  color: #fff;
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-}
-
-.scheduleHeader p:last-child {
-  margin: 0;
-  color: rgba(247, 244, 239, 0.72);
-  line-height: 1.72;
+  gap: 12px;
 }
 
 @media (max-width: 1024px) {
-  .quickGrid,
-  .scheduleHeader {
+  .hero {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .heroNote {
+    max-width: 520px;
+  }
+
+  .programHeader {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .timeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
 @media (max-width: 767px) {
   .page {
     padding: var(--section-space-mobile) 16px;
+  }
+
+  .shell {
+    gap: 54px;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
+    line-height: 0.94;
+  }
+
+  .sectionIntro,
+  .scheduleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionIntro {
+    align-items: start;
+  }
+
+  .programCard {
+    padding: 22px;
+    border-radius: 23px;
+  }
+
+  .timeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeChip {
+    padding-inline: 10px;
+    font-size: 0.72rem;
+  }
+
+  .cta {
+    padding: 25px;
   }
 
   .actions {
@@ -107,8 +388,16 @@
   .actions > * {
     width: 100%;
   }
+}
 
-  .schedulePanel {
-    padding: 20px;
+@media (max-width: 410px) {
+  .timeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liveDot {
+    box-shadow: 0 0 0 5px rgba(255, 122, 24, 0.12);
   }
 }

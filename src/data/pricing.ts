@@ -1,5 +1,3 @@
-// Update with real pricing.
-
 export type PricingTier = {
   duration: string;
   price: string;
@@ -14,43 +12,11 @@ export type PricingProgram = {
 export const PRICING_PROGRAMS: PricingProgram[] = [
   {
     program: 'MMA',
-    tiers: [
-      {
-        duration: 'Monthly',
-        price: '₹4,500',
-        inclusions: ['Coach-led sessions', 'Batch access', 'Progress tracking'],
-      },
-      {
-        duration: '3-Month',
-        price: '₹12,000',
-        inclusions: ['Coach-led sessions', 'Batch access', 'Progress tracking'],
-      },
-      {
-        duration: '6-Month',
-        price: '₹22,000',
-        inclusions: ['Coach-led sessions', 'Batch access', 'Progress tracking'],
-      },
-    ],
+    tiers: [],
   },
   {
     program: 'Calisthenics',
-    tiers: [
-      {
-        duration: 'Monthly',
-        price: '₹4,200',
-        inclusions: ['Coach-led sessions', 'Batch access', 'Progress tracking'],
-      },
-      {
-        duration: '3-Month',
-        price: '₹11,400',
-        inclusions: ['Coach-led sessions', 'Batch access', 'Progress tracking'],
-      },
-      {
-        duration: '6-Month',
-        price: '₹21,000',
-        inclusions: ['Coach-led sessions', 'Batch access', 'Progress tracking'],
-      },
-    ],
+    tiers: [],
   },
   {
     program: 'Zumba & Dance',
@@ -66,26 +32,26 @@ export const PRICING_FAQS = [
   {
     question: 'Can I switch programs later?',
     answer:
-      'Yes. Program changes can usually be worked out with the team based on batch availability and your training goals.',
+      'Ask the team about current program-change options, batch availability, and any applicable plan terms.',
   },
   {
     question: 'Is there a joining fee?',
     answer:
-      'That depends on the final membership structure. Please confirm current joining details with the team before enrolling.',
+      'Please confirm the current fee structure with the team before enrolling.',
   },
   {
     question: 'Do you offer student discounts?',
     answer:
-      'Student offers can vary through the year, so it is best to ask during your trial or enquiry.',
+      'Ask during your trial or enquiry for any currently available offers.',
   },
   {
     question: 'What happens if I miss sessions?',
     answer:
-      'Missed sessions can often be planned around with alternate batches, subject to current schedule availability.',
+      'The team can explain the current missed-session and alternate-batch policy before you enrol.',
   },
   {
     question: 'Can I freeze my membership?',
     answer:
-      'Freeze policies depend on the membership term and reason, so please confirm the latest policy with the team.',
+      'Please confirm the current freeze policy and eligibility terms with the team.',
   },
 ] as const;

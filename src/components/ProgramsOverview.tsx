@@ -17,9 +17,7 @@ export default function ProgramsOverview() {
             <h1 className="section-heading">Choose the discipline that matches how you want to train.</h1>
           </div>
           <p className="section-lead">
-            MMA and calisthenics are coached differently for a reason. Each path has its own
-            technical goals, pace, and kind of progress. Zumba & Dance is now running, and Yoga
-            is upcoming.
+            Explore MMA, calisthenics, and Zumba & Dance. Yoga is coming soon.
           </p>
         </Reveal>
 
@@ -51,7 +49,7 @@ export default function ProgramsOverview() {
                 <h2>{program.name}</h2>
                 <p>{program.description}</p>
                 <ul className={styles.highlights}>
-                  {program.highlights.map((highlight) => (
+                  {program.highlights.slice(0, 3).map((highlight) => (
                     <li key={highlight}>{highlight}</li>
                   ))}
                 </ul>

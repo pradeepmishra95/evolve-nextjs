@@ -6,6 +6,7 @@ import {
   CONTACT_EMAIL_LINK,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_LINK,
+  FULL_ADDRESS,
 } from '@/lib/links';
 
 import styles from './ContactPage.module.css';
@@ -50,8 +51,7 @@ const faqSchema = {
       name: 'Where is Evolve Sports And Fitness Club located?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text:
-          'The training center is located in Malad West, Mumbai, near Lower Malad Metro Station on New Link Road.',
+        text: `The training center is located at ${FULL_ADDRESS}.`,
       },
     },
     {
@@ -94,8 +94,8 @@ const contactCards = [
   },
   {
     title: 'Location',
-    value: 'Near Lower Malad Metro, Malad West, Mumbai',
-    helper: 'A convenient landmark if you are coming by metro or New Link Road.',
+    value: FULL_ADDRESS,
+    helper: 'Beside Mahanagar Gas Station and diagonally opposite Inorbit Mall.',
   },
 ];
 

@@ -1,12 +1,10 @@
 import InstaReels from '@/components/insta-reels/InstaReels';
 import Testimonials from '@/components/testimonials/Testimonials';
 import Excercises from '@/components/excersises/Excersises';
-import ProgressShowcase from '@/components/ProgressShowcase';
 import About from '@/components/about/About';
 import GoogleReviewsProvider from '@/components/google-reviews/GoogleReviewsProvider';
 import MapSection from '@/components/mapsection/MapSection';
 import Hero from '@/components/hero/Hero';
-import { PROGRESS_ENTRIES } from '@/data/progress';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
@@ -35,7 +33,6 @@ export default function Home() {
         <Excercises />
         {/* TrainingGallery hidden for now; bring it back here when ready to reveal. */}
         <Testimonials />
-        <ProgressShowcase entries={PROGRESS_ENTRIES} />
         <MapSection />
       </main>
     </GoogleReviewsProvider>

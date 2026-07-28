@@ -29,10 +29,9 @@ export const PROGRAMS: Program[] = [
     imagePosition: 'center',
     imageFit: 'contain',
     previewVideo: '/videos/mma-preview.mp4', // Replace with real training footage.
-    teaser:
-      'Build striking, grappling, conditioning, and confidence in structured coach-led batches.',
+    teaser: 'Build striking, grappling, conditioning, and confidence.',
     description:
-      'MMA at Evolve combines striking, grappling, pad work, partner drills, and conditioning so beginners and experienced trainees can build usable combat skill with a clear path forward.',
+      'Learn striking, grappling, pad work, partner drills, and conditioning at a pace that suits your experience.',
     bestFor:
       'People who want practical combat training, sharper reactions, and an athletic challenge.',
     highlights: ['Striking drills', 'Grappling basics', 'Pad work', 'Conditioning'],
@@ -52,10 +51,9 @@ export const PROGRAMS: Program[] = [
     image: '/images/gallery/calisthenics-new.PNG',
     imagePosition: '72% 16%',
     imageFit: 'cover',
-    teaser:
-      'Develop pull strength, pushing power, mobility, and visible control through bodyweight progressions.',
+    teaser: 'Develop strength, mobility, and body control.',
     description:
-      'The calisthenics program focuses on controlled bodyweight strength, movement quality, and skill development through progressions that make advanced work feel reachable over time.',
+      'Build bodyweight strength, movement quality, and skills through practical progressions.',
     bestFor:
       'People who want stronger fundamentals, better body control, and long-term skill-based training.',
     highlights: ['Pull strength', 'Push strength', 'Mobility', 'Static holds'],
@@ -76,9 +74,9 @@ export const PROGRAMS: Program[] = [
     imagePosition: 'center 42%',
     imageFit: 'cover',
     previewVideo: '/videos/jumba-preview.mp4',
-    teaser: 'A rhythmic, group-focused cardio and movement class now running at Evolve.',
+    teaser: 'High-energy cardio, rhythm, and movement in a group setting.',
     description:
-      'Zumba & Dance combines rhythmic movement and cardio-focused group training for fun, high-energy sessions. Classes started on 1 June at Evolve.',
+      'Enjoy rhythmic movement and cardio-focused group sessions. Classes are now running at Evolve.',
     bestFor: 'People who enjoy group rhythm-based fitness and high-energy sessions.',
     highlights: ['Cardio rhythm', 'Group energy', 'Low-impact options', 'Beginner-friendly'],
     firstClass: 'Started on 1 June — you can now join the current batch.',
@@ -96,9 +94,9 @@ export const PROGRAMS: Program[] = [
     imagePosition: 'center',
     imageFit: 'contain',
     previewVideo: '/videos/yoga-preview.mp4',
-    teaser: 'A mindful movement class focused on mobility, breathing, and recovery — launching soon.',
+    teaser: 'Mobility, breathing, and recovery — launching soon.',
     description:
-      'Yoga at Evolve will offer mobility, breath work, and recovery-focused sessions aimed at improving flexibility and movement quality.',
+      'Improve flexibility and movement quality through mobility, breath work, and recovery-focused sessions.',
     bestFor: 'Anyone looking for mobility, recovery, and mindful movement.',
     highlights: ['Mobility', 'Breath work', 'Recovery', 'Alignment'],
     firstClass: 'Upcoming — collection of introductory mobility and breath sessions.',
