@@ -60,7 +60,7 @@ export default function CoachesPage() {
 
         <div className={styles.grid}>
           {COACHES.map((coach) => (
-            <CoachCard key={coach.slug} coach={coach} />
+            <CoachCard key={coach.id} coach={coach} />
           ))}
         </div>
       </div>

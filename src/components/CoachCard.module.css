@@ -7,16 +7,6 @@
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
 }
 
-.imageWrap {
-  position: relative;
-  aspect-ratio: 1 / 1.08;
-  overflow: hidden;
-}
-
-.image {
-  object-fit: cover;
-}
-
 .body {
   display: grid;
   gap: 14px;
@@ -34,12 +24,6 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.card h3 {
-  margin: 0;
-  font-size: 1.42rem;
-  color: #fff;
 }
 
 .bio {
