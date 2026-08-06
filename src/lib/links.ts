@@ -26,7 +26,9 @@ export const GOOGLE_MAPS_URL = `https://maps.google.com/?q=${encodeURIComponent(
 export const GOOGLE_MAPS_EMBED_URL =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4577457053815!2d72.8373853!3d19.1751993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7005e5842fd%3A0xf83ec3da041829c5!2sEVOLVE%20MMA%20%26%20CALISTHENICS!5e0!3m2!1sen!2sin!4v1770299165791!5m2!1sen!2sin';
 export const INSTAGRAM_PROFILE_URL =
-  'https://www.instagram.com/evolve_mmacalisthenics';
+  'https://www.instagram.com/esfclub_official/';
+export const FACEBOOK_PROFILE_URL = 'https://www.facebook.com/esfclubofficial/';
+export const YOUTUBE_PROFILE_URL = 'https://www.youtube.com/@esfclub_official';
 
 export const WHATSAPP_TRIAL_URL = `https://wa.me/91${CONTACT_PHONE_NUMBER}?text=${encodeURIComponent(
   'Hi! I want to book a trial at Evolve Sports And Fitness Club.'

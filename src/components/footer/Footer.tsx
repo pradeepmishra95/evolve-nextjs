@@ -19,9 +19,11 @@ import {
   CONTACT_EMAIL_LINK,
   CONTACT_PHONE_DISPLAY,
   CONTACT_PHONE_LINK,
+  FACEBOOK_PROFILE_URL,
   INSTAGRAM_PROFILE_URL,
   OPENING_HOURS_LABEL,
   WHATSAPP_TRIAL_URL,
+  YOUTUBE_PROFILE_URL,
 } from '@/lib/links';
 
 const navigationLinks = [
@@ -102,7 +104,7 @@ export default function Footer() {
                 <FaInstagram />
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61587043175017"
+                href={FACEBOOK_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -110,7 +112,7 @@ export default function Footer() {
                 <FaFacebook />
               </a>
               <a
-                href="https://youtube.com/@evlovemmacalisthenics"
+                href={YOUTUBE_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"

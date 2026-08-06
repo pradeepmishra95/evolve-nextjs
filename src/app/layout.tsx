@@ -10,10 +10,13 @@ import {
   CONTACT_EMAIL,
   CONTACT_EMAIL_IS_ADDRESS,
   CONTACT_PHONE_DISPLAY,
+  FACEBOOK_PROFILE_URL,
   FULL_ADDRESS,
   GOOGLE_MAPS_URL,
+  INSTAGRAM_PROFILE_URL,
   STREET_ADDRESS,
   WHATSAPP_TRIAL_URL,
+  YOUTUBE_PROFILE_URL,
 } from '@/lib/links';
 import { buildAbsoluteUrl, SITE_URL, SITE_URL_OBJECT } from '@/lib/site';
 
@@ -127,9 +130,9 @@ const organizationSchema = {
   areaServed: FULL_ADDRESS,
   image: buildAbsoluteUrl(LOGO_IMAGE_PATH),
   sameAs: [
-    'https://www.instagram.com/evolve_mmacalisthenics',
-    'https://www.facebook.com/profile.php?id=61587043175017',
-    'https://youtube.com/@evlovemmacalisthenics',
+    INSTAGRAM_PROFILE_URL,
+    FACEBOOK_PROFILE_URL,
+    YOUTUBE_PROFILE_URL,
   ],
 };
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import Reveal from '@/components/reveal/Reveal';
-import { WHATSAPP_PROGRAM_HELP_URL } from '@/lib/links';
+import { INSTAGRAM_PROFILE_URL, WHATSAPP_PROGRAM_HELP_URL } from '@/lib/links';
 
 import styles from './blog.module.css';
 
@@ -138,7 +138,7 @@ export default function Blog() {
             </div>
 
             <a
-              href="https://www.instagram.com/evolve_mmacalisthenics"
+              href={INSTAGRAM_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryLink}

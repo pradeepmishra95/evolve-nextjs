@@ -194,7 +194,7 @@ export default function InstaReels() {
           <div className={styles.statusCard}>
             <span className={styles.statusLabel}>Live from Instagram</span>
             <strong>
-              {status === 'ready' ? `${reels.length} reels live` : '@evolve_mmacalisthenics'}
+              {status === 'ready' ? `${reels.length} reels live` : '@esfclub_official'}
             </strong>
           </div>
 

@@ -19,14 +19,39 @@
   pointer-events: none;
 }
 
-.video {
+.heroMedia {
   position: absolute;
   inset: 0;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  background: #0a1018;
+}
+
+.heroImage {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  transform: scale(1.03);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calisthenicsImage {
+  background-image: url('/images/hero/calisthenics-hd.jpg');
+  background-position: 56% center;
+}
+
+.mmaImage {
+  background-image: url('/images/hero/mma-hd.jpg');
+  background-position: 48% center;
+}
+
+.mmaImage::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 -70px;
+  width: 140px;
+  background: linear-gradient(90deg, transparent, rgba(10, 16, 24, 0.44), transparent);
 }
 
 .scrim {
@@ -264,6 +289,18 @@
 }
 
 @media (max-width: 767px) {
+  .heroMedia {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calisthenicsImage {
+    background-position: 58% center;
+  }
+
+  .mmaImage {
+    background-position: 44% center;
+  }
+
   .tagline {
     font-size: 0.76rem;
     letter-spacing: 0.18em;

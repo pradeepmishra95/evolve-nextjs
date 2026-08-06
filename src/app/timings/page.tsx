@@ -9,13 +9,11 @@ import styles from './timings.module.css';
 export const metadata = buildMetadata({
   title: 'Batch Timings | Evolve Sports And Fitness Club',
   description:
-    'View calisthenics, MMA, yoga, and dance batch timings at Evolve Sports And Fitness Club in Malad West, Mumbai.',
+    'View calisthenics and MMA batch timings at Evolve Sports And Fitness Club in Malad West, Mumbai.',
   path: '/timings',
   keywords: [
     'MMA timings Malad West',
     'calisthenics batch timings Mumbai',
-    'dance batch timings Mumbai',
-    'yoga schedule Mumbai',
     'Evolve batch schedule',
   ],
 });
@@ -76,30 +74,6 @@ const schedules: ProgramSchedule[] = [
       },
     ],
   },
-  {
-    name: 'Yoga',
-    number: '03',
-    description: 'Start your day with movement, mobility and mindful recovery.',
-    accent: 'green',
-    sessions: [
-      {
-        period: 'Morning',
-        times: ['6:00 AM – 7:00 AM', '7:00 AM – 8:00 AM'],
-      },
-    ],
-  },
-  {
-    name: 'Dance',
-    number: '04',
-    description: 'An energetic evening session built around rhythm and movement.',
-    accent: 'purple',
-    sessions: [
-      {
-        period: 'Evening',
-        times: ['5:00 PM – 6:00 PM'],
-      },
-    ],
-  },
 ];
 
 function PeriodIcon({ period }: { period: Session['period'] }) {
@@ -137,7 +111,7 @@ export default function TimingsPage() {
           <div className={styles.heroNote}>
             <span className={styles.liveDot} aria-hidden="true" />
             <div>
-              <strong>4 programs. Morning to night.</strong>
+              <strong>2 programs. Morning to night.</strong>
               <p>Pick your preferred batch and confirm availability with our team.</p>
             </div>
           </div>
