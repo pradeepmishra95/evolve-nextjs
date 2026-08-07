@@ -8,7 +8,6 @@ export type Program = {
   image: string;
   imagePosition?: string;
   imageFit?: 'cover' | 'contain';
-  previewVideo?: string;
   teaser: string;
   description: string;
   bestFor: string;
@@ -25,10 +24,9 @@ export const PROGRAMS: Program[] = [
     name: 'Mixed Martial Arts',
     shortName: 'MMA',
     label: 'Combat Skill',
-    image: '/images/gallery/mma-new.jpeg',
-    imagePosition: 'center',
-    imageFit: 'contain',
-    previewVideo: '/videos/mma-preview.mp4', // Replace with real training footage.
+    image: '/images/gallery/mma-1.jpg',
+    imagePosition: 'center 42%',
+    imageFit: 'cover',
     teaser: 'Build striking, grappling, conditioning, and confidence.',
     description:
       'Learn striking, grappling, pad work, partner drills, and conditioning at a pace that suits your experience.',
@@ -48,8 +46,8 @@ export const PROGRAMS: Program[] = [
     name: 'Calisthenics',
     shortName: 'Calisthenics',
     label: 'Bodyweight Strength',
-    image: '/images/gallery/calisthenics-new.PNG',
-    imagePosition: '72% 16%',
+    image: '/images/gallery/calisthenics-dips.png',
+    imagePosition: 'center 38%',
     imageFit: 'cover',
     teaser: 'Develop strength, mobility, and body control.',
     description:
@@ -73,7 +71,6 @@ export const PROGRAMS: Program[] = [
     image: '/images/gallery/zumba-urban.jpg',
     imagePosition: 'center 42%',
     imageFit: 'cover',
-    previewVideo: '/videos/jumba-preview.mp4',
     teaser: 'High-energy cardio, rhythm, and movement in a group setting.',
     description:
       'Enjoy rhythmic movement and cardio-focused group sessions. Classes are now running at Evolve.',
@@ -93,7 +90,6 @@ export const PROGRAMS: Program[] = [
     image: '/images/gallery/yoga-india.jpg',
     imagePosition: 'center',
     imageFit: 'contain',
-    previewVideo: '/videos/yoga-preview.mp4',
     teaser: 'Mobility, breathing, and recovery — launching soon.',
     description:
       'Improve flexibility and movement quality through mobility, breath work, and recovery-focused sessions.',

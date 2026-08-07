@@ -1,19 +1,13 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import Reveal from '@/components/reveal/Reveal';
-import ProgramPreviewModal from '@/components/ProgramPreviewModal';
 import { PROGRAMS } from '@/data/programs';
 import { BOOK_TRIAL_PATH } from '@/lib/links';
 
 import styles from './Excersises.module.css';
 
 export default function Excercises() {
-  const [activeProgram, setActiveProgram] = useState(null);
-
   return (
     <section className={styles.section}>
       <div className={styles.shell}>
@@ -54,15 +48,6 @@ export default function Excercises() {
                 />
                 <div className={styles.mediaOverlay} />
                 <span className={styles.cardNumber}>0{index + 1}</span>
-                {item.previewVideo ? (
-                  <button
-                    type="button"
-                    className={styles.previewButton}
-                    onClick={() => setActiveProgram(item)}
-                  >
-                    Watch Preview
-                  </button>
-                ) : null}
               </div>
 
               <div className={styles.cardBody}>
@@ -93,13 +78,6 @@ export default function Excercises() {
           ))}
         </div>
       </div>
-
-      <ProgramPreviewModal
-        open={Boolean(activeProgram)}
-        onClose={() => setActiveProgram(null)}
-        title={activeProgram?.name || ''}
-        videoSrc={activeProgram?.previewVideo || ''}
-      />
     </section>
   );
 }

@@ -1,0 +1,75 @@
+.mascot {
+  --cub-width: 110px;
+  --cub-sprite-height: 92px;
+  --cub-height: 92px;
+  --cub-direction: 1;
+  --cub-tilt: 0deg;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: var(--cub-width);
+  height: var(--cub-height);
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 10px 10px rgba(4, 8, 12, 0.28));
+  transition: opacity 240ms ease;
+  will-change: transform;
+}
+
+.mascot[data-ready='true'] {
+  opacity: 1;
+}
+
+.direction,
+.viewport {
+  width: 100%;
+  height: var(--cub-sprite-height);
+}
+
+.direction {
+  transform: rotate(var(--cub-tilt)) scaleX(var(--cub-direction));
+  transition: transform 120ms ease;
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.spriteStrip {
+  display: block;
+  width: 600%;
+  height: 100%;
+  max-width: none;
+  user-select: none;
+  animation: cubRun 520ms steps(6, end) infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+.mascot[data-running='true'] .spriteStrip {
+  animation-play-state: running;
+}
+
+@keyframes cubRun {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 767px) {
+  .mascot {
+    z-index: 850;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot {
+    display: none;
+  }
+}
