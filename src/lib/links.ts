@@ -6,7 +6,7 @@ export const BOOK_TRIAL_PATH = `https://wa.me/91${BOOK_TRIAL_WHATSAPP_NUMBER}?te
 export const CONTACT_PHONE_NUMBER = '9552596315';
 export const CONTACT_PHONE_DISPLAY = '+91 9552596315';
 export const CONTACT_PHONE_LINK = `tel:+91${CONTACT_PHONE_NUMBER}`;
-export const CONTACT_EMAIL = 'esfclub.in';
+export const CONTACT_EMAIL = 'support@esfclub.in';
 export const CONTACT_EMAIL_IS_ADDRESS = CONTACT_EMAIL.includes('@');
 export const CONTACT_EMAIL_LINK = CONTACT_EMAIL_IS_ADDRESS
   ? `mailto:${CONTACT_EMAIL}`
@@ -20,9 +20,7 @@ export const STREET_ADDRESS =
   'Beside Mahanagar Gas Station, diagonally opposite Inorbit Mall, Near Lower Malad Metro Station, New Link Road, Malad West';
 export const FULL_ADDRESS = `${ADDRESS_LINE_1}, ${ADDRESS_LINE_2}`;
 
-export const GOOGLE_MAPS_URL = `https://maps.google.com/?q=${encodeURIComponent(
-  FULL_ADDRESS
-)}`;
+export const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/N1K6CBoqBmtbKEEo9';
 export const GOOGLE_MAPS_EMBED_URL =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4577457053815!2d72.8373853!3d19.1751993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7005e5842fd%3A0xf83ec3da041829c5!2sEVOLVE%20MMA%20%26%20CALISTHENICS!5e0!3m2!1sen!2sin!4v1770299165791!5m2!1sen!2sin';
 export const INSTAGRAM_PROFILE_URL =
