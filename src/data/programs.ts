@@ -47,7 +47,7 @@ export const PROGRAMS: Program[] = [
     shortName: 'Calisthenics',
     label: 'Bodyweight Strength',
     image: '/images/gallery/calisthenics-dips.png',
-    imagePosition: 'center 38%',
+    imagePosition: 'center top',
     imageFit: 'cover',
     teaser: 'Develop strength, mobility, and body control.',
     description:
