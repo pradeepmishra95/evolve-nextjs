@@ -22,6 +22,38 @@
   opacity: 1;
 }
 
+.speechBubble {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 5px);
+  min-width: 136px;
+  padding: 8px 11px;
+  border: 2px solid #171b22;
+  border-radius: 16px;
+  color: #171b22;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(4, 8, 12, 0.2);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.speechBubble::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #171b22;
+  border-bottom: 2px solid #171b22;
+  background: #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+
 .direction,
 .viewport {
   width: 100%;
@@ -65,6 +97,12 @@
 @media (max-width: 767px) {
   .mascot {
     z-index: 850;
+  }
+
+  .speechBubble {
+    min-width: 118px;
+    padding: 7px 9px;
+    font-size: 0.62rem;
   }
 }
 

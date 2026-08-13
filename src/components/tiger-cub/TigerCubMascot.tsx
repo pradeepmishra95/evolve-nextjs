@@ -45,8 +45,8 @@ export default function TigerCubMascot() {
     let lastFrameTime = performance.now();
 
     const chooseNextTarget = () => {
-      const sidePadding = 12;
-      const topPadding = 92;
+      const sidePadding = coarsePointer.matches ? 22 : 30;
+      const topPadding = coarsePointer.matches ? 116 : 128;
       const bottomPadding = coarsePointer.matches ? 76 : 18;
       const availableX = Math.max(0, window.innerWidth - width - sidePadding * 2);
       const availableY = Math.max(
@@ -77,8 +77,18 @@ export default function TigerCubMascot() {
       mascot.style.setProperty('--cub-width', `${width}px`);
       mascot.style.setProperty('--cub-sprite-height', `${spriteHeight}px`);
       mascot.style.setProperty('--cub-height', `${height}px`);
-      targetX = clamp(targetX, 12, Math.max(12, window.innerWidth - width - 12));
-      targetY = clamp(targetY, 84, Math.max(84, window.innerHeight - height - 8));
+      const sidePadding = coarsePointer.matches ? 22 : 30;
+      const topPadding = coarsePointer.matches ? 116 : 128;
+      targetX = clamp(
+        targetX,
+        sidePadding,
+        Math.max(sidePadding, window.innerWidth - width - sidePadding)
+      );
+      targetY = clamp(
+        targetY,
+        topPadding,
+        Math.max(topPadding, window.innerHeight - height - 8)
+      );
     };
 
     const animate = (frameTime: number) => {
@@ -134,6 +144,8 @@ export default function TigerCubMascot() {
       data-running="false"
       aria-hidden="true"
     >
+      <div className={styles.speechBubble}>Let&apos;s go to Evolve!</div>
+
       <div className={styles.direction}>
         <div className={styles.viewport}>
           <Image
