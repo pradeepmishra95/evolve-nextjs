@@ -53,6 +53,10 @@
   text-transform: uppercase;
 }
 
+.brandNameShort {
+  display: none;
+}
+
 .brandSub {
   text-decoration: none;
   font-size: 0.82rem;
@@ -142,12 +146,14 @@
   padding: 0;
 }
 
-.menuButton span {
+.menuButton svg {
   display: block;
   width: 26px;
-  height: 2px;
-  border-radius: 999px;
-  background: #f7f4ef;
+  height: 26px;
+  fill: none;
+  stroke: #f7f4ef;
+  stroke-width: 2;
+  stroke-linecap: round;
 }
 
 .brandSub {
@@ -178,12 +184,12 @@
     position: relative;
     z-index: 3;
     display: inline-flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
+    flex: 0 0 44px;
+    margin-left: auto;
     cursor: pointer;
   }
 
@@ -247,7 +253,13 @@
     height: 54px;
   }
 
-  .brandName {
-    font-size: 0.88rem;
+  .brandNameLong {
+    display: none;
+  }
+
+  .brandNameShort {
+    display: inline;
+    font-size: 1rem;
+    letter-spacing: 0.16em;
   }
 }

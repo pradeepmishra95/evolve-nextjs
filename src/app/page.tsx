@@ -28,11 +28,10 @@ export default function Home() {
     <GoogleReviewsProvider>
       <main className="relative">
         <Hero />
-        <InstaReels />
-        <About />
         <Excercises />
-        {/* TrainingGallery hidden for now; bring it back here when ready to reveal. */}
+        <About />
         <Testimonials />
+        <InstaReels />
         <MapSection />
       </main>
     </GoogleReviewsProvider>

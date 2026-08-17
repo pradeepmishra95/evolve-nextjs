@@ -24,6 +24,8 @@
   --section-space: 104px;
   --section-space-mobile: 80px;
   --font-display:
+    'Avenir Next Condensed',
+    'Arial Narrow',
     'Segoe UI',
     -apple-system,
     BlinkMacSystemFont,
@@ -51,6 +53,5 @@
   --shadow-lg: 0 24px 60px rgba(9, 13, 20, 0.18);
   --shadow-md: 0 16px 35px rgba(9, 13, 20, 0.12);
   --shadow-xl: 0 30px 72px rgba(9, 13, 20, 0.22);
-  --radius-xl: 28px;
-  --radius-md-old: 14px;
+  --radius-xl: 32px;
 }

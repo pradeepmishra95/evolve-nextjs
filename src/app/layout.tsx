@@ -5,7 +5,6 @@ import './globals.css';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 import PwaRegistrar from '@/components/pwa/PwaRegistrar';
-import TigerCubMascot from '@/components/tiger-cub/TigerCubMascot';
 import { LOGO_IMAGE_PATH } from '@/lib/brand';
 import {
   CONTACT_EMAIL,
@@ -152,8 +151,6 @@ export default function RootLayout({ children }) {
         <Header />
 
         {children}
-
-        <TigerCubMascot />
 
         <a
           href={WHATSAPP_TRIAL_URL}

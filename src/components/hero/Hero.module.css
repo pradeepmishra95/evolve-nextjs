@@ -22,36 +22,82 @@
 .heroMedia {
   position: absolute;
   inset: 0;
-  display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
   background: #0a1018;
 }
 
 .heroImage {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transform: scale(1.035);
+  animation: heroImageCycle 24s ease-in-out infinite;
+  will-change: opacity, transform;
 }
 
-.calisthenicsImage {
-  background-image: url('/images/hero/calisthenics-hd.jpg');
-  background-position: 56% center;
+.mmaCoachingImage {
+  opacity: 1;
+  background-image: url('/images/hero/evolve-mma-coaching.jpg');
+  background-position: 54% center;
+  animation-name: heroFirstImageCycle;
 }
 
-.mmaImage {
-  background-image: url('/images/hero/mma-hd.jpg');
-  background-position: 48% center;
+.calisthenicsCoachingImage {
+  background-image: url('/images/hero/evolve-calisthenics-coaching.jpg');
+  background-position: 52% center;
+  animation-delay: 6s;
 }
 
-.mmaImage::before {
-  content: '';
-  position: absolute;
-  inset: 0 auto 0 -70px;
-  width: 140px;
-  background: linear-gradient(90deg, transparent, rgba(10, 16, 24, 0.44), transparent);
+.calisthenicsCommunityImage {
+  background-image: url('/images/hero/evolve-calisthenics-community.jpg');
+  background-position: 50% center;
+  animation-delay: 12s;
+}
+
+.mmaClassImage {
+  background-image: url('/images/hero/evolve-mma-class.jpg');
+  background-position: 50% center;
+  animation-delay: 18s;
+}
+
+@keyframes heroFirstImageCycle {
+  0%,
+  23% {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+
+  27%,
+  96% {
+    opacity: 0;
+    transform: scale(1.075);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+}
+
+@keyframes heroImageCycle {
+  0% {
+    opacity: 0;
+    transform: scale(1.075);
+  }
+
+  4%,
+  23% {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+
+  27%,
+  100% {
+    opacity: 0;
+    transform: scale(1.075);
+  }
 }
 
 .scrim {
@@ -59,7 +105,8 @@
   inset: 0;
   background:
     radial-gradient(circle at 88% 18%, rgba(255, 106, 0, 0.28), transparent 26%),
-    linear-gradient(115deg, rgba(6, 9, 14, 0.92) 0%, rgba(6, 9, 14, 0.76) 42%, rgba(6, 9, 14, 0.34) 100%);
+    linear-gradient(110deg, rgba(6, 9, 14, 0.94) 0%, rgba(6, 9, 14, 0.82) 42%, rgba(6, 9, 14, 0.3) 100%),
+    linear-gradient(0deg, rgba(6, 9, 14, 0.44), transparent 46%);
   z-index: 1;
 }
 
@@ -70,14 +117,15 @@
   min-height: calc(100svh - 88px);
   margin: 0 auto;
   padding: 64px 24px 74px;
-  display: block;
+  display: flex;
   align-items: end;
 }
 
 .copy {
   display: grid;
   gap: 0;
-  max-width: 44rem;
+  width: 100%;
+  max-width: 48rem;
 }
 
 .tagline {
@@ -109,6 +157,21 @@
   text-transform: uppercase;
 }
 
+.title {
+  margin: 18px 0 0;
+  max-width: 11ch;
+  color: #fff;
+  font-size: clamp(3.25rem, 6vw, 6.15rem);
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  text-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.title span {
+  display: block;
+  color: #ffb060;
+}
+
 .eyebrowPill {
   padding: 0 16px;
   color: #111418;
@@ -132,15 +195,31 @@
 }
 
 .helper {
-  margin: 22px 0 0;
-  padding: 18px 20px;
-  max-width: 42ch;
+  margin: 18px 0 0;
+  max-width: 60ch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
   color: rgba(247, 244, 239, 0.72);
-  font-size: 0.96rem;
-  line-height: 1.68;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.helper span {
+  position: relative;
+  padding-left: 14px;
+}
+
+.helper span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.64em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff9b27;
 }
 
 .primaryCta,
@@ -187,17 +266,17 @@
 }
 
 .proofBar {
-  margin-top: 28px;
+  margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .proofCard {
   display: grid;
   gap: 7px;
-  padding: 18px;
-  border-radius: 24px;
+  padding: 15px;
+  border-radius: var(--radius-sm);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: inherit;
@@ -224,13 +303,13 @@
 
 .proofValue {
   color: #fff;
-  font-size: 1.04rem;
+  font-size: 0.96rem;
   line-height: 1.34;
 }
 
 .proofDetail {
   color: rgba(247, 244, 239, 0.7);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.5;
 }
 
@@ -286,24 +365,44 @@
   .scrollCue {
     display: none;
   }
+
+  .proofBar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 767px) {
-  .heroMedia {
-    grid-template-columns: 1fr 1fr;
+  .mmaCoachingImage {
+    background-position: 55% center;
   }
 
-  .calisthenicsImage {
-    background-position: 58% center;
+  .calisthenicsCoachingImage {
+    background-position: 51% center;
   }
 
-  .mmaImage {
-    background-position: 44% center;
+  .calisthenicsCommunityImage {
+    background-position: 48% center;
+  }
+
+  .mmaClassImage {
+    background-position: 50% center;
   }
 
   .tagline {
     font-size: 0.76rem;
     letter-spacing: 0.18em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroImage {
+    opacity: 0;
+    animation: none;
+    transform: none;
+  }
+
+  .mmaCoachingImage {
+    opacity: 1;
   }
 }
 
@@ -314,7 +413,13 @@
   }
 
   .container {
-    padding: 48px 16px 48px;
+    padding: 56px 16px 48px;
+  }
+
+  .title {
+    margin-top: 16px;
+    font-size: clamp(3rem, 13vw, 4rem);
+    line-height: 0.91;
   }
 
   .eyebrowRow {
@@ -332,7 +437,9 @@
   }
 
   .helper {
-    font-size: 0.92rem;
+    display: grid;
+    gap: 7px;
+    font-size: 0.86rem;
   }
 
   .proofBar {

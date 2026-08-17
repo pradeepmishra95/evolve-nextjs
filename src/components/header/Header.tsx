@@ -18,7 +18,6 @@ const menus = [
   { name: 'Contact', path: '/contactus' },
 ];
 
-// ✅ Added Location Icon (only addition)
 const LocationIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +75,12 @@ export default function Header() {
 
           <div className={styles.brandCopy}>
             <Link href="/" onClick={closeMenu} className={styles.brandNameLink}>
-              <span className={styles.brandName}>Evolve Sports And Fitness Club</span>
+              <span className={`${styles.brandName} ${styles.brandNameLong}`}>
+                Evolve Sports And Fitness Club
+              </span>
+              <span className={`${styles.brandName} ${styles.brandNameShort}`}>
+                Evolve
+              </span>
             </Link>
 
             <a
@@ -133,9 +137,15 @@ export default function Header() {
           aria-controls="primary-navigation"
           aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
         >
-          <span />
-          <span />
-          <span />
+          {menuOpen ? (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 5l14 14M19 5 5 19" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          )}
         </button>
 
         {menuOpen ? (

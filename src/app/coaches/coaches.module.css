@@ -1,7 +1,7 @@
 .page {
-  padding: var(--section-space) 24px;
+  padding: var(--section-space) 24px calc(var(--section-space) + 42px);
   background:
-    radial-gradient(circle at top left, rgba(255, 106, 0, 0.12), transparent 22%),
+    radial-gradient(circle at top left, rgba(255, 106, 0, 0.14), transparent 24%),
     linear-gradient(180deg, #0f141c, #090d14);
 }
 
@@ -9,17 +9,55 @@
   max-width: var(--content-width);
   margin: 0 auto;
   display: grid;
-  gap: 28px;
+  gap: 30px;
 }
 
 .hero {
   display: grid;
-  gap: 18px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 380px);
+  align-items: end;
+  gap: 32px;
+  padding-bottom: 18px;
 }
 
 .copy {
   display: grid;
   gap: 18px;
+}
+
+.copy h1 {
+  max-width: 13ch;
+}
+
+.heroNote {
+  padding: 26px;
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at top right, rgba(255, 106, 0, 0.18), transparent 34%),
+    rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.heroNote span {
+  display: block;
+  margin-bottom: 12px;
+  color: #ffb060;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heroNote strong {
+  display: block;
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.heroNote p {
+  margin: 10px 0 0;
+  color: rgba(247, 244, 239, 0.7);
+  line-height: 1.7;
 }
 
 .valueGrid {
@@ -29,10 +67,19 @@
 }
 
 .valueCard {
-  padding: 20px;
-  border-radius: 24px;
+  padding: 22px;
+  border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.valueCard > span {
+  display: block;
+  margin-bottom: 18px;
+  color: #ffb060;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
 }
 
 .valueCard strong {
@@ -47,13 +94,132 @@
   line-height: 1.72;
 }
 
+.coachingSection {
+  display: grid;
+  gap: 26px;
+  padding-top: 52px;
+}
+
+.sectionIntro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  align-items: end;
+  gap: 24px;
+}
+
+.sectionIntro h2,
+.cta h2 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 0.98;
+}
+
+.sectionIntro > p {
+  margin: 0;
+  color: rgba(247, 244, 239, 0.7);
+  line-height: 1.8;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
+.coachCard {
+  min-height: 100%;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: var(--shadow-soft);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.cardNumber,
+.discipline {
+  color: #ffb060;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.discipline {
+  padding: 8px 11px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  background: rgba(255, 106, 0, 0.14);
+}
+
+.coachCard h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.coachCard > p {
+  margin: 14px 0 22px;
+  color: rgba(247, 244, 239, 0.7);
+  line-height: 1.75;
+}
+
+.coachCard ul {
+  margin: 0;
+  padding: 18px 0 0;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.coachCard li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(247, 244, 239, 0.86);
+}
+
+.coachCard li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff8b20;
+}
+
+.cta {
+  margin-top: 36px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at top right, rgba(255, 106, 0, 0.2), transparent 30%),
+    rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta h2 {
+  max-width: 18ch;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
 @media (max-width: 1024px) {
+  .hero,
+  .sectionIntro,
   .valueGrid,
   .grid {
     grid-template-columns: 1fr;
@@ -62,6 +228,16 @@
 
 @media (max-width: 767px) {
   .page {
-    padding: var(--section-space-mobile) 16px;
+    padding: var(--section-space-mobile) 16px calc(var(--section-space-mobile) + 24px);
+  }
+
+  .coachingSection {
+    padding-top: 30px;
+  }
+
+  .cta {
+    padding: 26px 22px;
+    flex-direction: column;
+    align-items: stretch;
   }
 }
