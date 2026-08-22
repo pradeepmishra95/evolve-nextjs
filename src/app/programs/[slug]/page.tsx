@@ -20,16 +20,6 @@ const audienceCopy: Record<ProgramSlug, string[]> = {
     'People who enjoy holds, movement, and control',
     'Students improving mobility and posture',
   ],
-  zumba: [
-    'People who enjoy music and group energy',
-    'Anyone looking for engaging cardio',
-    'Newcomers who want approachable intensity',
-  ],
-  yoga: [
-    'Anyone improving mobility and flexibility',
-    'People who prefer a calmer practice',
-    'Trainees balancing strength or combat work',
-  ],
 };
 
 export async function generateMetadata({ params }: ProgramPageProps) {

@@ -31,6 +31,7 @@ const navigationLinks = [
   { label: 'Programs', href: '/programs' },
   { label: 'Timings', href: '/timings' },
   { label: 'Coaches', href: '/coaches' },
+  { label: 'Careers', href: '/careers' },
   { label: 'About', href: '/aboutus' },
   { label: 'Contact', href: '/contactus' },
   { label: 'Book A Trial', href: BOOK_TRIAL_PATH },
@@ -39,7 +40,7 @@ const navigationLinks = [
 const discoverLinks = [
   { label: 'MMA Classes Malad', href: '/mma-classes-malad-west' },
   { label: 'Calisthenics Gym Mumbai', href: '/calisthenics-gym-mumbai' },
-  // Parkour page removed; upcoming programs will be listed on /programs
+  // Parkour page removed; current programs are listed on /programs
 ];
 
 export default function Footer() {
@@ -77,7 +78,8 @@ export default function Footer() {
             </div>
 
             <p className={styles.description}>
-              A Malad West training center for MMA, calisthenics, and Zumba & Dance with coach-led progress, disciplined structure, and a strong movement culture. Yoga coming soon.
+              A Malad West training center for MMA and calisthenics with coach-led progress,
+              disciplined structure, and a strong movement culture.
             </p>
 
             <div className={styles.socials}>
@@ -163,7 +165,7 @@ export default function Footer() {
 
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} Evolve Sports And Fitness Club.</span>
-          <span>MMA, calisthenics, and Zumba & Dance training in Malad West. Yoga coming soon.</span>
+          <span>MMA and calisthenics training in Malad West.</span>
         </div>
       </div>
     </footer>

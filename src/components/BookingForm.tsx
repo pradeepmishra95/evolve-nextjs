@@ -183,8 +183,6 @@ export default function BookingForm() {
           >
             <option>MMA</option>
             <option>Calisthenics</option>
-            <option>Zumba & Dance</option>
-            <option>Yoga (upcoming)</option>
             <option>Not sure yet</option>
           </select>
         </label>

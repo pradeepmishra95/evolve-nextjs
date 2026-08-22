@@ -17,7 +17,8 @@ export default function ProgramsOverview() {
             <h1 className="section-heading">Choose the discipline that matches how you want to train.</h1>
           </div>
           <p className="section-lead">
-            Explore MMA, calisthenics, and Zumba & Dance. Yoga is coming soon.
+            Explore coach-led MMA and calisthenics training built around technique,
+            progression, and consistent practice.
           </p>
         </Reveal>
 

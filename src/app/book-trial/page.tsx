@@ -14,8 +14,6 @@ export const metadata = buildMetadata({
   keywords: [
     'book MMA trial Malad West',
     'book calisthenics trial Mumbai',
-    'zumba dance trial Mumbai',
-    'yoga trial Mumbai',
     'Evolve trial booking',
   ],
 });

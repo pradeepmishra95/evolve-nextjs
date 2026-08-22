@@ -14,8 +14,6 @@ export const metadata = buildMetadata({
   keywords: [
     'MMA coach Malad West',
     'calisthenics coach Mumbai',
-    'zumba dance coach Mumbai',
-    'yoga coach Mumbai',
     'Evolve coaches',
   ],
 });
@@ -51,14 +49,6 @@ const coachingAreas = [
     detail:
       'Learn stance, movement, striking, and grappling fundamentals in sessions that stay structured and approachable.',
     focus: ['Striking fundamentals', 'Defence and footwork', 'Conditioning'],
-  },
-  {
-    number: '03',
-    discipline: 'Zumba & Dance',
-    title: 'Energy with direction',
-    detail:
-      'Follow guided movement that builds rhythm, coordination, and stamina without losing the joy of the session.',
-    focus: ['Rhythm and coordination', 'Cardio fitness', 'Group confidence'],
   },
 ];
 

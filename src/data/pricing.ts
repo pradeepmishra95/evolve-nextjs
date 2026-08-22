@@ -18,14 +18,6 @@ export const PRICING_PROGRAMS: PricingProgram[] = [
     program: 'Calisthenics',
     tiers: [],
   },
-  {
-    program: 'Zumba & Dance',
-    tiers: [],
-  },
-  {
-    program: 'Yoga (upcoming)',
-    tiers: [],
-  },
 ];
 
 export const PRICING_FAQS = [

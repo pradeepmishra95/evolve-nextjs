@@ -7,6 +7,6 @@ export const metadata = {
 };
 
 export default function ParkourTrainingMumbaiPage() {
-  // Redirect visitors to the programs page where upcoming classes are listed.
+  // Redirect visitors to the current programs page.
   redirect('/programs');
 }

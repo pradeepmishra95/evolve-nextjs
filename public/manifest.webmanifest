@@ -1,7 +1,7 @@
 {
   "name": "Evolve Sports And Fitness Club",
   "short_name": "Evolve Sports",
-  "description": "Coach-led MMA and calisthenics training in Malad West, Mumbai. Jumba & Yoga coming soon.",
+  "description": "Coach-led MMA and calisthenics training in Malad West, Mumbai.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

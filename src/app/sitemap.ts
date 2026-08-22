@@ -8,6 +8,7 @@ const INDEXABLE_ROUTES = [
   '/blog',
   '/book-trial',
   '/calisthenics-gym-mumbai',
+  '/careers',
   '/coaches',
   '/contactus',
   '/mma-classes-malad-west',

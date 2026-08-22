@@ -1,4 +1,4 @@
-export type ProgramSlug = 'mma' | 'calisthenics' | 'zumba' | 'yoga';
+export type ProgramSlug = 'mma' | 'calisthenics';
 
 export type Program = {
   slug: ProgramSlug;
@@ -62,43 +62,6 @@ export const PROGRAMS: Program[] = [
       'Calisthenics Program in Malad West, Mumbai | Bodyweight Strength | Evolve',
     metaDescription:
       'See how the calisthenics program at Evolve builds bodyweight strength, control, mobility, and skill progressions in Malad West, Mumbai.',
-  },
-  {
-    slug: 'zumba',
-    name: 'Zumba & Dance',
-    shortName: 'Zumba & Dance',
-    label: 'Now Running',
-    image: '/images/gallery/zumba-urban.jpg',
-    imagePosition: 'center 42%',
-    imageFit: 'cover',
-    teaser: 'High-energy cardio, rhythm, and movement in a group setting.',
-    description:
-      'Enjoy rhythmic movement and cardio-focused group sessions. Classes are now running at Evolve.',
-    bestFor: 'People who enjoy group rhythm-based fitness and high-energy sessions.',
-    highlights: ['Cardio rhythm', 'Group energy', 'Low-impact options', 'Beginner-friendly'],
-    firstClass: 'Started on 1 June — you can now join the current batch.',
-    scheduleHint: 'Now running — contact the team for current batch timings.',
-    metaTitle: 'Zumba & Dance | Group Rhythm Cardio | Evolve',
-    metaDescription:
-      'Zumba & Dance is now running at Evolve with rhythmic, cardio-focused group sessions starting on 1 June.',
-  },
-  {
-    slug: 'yoga',
-    name: 'Yoga',
-    shortName: 'Yoga',
-    label: 'Upcoming Mind-Body',
-    image: '/images/gallery/yoga-india.jpg',
-    imagePosition: 'center',
-    imageFit: 'contain',
-    teaser: 'Mobility, breathing, and recovery — launching soon.',
-    description:
-      'Improve flexibility and movement quality through mobility, breath work, and recovery-focused sessions.',
-    bestFor: 'Anyone looking for mobility, recovery, and mindful movement.',
-    highlights: ['Mobility', 'Breath work', 'Recovery', 'Alignment'],
-    firstClass: 'Upcoming — collection of introductory mobility and breath sessions.',
-    scheduleHint: 'Upcoming program — launch date and schedule to be announced.',
-    metaTitle: 'Yoga (Upcoming) | Mobility & Recovery | Evolve',
-    metaDescription: 'Yoga is an upcoming program at Evolve focusing on mobility, breath, and recovery.',
   },
 ];
 

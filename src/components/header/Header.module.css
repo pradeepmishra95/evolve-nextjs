@@ -171,7 +171,7 @@
   display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1120px) {
   .inner {
     padding: 14px 16px;
   }

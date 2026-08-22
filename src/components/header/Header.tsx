@@ -14,6 +14,7 @@ const menus = [
   { name: 'Programs', path: '/programs' },
   { name: 'Coaches', path: '/coaches' },
   { name: 'Timings', path: '/timings' },
+  { name: 'Careers', path: '/careers' },
   { name: 'About Us', path: '/aboutus' },
   { name: 'Contact', path: '/contactus' },
 ];

@@ -11,13 +11,11 @@ export const metadata = buildMetadata({
   title:
     'Evolve Sports And Fitness Club | MMA & Calisthenics Training in Malad West, Mumbai',
   description:
-    'Coach-led MMA and calisthenics training in Malad West, Mumbai with trial booking, schedules, coaches, and program details. Zumba & Dance is now running, and Yoga is upcoming.',
+    'Coach-led MMA and calisthenics training in Malad West, Mumbai with trial booking, schedules, coaches, and program details.',
   path: '/',
   keywords: [
     'MMA training Malad West',
     'calisthenics Malad West',
-    'zumba dance Malad West',
-    'yoga upcoming',
     'Malad West training center',
     'book MMA trial Mumbai',
   ],

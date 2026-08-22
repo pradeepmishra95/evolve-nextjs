@@ -45,7 +45,7 @@ const facts = [
   {
     label: 'Programs',
     title: 'MMA and Calisthenics',
-    detail: 'Plus Zumba & Dance, with Yoga coming soon.',
+    detail: 'Combat skill and bodyweight strength training.',
   },
 ];
 
@@ -86,7 +86,7 @@ export default function AboutUs() {
           <p className={styles.eyebrow}>About Evolve</p>
           <h1>A training center built around disciplines, not random workouts.</h1>
           <p className={styles.lead}>
-            Train MMA, calisthenics, and Zumba & Dance in one focused space. Yoga is coming soon.
+            Train MMA and calisthenics in one focused, coach-led space.
           </p>
 
           <div className={styles.actions}>

@@ -4,6 +4,7 @@ import './globals.css';
 
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
+import RoamingTiger from '@/components/mascot/RoamingTiger';
 import PwaRegistrar from '@/components/pwa/PwaRegistrar';
 import { LOGO_IMAGE_PATH } from '@/lib/brand';
 import {
@@ -30,19 +31,17 @@ export const metadata = {
   },
   manifest: '/manifest.webmanifest',
   description:
-    'Train MMA, calisthenics, and Zumba & Dance with coach-led batches in Malad West, Mumbai. Yoga is coming soon.',
+    'Train MMA and calisthenics with coach-led batches in Malad West, Mumbai.',
   keywords: [
     'MMA training center Mumbai',
     'calisthenics Mumbai',
-    'zumba dance class Mumbai',
-    'yoga upcoming Mumbai',
     'fitness training center Malad West',
     'trial training center Mumbai',
   ],
   openGraph: {
     title: 'Evolve Sports And Fitness Club',
     description:
-      'Coach-led MMA, calisthenics, and Zumba & Dance training in Malad West, Mumbai. Yoga is coming soon.',
+      'Coach-led MMA and calisthenics training in Malad West, Mumbai.',
     url: SITE_URL,
     siteName: 'Evolve Sports And Fitness Club',
     locale: 'en_IN',
@@ -53,7 +52,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Evolve Sports And Fitness Club',
     description:
-      'Coach-led MMA, calisthenics, and Zumba & Dance training in Malad West, Mumbai. Yoga is coming soon.',
+      'Coach-led MMA and calisthenics training in Malad West, Mumbai.',
     images: [buildAbsoluteUrl(LOGO_IMAGE_PATH)],
   },
   robots: {
@@ -108,7 +107,7 @@ const organizationSchema = {
   '@type': 'SportsActivityLocation',
   name: 'Evolve Sports And Fitness Club',
   description:
-    'Performance-driven training space offering coach-led MMA, calisthenics, and Zumba & Dance programs in Malad West, Mumbai. Yoga is coming soon.',
+    'Performance-driven training space offering coach-led MMA and calisthenics programs in Malad West, Mumbai.',
   url: SITE_URL,
   telephone: CONTACT_PHONE_DISPLAY,
   ...(CONTACT_EMAIL_IS_ADDRESS ? { email: CONTACT_EMAIL } : {}),
@@ -151,6 +150,8 @@ export default function RootLayout({ children }) {
         <Header />
 
         {children}
+
+        <RoamingTiger />
 
         <a
           href={WHATSAPP_TRIAL_URL}

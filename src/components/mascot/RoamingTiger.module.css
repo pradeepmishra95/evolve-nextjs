@@ -1,0 +1,190 @@
+.roamingTiger {
+  --tiger-width: 120px;
+  --edge-gap: 16px;
+  --top-gap: 64px;
+  --bottom-gap: 112px;
+  --route-duration: 36s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 900;
+  width: var(--tiger-width);
+  pointer-events: none;
+  filter: drop-shadow(0 12px 12px rgba(4, 8, 12, 0.34));
+  will-change: transform;
+  animation: roamAroundViewport var(--route-duration) linear infinite;
+}
+
+.bubble {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  min-width: 138px;
+  padding: 8px 11px;
+  border: 2px solid #171b22;
+  border-radius: 15px;
+  color: #171b22;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(4, 8, 12, 0.2);
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.bubble::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 11px;
+  height: 11px;
+  border-right: 2px solid #171b22;
+  border-bottom: 2px solid #171b22;
+  background: #fff;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.viewport {
+  width: 120px;
+  aspect-ratio: 360 / 284;
+  overflow: hidden;
+  transform-origin: center;
+  animation: faceTravelDirection var(--route-duration) linear infinite;
+}
+
+.sprite {
+  display: block;
+  width: 600%;
+  height: 100%;
+  max-width: none;
+  user-select: none;
+  animation: tigerRunCycle 560ms steps(6, end) infinite;
+}
+
+@keyframes roamAroundViewport {
+  0% {
+    transform: translate3d(
+      var(--edge-gap),
+      calc(100vh - var(--bottom-gap)),
+      0
+    );
+  }
+
+  14% {
+    transform: translate3d(42vw, 48vh, 0);
+  }
+
+  28% {
+    transform: translate3d(
+      calc(100vw - var(--tiger-width) - var(--edge-gap)),
+      var(--top-gap),
+      0
+    );
+  }
+
+  42% {
+    transform: translate3d(54vw, 62vh, 0);
+  }
+
+  56% {
+    transform: translate3d(var(--edge-gap), 28vh, 0);
+  }
+
+  70% {
+    transform: translate3d(
+      38vw,
+      calc(100vh - var(--bottom-gap)),
+      0
+    );
+  }
+
+  84% {
+    transform: translate3d(
+      calc(100vw - var(--tiger-width) - var(--edge-gap)),
+      36vh,
+      0
+    );
+  }
+
+  100% {
+    transform: translate3d(
+      var(--edge-gap),
+      calc(100vh - var(--bottom-gap)),
+      0
+    );
+  }
+}
+
+@keyframes faceTravelDirection {
+  0%,
+  27.99% {
+    transform: scaleX(1);
+  }
+
+  28%,
+  55.99% {
+    transform: scaleX(-1);
+  }
+
+  56%,
+  83.99% {
+    transform: scaleX(1);
+  }
+
+  84%,
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes tigerRunCycle {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .roamingTiger {
+    --tiger-width: 88px;
+    --edge-gap: 14px;
+    --top-gap: 54px;
+    --bottom-gap: 84px;
+    --route-duration: 28s;
+  }
+
+  .viewport {
+    width: 88px;
+  }
+
+  .bubble {
+    min-width: 112px;
+    padding: 6px 8px;
+    font-size: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roamingTiger {
+    animation: none;
+    transform: translate3d(
+      var(--edge-gap),
+      calc(100vh - var(--bottom-gap)),
+      0
+    );
+  }
+
+  .sprite {
+    animation: none;
+  }
+
+  .viewport {
+    animation: none;
+  }
+}
